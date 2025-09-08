@@ -1,17 +1,51 @@
 <?php
 require_once __DIR__ . '/../db/Database.php';
 require_once __DIR__ . '/User.php';
-class UserService {
+class UserService
+{
     private static \PDO $db;
 
-    private static function init() {
+    private static function init()
+    {
         if (!isset(self::$db)) {
             self::$db = Database::getInstance()->getConnection();
         }
     }
 
+    // Check for taken credentials.
+    public static function checkForExistantCredentials(string $username, string $email): int
+    {
+        self::init();
+        define("AVAILABLE", 0);
+        define("USERNAME_TAKEN", 1);
+        define("EMAIL_TAKEN", 2);
+        define("UKNOWN_ERROR", 3);
+
+        $stmt = self::$db->prepare("SELECT username, email FROM users WHERE username = :username OR email = :email");
+
+        if ($stmt->execute([
+            ':username' => $username,
+            ':email' => $email
+        ])) {
+            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            if ($user) {
+                if ($user['username'] === $username) {
+                    return USERNAME_TAKEN;
+                } else if ($user['email'] === $email) {
+                    return EMAIL_TAKEN;
+                }
+            } else {
+                return AVAILABLE;
+            }
+        }
+
+        return UKNOWN_ERROR;
+    }
+
     // Create a new user
-    public static function createUser(string $username, string $password, string $email): ?User {
+    public static function createUser(string $username, string $password, string $email): ?User
+    {
         self::init();
         $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
         $stmt = self::$db->prepare("INSERT INTO users (username, password, email) VALUES (:username, :password, :email)");
@@ -29,7 +63,8 @@ class UserService {
     }
 
     // Edit an existing user
-    public static function editUser(int $id, ?string $username = null, ?string $password = null, ?string $email = null): ?User {
+    public static function editUser(int $id, ?string $username = null, ?string $password = null, ?string $email = null): ?User
+    {
         self::init();
         $fields = [];
         $params = [':id' => $id];
@@ -60,7 +95,8 @@ class UserService {
     }
 
     // Get user by ID
-    public static function getUserById(int $id): ?User {
+    public static function getUserById(int $id): ?User
+    {
         self::init();
         $stmt = self::$db->prepare("SELECT * FROM users WHERE id = :id");
         $stmt->execute([':id' => $id]);
@@ -76,6 +112,7 @@ class UserService {
             $userData['token'] ?? ''
         );
 
+        
         // Fetch devices
         $stmtDevices = self::$db->prepare("SELECT * FROM devices WHERE user_id = :user_id");
         $stmtDevices->execute([':user_id' => $id]);
@@ -85,12 +122,14 @@ class UserService {
             $device = new Device($deviceData['ip'], $deviceData['port'], $deviceData['local_machine_token']);
             $user->addDevice($device);
         }
+            
 
         return $user;
     }
 
     // Login user
-    public static function login(string $usernameOrEmail, string $password): ?User {
+    public static function login(string $usernameOrEmail, string $password): ?User
+    {
         self::init();
         $stmt = self::$db->prepare("SELECT * FROM users WHERE username = :username OR email = :email");
         $stmt->execute([
@@ -101,17 +140,17 @@ class UserService {
         echo $userData['password'];
         echo "\n";
         echo $password;
-        
+
         if ($userData && password_verify($password, $userData['password'])) {
             return self::getUserById((int)$userData['id']);
         }
-    
+
         return null;
     }
-    
 
     // Generate a new token for user
-    public static function generateToken(int $userId): ?string {
+    public static function generateToken(int $userId): ?string
+    {
         self::init();
         $token = bin2hex(random_bytes(32)); // 64-character token
         $stmt = self::$db->prepare("UPDATE users SET token = :token WHERE id = :id");
@@ -122,7 +161,8 @@ class UserService {
     }
 
     // Get user by token
-    public static function getUserByToken(string $token): ?User {
+    public static function getUserByToken(string $token): ?User
+    {
         self::init();
         $stmt = self::$db->prepare("SELECT * FROM users WHERE token = :token");
         $stmt->execute([':token' => $token]);
@@ -134,7 +174,8 @@ class UserService {
     }
 
     // Logout user (remove token)
-    public static function logout(int $userId): bool {
+    public static function logout(int $userId): bool
+    {
         self::init();
         $stmt = self::$db->prepare("UPDATE users SET token = NULL WHERE id = :id");
         return $stmt->execute([':id' => $userId]);
