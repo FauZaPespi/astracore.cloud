@@ -2,7 +2,7 @@
 function consoleHero() {
     // Title
     console.log(
-        `%cAstroCore`,
+        `%cAstraCore`,
         `font-size: 3rem;
        font-weight: 900;
        background: linear-gradient(135deg, #ffffff, #10b981);

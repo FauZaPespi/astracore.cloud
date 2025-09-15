@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteBase /astracore.cloud/
+RewriteBase /astracore/
 
 # Allow static files (.js, .css, .png, .svg, etc.)
 RewriteCond %{REQUEST_URI} \.(js|css|png|jpg|jpeg|gif|svg|ico|webp|woff|woff2|ttf|eot)$ [NC]

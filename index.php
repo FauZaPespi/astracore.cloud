@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/db/Database.php';
 
-define('URL_ROOT', '/astracore.cloud');
+define('URL_ROOT', '/astracore');
 
 $requestUri = $_SERVER['REQUEST_URI'];
 $requestMethod = $_SERVER['REQUEST_METHOD'];
