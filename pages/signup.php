@@ -2,20 +2,21 @@
 require_once "class/UserService.php";
 require_once "class/SessionHandler.php";
 require_once "class/User.php";
+require_once "class/utils/LoggerOscar.php";
+
+if (isset($_SESSION["userId"])) {
+    $user = UserService::getUserById($_SESSION["userId"]);
+
+    if (!empty($user)) {
+        header("Location: ./dashboard/");
+    }
+}
 
 $diagnostics = [
     "username" => "",
     "email" => "",
     "password" => ""
 ];
-
-if (isset($_SESSION["userId"])) {
-    $user = UserService::getUserById($_SESSION["userId"]);
-
-    if (!empty($user)) {
-        header("Location: dashboard");
-    }
-}
 
 $username = "";
 $email = "";
@@ -43,10 +44,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     switch (UserService::checkForExistantCredentials($username, $email)) {
         case AVAILABLE:
             $user = UserService::createUser($username, $password, $email);
+            log_Oscar::Tlog("New user created with ID: $id ($username)", 'SUCCESS');
             SaveInSession("userId", $user->getId());
             break;
         case USERNAME_TAKEN:
             $diagnostics["username"] = $username . " is already taken.";
+            log_Oscar::Tlog($username . " is already taken.", 'WARNING');
             break;
         case EMAIL_TAKEN:
             $diagnostics["email"] = $email . " is already taken.";
@@ -79,9 +82,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     <!-- Navigation -->
     <nav class="navbar">
-        <a href="../astracore.cloud" class="logo">AstraCore</a>
+        <a href="../astracore" class="logo">AstraCore</a>
         <div class="nav-buttons">
-            <a href="login" class="nav-link">Login</a>
+            <a href="login" class="btn btn-ghost">Login</a>
         </div>
     </nav>
 

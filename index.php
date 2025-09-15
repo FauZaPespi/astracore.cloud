@@ -1,4 +1,5 @@
 <?php
+$start = microtime(true);
 require_once __DIR__ . '/db/Database.php';
 
 define('URL_ROOT', '/astracore');
@@ -24,12 +25,17 @@ elseif ($requestUri === URL_ROOT . '/' || $requestUri === URL_ROOT . '/index.php
     require_once __DIR__ . '/pages/devices.php';
 } elseif ($requestUri === URL_ROOT . '/signup') {
     require_once __DIR__ . '/pages/signup.php';
-} elseif ($requestUri === URL_ROOT . '/dashboard' || $requestUri === URL_ROOT . '/dashboard/' || strpos($requestUri, URL_ROOT . '/dashboard?tab=') === 0 || strpos($requestUri, URL_ROOT . '/dashboard/?tab=') === 0) {
+} elseif ($requestUri === URL_ROOT . '/login') {
+    require_once __DIR__ . '/pages/login.php';
+} elseif ($requestUri === URL_ROOT . '/dashboard' || $requestUri === URL_ROOT . '/dashboard/' || strpos($requestUri, URL_ROOT . '/dashboard?tab=') === 0 || strpos($requestUri, URL_ROOT . '/dashboard/?tab=') === 0 || strpos($requestUri, URL_ROOT . '/dashboard?action=') === 0 || strpos($requestUri, URL_ROOT . '/dashboard/?action=') === 0) {
     require_once __DIR__ . '/pages/dashboard/view.php';
-    exit();
 }
 // Fallback 404
 else {
     http_response_code(404);
     require_once __DIR__ . '/pages/404.php';
 }
+$end = microtime(true);
+require_once 'class/utils/LoggerOscar.php';
+log_Oscar::Tlog('Page generation time: ' . ($end - $start) . ' seconds', 'INFO');
+?>

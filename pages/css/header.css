@@ -44,3 +44,26 @@
     display: flex;
     gap: 1rem;
 }
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f9f9f9;
+    text-decoration: none;
+    position: relative;
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #0f9d66, #10b981);
+    transition: width 0.3s ease;
+}
+
+.logo:hover::after {
+    width: 100%;
+}

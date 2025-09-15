@@ -8,12 +8,10 @@ $isLogged = isset($_SESSION['user']);
 
 $isLogged = false; // Si le client est connecté
 //$_SESSION["id"] = 3;
-if (isset($_SESSION["id"])) {
-    $user = UserService::getUserById($_SESSION["id"]);
+if (isset($_SESSION["userId"])) {
+    $user = UserService::getUserById($_SESSION["userId"]);
 
-    $isLogged = !empty($user);
-    echo $user->getUsername();
-}
-else {
-    var_dump($_SESSION); 
+    if (empty($user)) {
+        header("Location: ../");
+    }
 }

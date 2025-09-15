@@ -8,17 +8,19 @@ $isLogged = isset($_SESSION['user']);
 
 $isLogged = false; // Si le client est connecté
 
-if (isset($_SESSION["id"])) {
-    $user = UserService::getUserById($_SESSION["id"]);
-
-    $isLogged = !empty($user);
+if (isset($_SESSION["userId"])) {
+    $user = UserService::getUserById($_SESSION["userId"]);
+    if (empty($user)) {
+        header("Location: ../");
+    }
 }
 
 // Logout handling
 if (isset($_GET['action']) && $_GET['action'] === 'logout') {
     session_destroy();
-    header("Location: /astracore.cloud/login");
-    exit();
+    $url = "../";
+    header('Location: ' . $url);
+    die();
 }
 ?>
 
@@ -55,13 +57,20 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
             case 'devices-add':
                 require_once __DIR__ . '/add_devices.php';
                 break;
+            case 'settings':
+                require_once __DIR__ . '/settings.php';
+                break;
+            case 'curious':
+                echo "<h1>You're curious, aren't you?</h1>";
+                break;
             default:
                 http_response_code(404);
                 echo "<h1>404 - Tab Not Found</h1>";
                 exit();
         }
     } else {
-        exit();
+        header("Location: ?tab=devices-list");
+        die();
     }
     ?>
 
@@ -88,3 +97,4 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
 </body>
 
 </html>
+

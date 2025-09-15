@@ -31,12 +31,6 @@ if (isset($_GET['tab'])) {
                 </a>
             </li>
             <li class="nav-item">
-                <a href="?tab=devices-remove" class="nav-link <?= ($currentTab == 'devices-remove') ? 'active' : '' ?>">
-                    <i class="bi bi-dash-circle"></i>
-                    <span>Remove Device</span>
-                </a>
-            </li>
-            <li class="nav-item">
                 <a href="?tab=settings" class="nav-link <?= ($currentTab == 'settings') ? 'active' : '' ?>">
                     <i class="bi bi-gear"></i>
                     <span>Settings</span>

@@ -1,0 +1,9 @@
+[ Logger_Oscar - 2025-09-15 14:07:28 | Category: INFO | URL: http://localhost/astracore/ | SessionID: 8d84767cdcf68d7806d60d087c83c611 ] Page generation time: 5.8889389038086E-5 seconds
+[ Logger_Oscar - 2025-09-15 14:07:35 | Category: INFO | URL: http://localhost/astracore/signup | SessionID: 8d84767cdcf68d7806d60d087c83c611 ] Page generation time: 5.6982040405273E-5 seconds
+[ Logger_Oscar - 2025-09-15 14:07:51 | Category: INFO | URL: http://localhost/astracore/login | SessionID: 4ade164c28bc103b903b1cc2aca45cdd ] Page generation time: 9.7990036010742E-5 seconds
+[ Logger_Oscar - 2025-09-15 14:07:53 | Category: INFO | URL: http://localhost/astracore/signup | SessionID: 4ade164c28bc103b903b1cc2aca45cdd ] Page generation time: 0.00013899803161621 seconds
+[ Logger_Oscar - 2025-09-15 14:07:56 | Category: INFO | URL: http://localhost/astracore/signup | SessionID: 8d84767cdcf68d7806d60d087c83c611 ] Page generation time: 0.10420989990234 seconds
+[ Logger_Oscar - 2025-09-15 14:08:14 | Category: INFO | URL: http://localhost/astracore/signup | SessionID: 8d84767cdcf68d7806d60d087c83c611 ] Page generation time: 0.10496306419373 seconds
+[ Logger_Oscar - 2025-09-15 14:08:16 | Category: INFO | URL: http://localhost/astracore/signup | SessionID: 8d84767cdcf68d7806d60d087c83c611 ] Page generation time: 0.097607851028442 seconds
+[ Logger_Oscar - 2025-09-15 14:08:18 | Category: SUCCESS | URL: http://localhost/astracore/signup | SessionID: 8d84767cdcf68d7806d60d087c83c611 ] New user created with ID:  (abcfdsagf)
+[ Logger_Oscar - 2025-09-15 14:08:18 | Category: INFO | URL: http://localhost/astracore/signup | SessionID: 8d84767cdcf68d7806d60d087c83c611 ] Page generation time: 0.29378080368042 seconds

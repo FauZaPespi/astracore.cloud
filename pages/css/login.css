@@ -4,15 +4,6 @@
     box-sizing: border-box;
 }
 
-:root {
-    --green-primary: #0f9d66;
-    --green-accent: #10b981;
-    --white: #f9f9f9;
-    --gray-light: #e9e9e9;
-    --gray-dark: #2F343F;
-    --black: #0a0a0a;
-}
-
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     background: #0a0a0a;
@@ -170,7 +161,7 @@ body {
     position: absolute;
     top: -50%;
     left: -50%;
-    width: 210%;
+    width: 200%;
     height: 200%;
     background: conic-gradient(from 0deg, transparent, rgba(15, 157, 102, 0.1), transparent);
     animation: cardRotate 10s linear infinite;
@@ -260,6 +251,24 @@ body {
         0 0 20px rgba(15, 157, 102, 0.2);
     background: rgba(249, 249, 249, 0.08);
     transform: translateY(-1px);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.checkbox {
+    width: 18px;
+    height: 18px;
+    accent-color: #0f9d66;
+}
+
+.checkbox-label {
+    color: #e9e9e9;
+    font-size: 0.875rem;
+    cursor: pointer;
 }
 
 /* Buttons */
@@ -384,6 +393,11 @@ body {
     margin-top: 2rem;
     padding-top: 1.5rem;
     border-top: 1px solid rgba(233, 233, 233, 0.1);
+}
+
+.forgot-password {
+    text-align: center;
+    margin: 1rem 0;
 }
 
 /* Responsive */

@@ -34,7 +34,7 @@ if (isset($_SESSION["userId"])) {
             <li><a href="#organisation">Organisation</a></li>
             <li><a href="#docs">Docs</a></li>
         </ul>
-        <div class="nav-buttons"> <a href="" class="btn btn-ghost">Login</a> <a href="signup" class="btn btn-primary">Get Started</a> </div>
+        <div class="nav-buttons"> <?= !$isLogged ? '<a href="login" class="btn btn-ghost">Login</a>' : "" ?> <a href="<?= $isLogged ? "dashboard/" : "signup" ?>" class="btn btn-primary"><?= $isLogged ? "Dashboard" : "Get Started" ?></a> </div>
     </nav>
 
     <!-- Hero Section -->
@@ -47,7 +47,7 @@ if (isset($_SESSION["userId"])) {
                 Control your entire infrastructure from a single, powerful interface.
             </p>
             <div class="hero-buttons d-flex justify-content-center gap-2 flex-wrap">
-                <a href="#" class="btn btn-primary">Get Started</a>
+                <a href="<?= $isLogged ? "dashboard/" : "signup" ?>" class="btn btn-primary"><?= $isLogged ? "Dashboard" : "Get Started" ?></a>
                 <a href="#" class="btn btn-outline">Learn More</a>
             </div>
         </div>

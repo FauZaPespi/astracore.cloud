@@ -1,6 +1,17 @@
+<?php
+require_once "class/UserService.php";
+require_once "class/SessionHandler.php";
+require_once "class/User.php";
+
+$isLogged = false;
+
+if (isset($_SESSION["userId"])) {
+    $user = UserService::getUserById($_SESSION["userId"]);
+    $isLogged = !empty($user);
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -73,10 +84,7 @@
             <li><a href="#">Organisation</a></li>
             <li><a href="#">Docs</a></li>
         </ul>
-        <div class="nav-buttons">
-            <a href="login" class="btn btn-ghost">Login</a>
-            <a href="signup" class="btn btn-primary">Get Started</a>
-        </div>
+        <div class="nav-buttons"> <?= !$isLogged ? '<a href="login" class="btn btn-ghost">Login</a>' : "" ?> <a href="<?= $isLogged ? "dashboard/" : "signup" ?>" class="btn btn-primary"><?= $isLogged ? "Dashboard" : "Get Started" ?></a> </div>
     </nav>
 
     <!-- 404 Section -->
