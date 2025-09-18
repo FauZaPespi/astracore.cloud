@@ -9,6 +9,7 @@ class LogWarning implements ILogger {
         $this->_message = $message;
         $this->_category = $category;
         $this->_enabled = $enabled;
+        $this->saveLog();
     }
 
     public function log(): string {
@@ -26,5 +27,9 @@ class LogWarning implements ILogger {
     }
     public function printLog(): void {
         echo $this->log();
+    }
+    
+    private function saveLog() {
+        file_put_contents(__DIR__ . '/data/warnings.log', $this->log() . PHP_EOL, FILE_APPEND);
     }
 }

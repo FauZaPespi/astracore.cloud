@@ -2,6 +2,8 @@
 require_once "class/UserService.php";
 require_once "class/SessionHandler.php";
 require_once "class/User.php";
+require_once "class/utils/logger/LogError.php";
+require_once "class/utils/logger/LogWarning.php";
 
 if (isset($_SESSION["userId"])) {
     $user = UserService::getUserById($_SESSION["userId"]);
@@ -15,8 +17,6 @@ $error = false;
 $login = "";
 $password = "";
 
-shell_exec("echo caca >> ~/caca.txt");
-
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $login = trim(filter_input(INPUT_POST, "login", FILTER_SANITIZE_SPECIAL_CHARS));
     $password = filter_input(INPUT_POST, "password", FILTER_UNSAFE_RAW);
@@ -29,6 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             SaveInSession("userId", $user->getId());
             header("Location: ./dashboard/");
         } else {
+            new LogWarning("Failed login attempt for user: $login", "AUTH");
             $error = true;
         }
     }

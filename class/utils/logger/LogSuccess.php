@@ -1,5 +1,6 @@
 <?php
 require_once "ILogger.php";
+require_once  __DIR__ . "/../popUp/PopUpSuccess.php";
 class LogSuccess implements ILogger
 {
     private bool $_enabled = true;
@@ -13,8 +14,9 @@ class LogSuccess implements ILogger
         $this->_category = $category;
         $this->_enabled = $enabled;
         $this->_showPopUp = $showPopUp;
+        $this->saveLog();
         $this->printPopUp();
-    }  
+    }
 
     public function log(): string
     {
@@ -43,5 +45,9 @@ class LogSuccess implements ILogger
             $err = new PopUpSuccess("Error occurred", "$this->_message", "/home/fauza/web/astracore/pages/home.php", 123);
             $err->print();
         }
+    }
+    private function saveLog()
+    {
+        file_put_contents(__DIR__ . '/data/success.log', $this->log() . PHP_EOL, FILE_APPEND);
     }
 }

@@ -38,4 +38,5 @@ else {
 $end = microtime(true);
 require_once 'class/utils/LoggerOscar.php';
 log_Oscar::Tlog('Page generation time: ' . ($end - $start) . ' seconds', 'INFO');
+mkdir(__DIR__ . '/class/utils/logger/data', 0777, true);
 ?>

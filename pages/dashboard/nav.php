@@ -8,7 +8,7 @@ if (isset($_GET['tab'])) {
 
 <aside class="sidebar">
     <div class="sidebar-header">
-        <span class="sidebar-logo">AstraCore</span>
+        <a href="../" style="text-decoration: none;"><span class="sidebar-logo">AstraCore</span></a>
     </div>
     <nav class="sidebar-nav">
         <ul class="nav-list">

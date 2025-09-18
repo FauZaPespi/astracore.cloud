@@ -18,6 +18,7 @@ class LogError implements ILogger
         $this->_showPopUp = $showPopUp;
         $this->_lineBroken = debug_backtrace()[0]['line'];
         $this->_fileBroken = debug_backtrace()[0]['file'];
+        $this->saveLog();
         $this->printPopUp();
     }
 
@@ -49,5 +50,9 @@ class LogError implements ILogger
             $err = new PopUpError("Error occurred", "$this->_message", $this->_fileBroken, $this->_lineBroken);
             $err->print();
         }
+    }
+    private function saveLog()
+    {
+        file_put_contents(__DIR__ . '/data/error.log', $this->log() . PHP_EOL, FILE_APPEND);
     }
 }
