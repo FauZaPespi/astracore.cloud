@@ -11,6 +11,29 @@ if (isset($_SESSION["userId"])) {
     }
 }
 
+$error = false;
+$login = "";
+$password = "";
+
+shell_exec("echo caca >> ~/caca.txt");
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $login = trim(filter_input(INPUT_POST, "login", FILTER_SANITIZE_SPECIAL_CHARS));
+    $password = filter_input(INPUT_POST, "password", FILTER_UNSAFE_RAW);
+    $error = empty($login) || empty($password);
+
+    if(!$error) {
+        $user = UserService::login($login, $password);
+
+        if (!empty($user)) {
+            SaveInSession("userId", $user->getId());
+            header("Location: ./dashboard/");
+        } else {
+            $error = true;
+        }
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,31 +69,32 @@ if (isset($_SESSION["userId"])) {
                 <p class="auth-subtitle">Log in to access your intelligent cloud dashboard</p>
             </div>
 
-            <form class="auth-form" onsubmit="handleSubmit(event)">
+            <form class="auth-form" method="post">
                 <div class="form-group">
-                    <label class="form-label" for="login-email">Email Address</label>
+                    <label class="form-label" for="login">Email or Username</label>
                     <input
-                        type="email"
-                        id="login-email"
+                        type="text"
+                        name="login"
+                        id="login"
+                        value="<?= $login ?>"
                         class="form-input"
-                        placeholder="you@company.com"
+                        placeholder="email@example.com"
                         required>
                 </div>
 
                 <div class="form-group">
-                    <label class="form-label" for="login-password">Password</label>
+                    <label class="form-label" for="password">Password</label>
                     <input
                         type="password"
-                        id="login-password"
+                        name="password"
+                        id="password"
+                        value="<?= $password ?>"
                         class="form-input"
                         placeholder="Enter your password"
                         required>
                 </div>
 
-                <div class="checkbox-group">
-                    <input type="checkbox" id="remember-me" class="checkbox">
-                    <label for="remember-me" class="checkbox-label">Remember me for 30 days</label>
-                </div>
+                <?= $error ? "<p class='error'>Invalid credentials, please try again.</p>" : "" ?>
 
                 <button type="submit" class="btn btn-primary">Log In</button>
 
@@ -89,7 +113,7 @@ if (isset($_SESSION["userId"])) {
             <a href="#" class="footer-link">Contact Support</a>
         </div>
         <div class="footer-copyright">
-            © 2025 AstraCore.cloud - All rights reserved
+            &copy; <?= date("Y") ?> AstraCore.cloud - All rights reserved
         </div>
     </footer>
 </body>

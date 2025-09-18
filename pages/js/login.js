@@ -1,23 +1,3 @@
-// Form submission handler
-function handleSubmit(event) {
-    event.preventDefault();
-    const form = event.target;
-
-    // Add loading state
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Signing In...';
-    submitBtn.disabled = true;
-
-    // Simulate API call
-    setTimeout(() => {
-        alert('Login successful! Welcome back to AstraCore.');
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-        // In a real app, redirect to dashboard
-    }, 2000);
-}
-
 // Enhanced input focus effects
 document.querySelectorAll('.form-input').forEach(input => {
     input.addEventListener('focus', () => {

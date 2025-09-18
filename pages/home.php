@@ -1,7 +1,12 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 require_once "class/UserService.php";
 require_once "class/SessionHandler.php";
 require_once "class/User.php";
+require_once "class/utils/logger/LogError.php";
+require_once "class/utils/logger/LogSuccess.php";
 
 $isLogged = false;
 
@@ -27,6 +32,10 @@ if (isset($_SESSION["userId"])) {
 </head>
 
 <body>
+    <?php
+    //$logError = new LogError("Test error log", true);
+    $successLog = new LogSuccess("Test success log", true);
+    ?>
     <!-- Navbar -->
     <nav class="navbar"> <a href="#" class="logo">AstraCore</a>
         <ul class="nav-links">

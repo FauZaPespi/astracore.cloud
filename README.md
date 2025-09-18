@@ -19,3 +19,25 @@
 - **UI dashboard** : Conception de tous les components utilisé a l'aide de classe PHP
 
 ---
+
+## Date : 18 Septembre 2025
+
+
+## Contributions de Maksym
+
+### Module d'Authentification
+- **Page de login** : Implémentation de fonctionnalité de login.
+- **Receiver** : Conception d'un daemon qui recevra les commandes depuis notre application.
+- **Ajout des logs** : Inclure les logs dans tout les fichier au bon endroit
+
+---
+
+## Contributions d'Oscar
+
+### Log
+- **Classe des Logs** : Conception et intégration des classes log telle que LogSuccess LogError etc...
+- **Classes des popups** : Conception de tous les components comme popup pour les messages d'erreur, succès 
+- **Dashboard** : Avancement de la dashboard à l'aide de authentification faite par maksym plus tôt
+
+---
+

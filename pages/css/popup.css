@@ -1,0 +1,144 @@
+/* Overlay */
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 5vh;
+    font-family: system-ui, sans-serif;
+}
+
+/* Popup container */
+.popup {
+    width: 90%;
+    max-width: 800px;
+    background: #1a1a1a;
+    border: 2px solid;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    animation: fadeIn 0.3s ease;
+    color: #f8f9fa;
+}
+
+/* Header */
+.popup-header {
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.popup-close {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* Body */
+.popup-body {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+}
+
+/* Variants */
+.popup-error {
+    border-color: #dc3545;
+}
+.popup-error-header {
+    background: #dc3545;
+}
+
+.popup-success {
+    border-color: #28a745;
+}
+.popup-success-header {
+    background: #28a745;
+}
+
+/* Anim */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* Fullscreen dark backdrop */
+.error-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 5vh;
+    font-family: system-ui, sans-serif;
+}
+
+/* Card container */
+.error-card {
+    width: 90%;
+    max-width: 800px;
+    background: #1a1a1a;
+    border: 2px solid #dc3545;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    animation: fadeIn 0.3s ease;
+    color: #f8f9fa;
+}
+
+/* Header */
+.error-header {
+    background: #dc3545;
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.error-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.btn-close-white {
+    filter: invert(1);
+}
+
+/* Body */
+.error-body {
+    padding: 1rem 1.5rem;
+}
+
+.error-message {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #f8d7da;
+    white-space: pre-wrap;
+}
+
+.error-meta {
+    font-size: 0.9rem;
+    color: #adb5bd;
+    border-top: 1px solid #333;
+    padding-top: 0.75rem;
+}
+
+/* Anim */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
