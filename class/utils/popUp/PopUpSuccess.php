@@ -9,11 +9,11 @@ class PopUpSuccess extends PopUp
         <div class="popup-overlay" id="popup-overlay">
             <div class="popup popup-success">
                 <div class="popup-header popup-success-header">
-                    <h2 class="popup-title"><?php echo htmlspecialchars($this->_title); ?></h2>
+                    <h2 class="popup-title"><?= htmlspecialchars($this->_title); ?></h2>
                     <button class="popup-close" onclick="document.getElementById('popup-overlay').remove();">&times;</button>
                 </div>
                 <div class="popup-body">
-                    <p><?php echo nl2br(htmlspecialchars($this->_message)); ?></p>
+                    <p><?= nl2br(htmlspecialchars($this->_message)); ?></p>
                 </div>
             </div>
         </div>

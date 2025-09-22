@@ -44,16 +44,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     switch (UserService::checkForExistantCredentials($username, $email)) {
         case AVAILABLE:
             $user = UserService::createUser($username, $password, $email);
-            log_Oscar::Tlog("New user created with ID: $id ($username)", 'SUCCESS');
+            new LogSuccess("New user created with ID: $id ($username)", 'SUCCESS');
             SaveInSession("userId", $user->getId());
             header("Location: ./dashboard/");
             break;
         case USERNAME_TAKEN:
             $diagnostics["username"] = $username . " is already taken.";
-            log_Oscar::Tlog($username . " is already taken.", 'WARNING');
+            new LogWarning($username . " is already taken.", 'WARNING');
             break;
         case EMAIL_TAKEN:
             $diagnostics["email"] = $email . " is already taken.";
+            new LogWarning($email . " is already taken.", 'WARNING');
             break;
         default:
             $diagnostics["password"] = "Server-side exception occured. Please, try again later.";

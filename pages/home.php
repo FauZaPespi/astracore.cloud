@@ -46,7 +46,7 @@ if (isset($_SESSION["userId"])) {
         </ul>
         <div class="nav-buttons"> <?= !$isLogged ? '<a href="login" class="btn btn-ghost">Login</a>' : "" ?> <a href="<?= $isLogged ? "dashboard/" : "signup" ?>" class="btn btn-primary"><?= $isLogged ? "Dashboard" : "Get Started" ?></a> </div>
     </nav>
-
+    
     <!-- Hero Section -->
     <section class="hero d-flex flex-column justify-content-center text-center">
         <div class="hero-bg"></div>

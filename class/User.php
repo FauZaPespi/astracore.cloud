@@ -1,7 +1,5 @@
 <?php
-
-// filepath: Z:/MAMP/htdocs/astracore.cloud/api/class/User.php
-
+require_once "Device.php";
 class User {
     private int $id;
     private string $username;
@@ -62,7 +60,7 @@ class User {
     }
 
     // Add a device to the user's device list
-    public function addDevice($device): void {
+    public function addDevice(Device $device): void {
         $this->devices[] = $device;
     }
 

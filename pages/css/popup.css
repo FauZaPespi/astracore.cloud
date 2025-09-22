@@ -19,7 +19,7 @@
     border: 2px solid;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     animation: fadeIn 0.3s ease;
     color: #f8f9fa;
 }
@@ -46,6 +46,69 @@
     line-height: 1;
 }
 
+/* Popup container - alternative style */
+.popup-alt {
+    width: 90%;
+    max-width: 600px;
+    background: #2f2326;
+    border: 1.5px solid rgba(255, 107, 107, 0.2);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(20, 20, 40, 0.7);
+    animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    color: #e9ecef;
+}
+
+.overlay-alt {
+    background: none;
+    justify-content: flex-end;
+    margin-right: 50px;
+}
+
+/* Header - alternative */
+.popup-alt-header {
+    background: #ffffff0e;
+    padding: 0.4rem 0rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.popup-alt-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    background: none;
+    color: #f1f3f8;
+    letter-spacing: 0.01em;
+}
+
+.popup-alt-header p {
+    color: #ff6b6b;
+    margin: 0 0 0 0;
+    background: none;
+}
+
+.popup-alt-close {
+    background: none;
+    border: none;
+    color: #adb5bd;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: color 0.2s;
+    line-height: 1;
+}
+
+.popup-alt-close:hover {
+    color: #fff;
+}
+
+/* Body - alternative */
+.popup-alt-body {
+    padding: 1.25rem 1.75rem;
+    font-size: 1.05rem;
+    color: #cfd8e3;
+}
+
 /* Body */
 .popup-body {
     padding: 1rem 1.5rem;
@@ -56,6 +119,7 @@
 .popup-error {
     border-color: #dc3545;
 }
+
 .popup-error-header {
     background: #dc3545;
 }
@@ -63,14 +127,22 @@
 .popup-success {
     border-color: #28a745;
 }
+
 .popup-success-header {
     background: #28a745;
 }
 
 /* Anim */
 @keyframes fadeIn {
-    from {opacity: 0; transform: translateY(-10px);}
-    to {opacity: 1; transform: translateY(0);}
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Fullscreen dark backdrop */
@@ -94,7 +166,7 @@
     border: 2px solid #dc3545;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     animation: fadeIn 0.3s ease;
     color: #f8f9fa;
 }
@@ -139,6 +211,13 @@
 
 /* Anim */
 @keyframes fadeIn {
-    from {opacity: 0; transform: translateY(-10px);}
-    to {opacity: 1; transform: translateY(0);}
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
