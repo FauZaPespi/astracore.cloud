@@ -41,3 +41,21 @@
 
 ---
 
+## Date : 22 Septembre 2025
+
+
+## Contributions de Maksym
+
+- **Notification UI** : Implémentation de fonctionnalité de notifications.
+- **Backend Devices** : Conception de la logique du backend pour les devices.
+
+---
+
+## Contributions d'Oscar
+
+### Log
+- **Log Manager** : Conception d'une page pour les admins pour gérée les logs
+- **Dashboard** : Avancement de la dashboard à l'aide des devices crée par maksym plus tôt
+
+---
+
