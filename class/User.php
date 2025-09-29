@@ -5,15 +5,13 @@ class User {
     private string $username;
     private string $password;
     private string $email;
-    private string $token;
     private array $devices; // Array to hold Device objects
 
-    public function __construct(int $id, string $username, string $password, string $email, string $token = '') {
+    public function __construct(int $id, string $username, string $password, string $email) {
         $this->id = $id;
         $this->username = $username;
         $this->password = $password;
         $this->email = $email;
-        $this->token = $token;
         $this->devices = [];
     }
 
@@ -34,10 +32,6 @@ class User {
         return $this->email;
     }
 
-    public function getToken(): string {
-        return $this->token;
-    }
-
     public function getDevices(): array {
         return $this->devices;
     }
@@ -53,10 +47,6 @@ class User {
 
     public function setEmail(string $email): void {
         $this->email = $email;
-    }
-
-    public function setToken(string $token): void {
-        $this->token = $token;
     }
 
     // Add a device to the user's device list
@@ -87,7 +77,6 @@ class User {
             'id' => $this->id,
             'username' => $this->username,
             'email' => $this->email,
-            'token' => $this->token,
             'devices' => array_map(function($device) {
                 return method_exists($device, 'toArray') ? $device->toArray() : $device;
             }, $this->devices),

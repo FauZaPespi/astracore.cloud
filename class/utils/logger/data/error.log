@@ -1,3 +1,9 @@
 [ERROR] This should not be reached. | File: /home/fauza/web/astracore/index.php | Line: 110 | Code: 
 [ERROR] This should not be reached. | File: /home/fauza/web/astracore/index.php | Line: 110 | Code: 
 [ERROR] Class "log_Oscar" not found | File: /home/fauza/web/astracore/pages/signup.php | Line: 47 | Code: 
+[ERROR] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'local_machine_token' in 'where clause' | File: /home/fauza/web/astracore/class/UserService.php | Line: 187 | Code: 42S22
+[ERROR] Call to a member function getDevices() on null | File: /home/fauza/web/astracore/pages/dashboard/devices.php | Line: 44 | Code: 
+[ERROR] Call to a member function getDevices() on null | File: /home/fauza/web/astracore/pages/dashboard/devices.php | Line: 44 | Code: 
+[ERROR] Call to a member function getDevices() on null | File: /home/fauza/web/astracore/pages/dashboard/devices.php | Line: 44 | Code: 
+[ERROR] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Astracore.users' doesn't exist | File: /home/fauza/web/astracore/class/UserService.php | Line: 133 | Code: 42S02
+[ERROR] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Astracore.users' doesn't exist | File: /home/fauza/web/astracore/class/UserService.php | Line: 133 | Code: 42S02

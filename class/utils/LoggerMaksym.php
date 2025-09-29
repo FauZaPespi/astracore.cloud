@@ -46,4 +46,5 @@ class LogMaksym {
     {
         return "Date : {$this->_date} Message : {$this->_message}";
     }
+
 }

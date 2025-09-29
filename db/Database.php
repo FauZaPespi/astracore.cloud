@@ -4,8 +4,8 @@ class Database {
     private \PDO $connection;
 
     private function __construct() {
-        $host = 'node.fauza.xyz';
-        $port = 25576;
+        $host = '127.0.0.1';
+        $port = 3306;
         $db   = 'Astracore';
         $user = 'remoteuser';
         $pass = 'Super123'; //Dev-only password.

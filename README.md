@@ -59,3 +59,20 @@
 
 ---
 
+## Date : 29 Septembre 2025
+
+
+## Contributions de Maksym
+
+- **Devices service** : Implémentation de fonctionnalité de tout les services qui contacte le reciever.
+
+---
+
+## Contributions d'Oscar
+
+### Log
+- **Réparation base de donnée** : La base de donnée a été reinitialisé
+- **Dashboard** : Avancement de la dashboard partie modules
+
+---
+

@@ -153,11 +153,11 @@ if (isset($_GET['popup']) && $_GET['popup'] === 'form_incomplete') {
                                     </div>
 
                                     <div class="d-flex gap-2">
-                                        <button type="submit" class="btn btn-primary">
+                                        <button type="submit" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Add the device to your account">
                                             <i class="bi bi-plus-circle me-1"></i>
                                             Add Device
                                         </button>
-                                        <button type="button" class="btn btn-outline-secondary" onclick="testConnection()">
+                                        <button type="button" class="btn btn-outline-secondary" onclick="testConnection()" data-toggle="tooltip" data-placement="top" title="Test the connection to your device">
                                             <i class="bi bi-wifi me-1"></i>
                                             Test Connection
                                         </button>
@@ -207,7 +207,7 @@ if (isset($_GET['popup']) && $_GET['popup'] === 'form_incomplete') {
                                         Downloads
                                     </h6>
                                     <div class="d-grid gap-2">
-                                        <a href="/astracore/download?platform=linux" class="btn btn-outline-secondary btn-sm">
+                                        <a href="/astracore/download?platform=linux" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Download the Linux agent">
                                             <i class="bi bi-tux me-1"></i>
                                             Linux Agent
                                         </a>
@@ -236,17 +236,19 @@ if (isset($_GET['popup']) && $_GET['popup'] === 'form_incomplete') {
                                 <div class="card-body">
                                     <div class="devices-summary">
                                         <?php foreach ($user->getDevices() as $device): ?>
-                                            <div class="device-item d-flex justify-content-between align-items-center mb-2 p-2 rounded">
+                                            <div class="device-item d-flex justify-content-between align-items-center mb-2 p-2 rounded" data-toggle="tooltip" data-placement="top" title="The token is hidden for security">
                                                 <div class="device-info d-flex align-items-center">
+                                                    <span class="invisible">..</span>
                                                     <i class="bi bi-pc-display text-success me-2"></i>
+                                                    <span class="invisible">....</span>
                                                     <div>
-                                                        <strong><?= htmlspecialchars($device->getIp()) ?></strong>
-                                                        <small class="text-muted d-block">
-                                                            Token: <?= htmlspecialchars(substr($device->getLocalMachineToken(), 0, 16)) ?>...
+                                                        <strong class="text-white">IP: <?= htmlspecialchars($device->getIp()) ?></strong>
+                                                        <small class="text-white d-block">
+                                                            Token: <span class="text-secondary"><?= str_repeat("*", strlen(htmlspecialchars(substr($device->getLocalMachineToken(), 0, 255))))  ?></span>
                                                         </small>
                                                     </div>
                                                 </div>
-                                                <span class="badge bg-success">
+                                                <span class="badge bg-success" data-toggle="tooltip" data-placement="top" title="Server correctly connected">
                                                     <i class="bi bi-check-circle me-1"></i>
                                                     Connected
                                                 </span>
@@ -255,7 +257,7 @@ if (isset($_GET['popup']) && $_GET['popup'] === 'form_incomplete') {
                                     </div>
 
                                     <div class="text-center mt-3">
-                                        <a href="dashboard/?tab=devices-list" class="btn btn-outline-primary">
+                                        <a href="dashboard/?tab=devices-list" class="btn btn-outline-secondary">
                                             <i class="bi bi-list-ul me-1"></i>
                                             View all devices
                                         </a>
@@ -331,72 +333,6 @@ if (isset($_GET['popup']) && $_GET['popup'] === 'form_incomplete') {
     });
 </script>
 
-<style>
-    .device-status {
-        background: rgba(15, 157, 102, 0.05);
-        border: 1px solid rgba(15, 157, 102, 0.2);
-        border-radius: 8px;
-        padding: 1rem;
-    }
-
-    .status-indicator {
-        display: flex;
-        align-items: center;
-        font-weight: 500;
-    }
-
-    .instruction-step {
-        display: flex;
-        gap: 1rem;
-        align-items: flex-start;
-    }
-
-    .step-number {
-        background: linear-gradient(135deg, var(--green-primary), var(--green-accent));
-        color: white;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 600;
-        font-size: 0.875rem;
-        flex-shrink: 0;
-    }
-
-    .step-content strong {
-        color: var(--white);
-        font-size: 0.95rem;
-    }
-
-    .step-content p {
-        color: var(--gray-light);
-        font-size: 0.875rem;
-        margin: 0.25rem 0 0 0;
-        line-height: 1.4;
-    }
-
-    .download-section {
-        border-top: 1px solid rgba(233, 233, 233, 0.1);
-        padding-top: 1rem;
-    }
-
-    .device-item {
-        background: rgba(15, 157, 102, 0.05);
-        border: 1px solid rgba(15, 157, 102, 0.1);
-        transition: all 0.3s ease;
-    }
-
-    .device-item:hover {
-        background: rgba(15, 157, 102, 0.1);
-        border-color: rgba(15, 157, 102, 0.2);
-    }
-
-    .devices-summary {
-        max-height: 200px;
-        overflow-y: auto;
-    }
-</style>
+<link rel="stylesheet" href="/astracore/pages/css/add_devices.css">
 
 <link rel="stylesheet" href="/astracore/pages/css/settings.css">

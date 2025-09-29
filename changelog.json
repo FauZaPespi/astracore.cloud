@@ -1,0 +1,13 @@
+{
+  "25.09.2025": [
+    "Added tooltips to buttons and status indicators for better user guidance.",
+    "Updated sidebar logo link to point to the correct root URL.",
+    "Enhanced device connection status display with tooltips.",
+    "Improved navigation buttons for adding and viewing devices with clearer icons and labels.",
+    "Fixed minor UI inconsistencies in the dashboard pages."
+  ],
+  "15.09.2025": [
+    "Initial release of AstraCore web application.",
+    "Features include user authentication, device management, and a responsive dashboard."
+  ]
+}

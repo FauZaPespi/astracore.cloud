@@ -34,11 +34,12 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
     <title>AstraCore.cloud - One Website. Thousands of Machines. Full Control.</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="../pages/css/home.css">
-    <link rel="stylesheet" href="../pages/css/header.css">
-    <link rel="stylesheet" href="../pages/css/footer.css">
-    <link rel="stylesheet" href="../pages/css/utils.css">
-    <link rel="stylesheet" href="../pages/css/nav.css">
+    <base href="/astracore/">
+    <link rel="stylesheet" href="pages/css/home.css">
+    <link rel="stylesheet" href="pages/css/header.css">
+    <link rel="stylesheet" href="pages/css/footer.css">
+    <link rel="stylesheet" href="pages/css/utils.css">
+    <link rel="stylesheet" href="pages/css/nav.css">
     <link rel="icon" type="image/x-icon" href="pages/assets/AstraCore.ico">
 </head>
 

@@ -88,8 +88,8 @@ if (strpos($requestUri, URL_ROOT . '/auth/login') !== false) {
 // Pages
 elseif ($requestUri === URL_ROOT . '/' || $requestUri === URL_ROOT . '/index.php') {
     require_once __DIR__ . '/pages/home.php';
-} elseif ($requestUri === URL_ROOT . '/devices') {
-    require_once __DIR__ . '/pages/devices.php';
+} elseif ($requestUri === URL_ROOT . '/doc' || $requestUri === URL_ROOT . '/doc/') {
+    require_once __DIR__ . '/pages/documentation.php';
 } elseif ($requestUri === URL_ROOT . '/signup') {
     require_once __DIR__ . '/pages/signup.php';
 } elseif ($requestUri === URL_ROOT . '/login') {

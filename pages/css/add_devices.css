@@ -1,0 +1,65 @@
+.device-status {
+        background: rgba(15, 157, 102, 0.05);
+        border: 1px solid rgba(15, 157, 102, 0.2);
+        border-radius: 8px;
+        padding: 1rem;
+    }
+
+    .status-indicator {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+    }
+
+    .instruction-step {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .step-number {
+        background: linear-gradient(135deg, var(--green-primary), var(--green-accent));
+        color: white;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 0.875rem;
+        flex-shrink: 0;
+    }
+
+    .step-content strong {
+        color: var(--white);
+        font-size: 0.95rem;
+    }
+
+    .step-content p {
+        color: var(--gray-light);
+        font-size: 0.875rem;
+        margin: 0.25rem 0 0 0;
+        line-height: 1.4;
+    }
+
+    .download-section {
+        border-top: 1px solid rgba(233, 233, 233, 0.1);
+        padding-top: 1rem;
+    }
+
+    .device-item {
+        background: rgba(15, 157, 102, 0.05);
+        border: 1px solid rgba(15, 157, 102, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .device-item:hover {
+        background: rgba(15, 157, 102, 0.1);
+        border-color: rgba(15, 157, 102, 0.2);
+    }
+
+    .devices-summary {
+        max-height: 200px;
+        overflow-y: auto;
+    }
