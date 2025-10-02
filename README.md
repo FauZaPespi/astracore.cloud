@@ -70,9 +70,26 @@
 
 ## Contributions d'Oscar
 
-### Log
 - **Réparation base de donnée** : La base de donnée a été reinitialisé
 - **Dashboard** : Avancement de la dashboard partie modules
+
+---
+
+## Date : 02 Octobre 2025
+
+
+## Contributions de Maksym
+
+- **Reciever** : Mettre le reciever en ligne
+- **Devices** : Refactoring et amélioration coté device
+
+---
+
+## Contributions d'Oscar
+
+- **Résolution des problèmes avec git** : le git du projet à été corrompu
+- **Modules** : Il faut modifié la base de donnée pour ajouter une table module et adapté dans le code
+- **Dashboard** : Avancement de la dashboard partie modules (frontend)
 
 ---
 
