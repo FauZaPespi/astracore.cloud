@@ -42,7 +42,7 @@ if (isset($_SESSION["userId"])) {
         <ul class="nav-links">
             <li><a href="#overview">Overview</a></li>
             <li><a href="#organisation">Organisation</a></li>
-            <li><a href="#docs">Docs</a></li>
+            <li><a href="./doc">Docs</a></li>
         </ul>
         <div class="nav-buttons"> <?= !$isLogged ? '<a href="login" class="btn btn-ghost">Login</a>' : "" ?> <a href="<?= $isLogged ? "dashboard/" : "signup" ?>" class="btn btn-primary"><?= $isLogged ? "Dashboard" : "Get Started" ?></a> </div>
     </nav>
@@ -105,14 +105,14 @@ if (isset($_SESSION["userId"])) {
                     <div class="team-card">
                         <img class="team-avatar" src="https://api.fauza.dev/discord/pfp.php" alt="FauZa" onerror="this.onerror=null; this.src='https://placehold.co/1200x1200/1A1F2C/9b87f5?text=FZ';" draggable="false">
                         <h4>FauZa</h4>
-                        <p>Full-Stack Developer, Co-Founder</p>
+                        <p>Front-End Developer, Co-Founder</p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="team-card">
                         <img class="team-avatar" src="https://cdn.maksym.ch/pfp" alt="NeoTech" onerror="this.onerror=null; this.src='https://placehold.co/1200x1200/1A1F2C/9b87f5?text=NT';" draggable="false">
                         <h4>NeoTech</h4>
-                        <p>Full-Stack Developer, Co-Founder</p>
+                        <p>Back-End Developer, Co-Founder</p>
                     </div>
                 </div>
             </div>

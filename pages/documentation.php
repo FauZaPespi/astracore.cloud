@@ -71,7 +71,7 @@ if (isset($_SESSION["userId"])) {
         <ul class="nav-links">
             <li><a href="#docs">Docs</a></li>
             <li><a href="#changelog">Changelog</a></li>
-            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="nav-buttons">
             <?= !$isLogged ? '<a href="login" class="btn btn-ghost">Login</a>' : "" ?>

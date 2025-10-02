@@ -33,3 +33,100 @@
 [ERROR] count(): Argument #1 ($value) must be of type Countable|array, null given | File: /home/fauza/web/astracore/pages/dashboard/devices.php | Line: 44 | Code: 
 [ERROR] Call to undefined method ModuleService::getAllModules() | File: /home/fauza/web/astracore/pages/dashboard/modules.php | Line: 42 | Code: 
 [ERROR] Call to undefined method ModuleService::getAllModules() | File: /home/fauza/web/astracore/pages/dashboard/modules.php | Line: 42 | Code: 
+[ERROR] Module::__construct(): Argument #6 ($lastExecuted) must be of type DateTime, null given, called in /home/fauza/web/astracore/class/ModuleService.php on line 105 | File: /home/fauza/web/astracore/class/Module.php | Line: 15 | Code: 
+[ERROR] Module::__construct(): Argument #6 ($lastExecuted) must be of type DateTime, null given, called in /home/fauza/web/astracore/class/ModuleService.php on line 105 | File: /home/fauza/web/astracore/class/Module.php | Line: 15 | Code: 
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] SQLSTATE[HY093]: Invalid parameter number | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 100 | Code: HY093
+[ERROR] Too few arguments to function ModuleService::getAllModules(), 0 passed in /home/fauza/web/astracore/pages/dashboard/modules.php on line 42 and exactly 1 expected | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 97 | Code: 
+[ERROR] Too few arguments to function ModuleService::getAllModules(), 0 passed in /home/fauza/web/astracore/pages/dashboard/modules.php on line 42 and exactly 1 expected | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 97 | Code: 
+[ERROR] Too few arguments to function ModuleService::getAllModules(), 0 passed in /home/fauza/web/astracore/pages/dashboard/modules.php on line 42 and exactly 1 expected | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 97 | Code: 
+[ERROR] Too few arguments to function ModuleService::getAllModules(), 0 passed in /home/fauza/web/astracore/pages/dashboard/modules.php on line 42 and exactly 1 expected | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 97 | Code: 
+[ERROR] Too few arguments to function ModuleService::getAllModules(), 0 passed in /home/fauza/web/astracore/pages/dashboard/modules.php on line 42 and exactly 1 expected | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 97 | Code: 
+[ERROR] Too few arguments to function ModuleService::getAllModules(), 0 passed in /home/fauza/web/astracore/pages/dashboard/modules.php on line 42 and exactly 1 expected | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 97 | Code: 
+[ERROR] Too few arguments to function ModuleService::getAllModules(), 0 passed in /home/fauza/web/astracore/pages/dashboard/modules.php on line 42 and exactly 1 expected | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 97 | Code: 
+[ERROR] Too few arguments to function ModuleService::getAllModules(), 0 passed in /home/fauza/web/astracore/pages/dashboard/modules.php on line 42 and exactly 1 expected | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 97 | Code: 
+[ERROR] Too few arguments to function ModuleService::getAllModules(), 0 passed in /home/fauza/web/astracore/pages/dashboard/modules.php on line 42 and exactly 1 expected | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 97 | Code: 
+[ERROR] Too few arguments to function ModuleService::getAllModules(), 0 passed in /home/fauza/web/astracore/pages/dashboard/modules.php on line 42 and exactly 1 expected | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 97 | Code: 
+[ERROR] Too few arguments to function ModuleService::getAllModules(), 0 passed in /home/fauza/web/astracore/pages/dashboard/modules.php on line 42 and exactly 1 expected | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 97 | Code: 
+[ERROR] Too few arguments to function ModuleService::getAllModules(), 0 passed in /home/fauza/web/astracore/pages/dashboard/modules.php on line 42 and exactly 1 expected | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 97 | Code: 
+[ERROR] Too few arguments to function ModuleService::getAllModules(), 0 passed in /home/fauza/web/astracore/pages/dashboard/modules.php on line 42 and exactly 1 expected | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 97 | Code: 
+[ERROR] Too few arguments to function ModuleService::getAllModules(), 0 passed in /home/fauza/web/astracore/pages/dashboard/modules.php on line 42 and exactly 1 expected | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 97 | Code: 
+[ERROR] Too few arguments to function ModuleService::getAllModules(), 0 passed in /home/fauza/web/astracore/pages/dashboard/modules.php on line 42 and exactly 1 expected | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 97 | Code: 
+[ERROR] Too few arguments to function ModuleService::getAllModules(), 0 passed in /home/fauza/web/astracore/pages/dashboard/modules.php on line 42 and exactly 1 expected | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 97 | Code: 
+[ERROR] Too few arguments to function ModuleService::getAllModules(), 0 passed in /home/fauza/web/astracore/pages/dashboard/modules.php on line 42 and exactly 1 expected | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 97 | Code: 
+[ERROR] Too few arguments to function ModuleService::getAllModules(), 0 passed in /home/fauza/web/astracore/pages/dashboard/modules.php on line 42 and exactly 1 expected | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 97 | Code: 
+[ERROR] Too few arguments to function ModuleService::getAllModules(), 0 passed in /home/fauza/web/astracore/pages/dashboard/modules.php on line 42 and exactly 1 expected | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 97 | Code: 
+[ERROR] Too few arguments to function ModuleService::getAllModules(), 0 passed in /home/fauza/web/astracore/pages/dashboard/modules.php on line 42 and exactly 1 expected | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 97 | Code: 

@@ -211,9 +211,9 @@ if (isset($_GET['popup']) && $_GET['popup'] === 'form_incomplete') {
                                             <i class="bi bi-tux me-1"></i>
                                             Linux Agent
                                         </a>
-                                        <a href="/astracore/download?platform=win" class="btn btn-outline-dark btn-sm">
+                                        <a href="/astracore/download?platform=win" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Download the Linux agent">
                                             <i class="bi bi-windows me-1"></i>
-                                            Windows Agent (Coming Soon)
+                                            Windows Agent
                                         </a>
                                     </div>
                                 </div>

@@ -94,12 +94,12 @@ class ModuleService
         return $stmt->execute([':device_id' => $deviceId]);
     }
     // List all modules across all devices
-    public static function getAllModules(): array
+    public static function getAllModules($userId): array
     {
         self::init();
-        $stmt = self::$db->query("SELECT * FROM modules");
-        $rows = $stmt->fetchAll();
-
+        $stmt = self::$db->prepare("SELECT m.* FROM modules AS m INNER JOIN devices AS d ON m.device_id = d.id WHERE d.user_id = :user_id;");
+        $stmt->execute([':user_id' => $userId]);
+        $rows = $stmt->fetchAll();  
         $modules = [];
         foreach ($rows as $row) {
             $modules[] = new Module(
@@ -108,7 +108,7 @@ class ModuleService
                 $row['name'],
                 $row['description'],
                 $row['command'],
-                $row['last_executed'],
+                $row['last_executed'] == null ? new DateTime() : new DateTime($row['last_executed']),
                 $row['status']
             );
         }

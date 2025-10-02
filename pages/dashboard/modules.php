@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 // Get all modules
-$modules = ModuleService::getAllModules();
+$modules = ModuleService::getAllModules($user->id);
 ?>
 
 <main class="main-content">
@@ -188,7 +188,8 @@ $modules = ModuleService::getAllModules();
                         </div>
                     </div>
                 </div>
-
+                <br style="user-select: none;">
+                <br style="user-select: none;">
                 <?php
                 // Handle module creation
                 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['action'] === 'create_module') {
