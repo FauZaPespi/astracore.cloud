@@ -16,3 +16,14 @@ CREATE TABLE devices(
     token VARCHAR(255) NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
+
+CREATE TABLE modules(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    device_id INT,
+    name VARCHAR(100) NOT NULL,
+    description TEXT,
+    command VARCHAR(255) NOT NULL,
+    last_executed DATETIME,
+    status VARCHAR(50) NOT NULL,
+    FOREIGN KEY (device_id) REFERENCES devices(id) ON DELETE CASCADE
+);

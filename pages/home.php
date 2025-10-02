@@ -46,7 +46,7 @@ if (isset($_SESSION["userId"])) {
         </ul>
         <div class="nav-buttons"> <?= !$isLogged ? '<a href="login" class="btn btn-ghost">Login</a>' : "" ?> <a href="<?= $isLogged ? "dashboard/" : "signup" ?>" class="btn btn-primary"><?= $isLogged ? "Dashboard" : "Get Started" ?></a> </div>
     </nav>
-    
+
     <!-- Hero Section -->
     <section class="hero d-flex flex-column justify-content-center text-center">
         <div class="hero-bg"></div>
@@ -137,14 +137,28 @@ if (isset($_SESSION["userId"])) {
 
     <!-- Footer -->
     <footer class="footer py-4">
-        <div class="container text-center">
-            <div class="footer-links mb-3 d-flex justify-content-center gap-3 flex-wrap">
-                <a href="#">Privacy</a>
-                <a href="#">Terms</a>
-                <a href="#">Contact</a>
-            </div>
-            <div class="footer-copyright">
-                &copy; <?= date("Y") == "2025" ?  date("Y") : "2025" - date("Y") ?> AstraCore.cloud - All rights reserved
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Center Content -->
+                <div class="col-md-8 offset-md-2 text-center">
+                    <div class="footer-links d-flex justify-content-center gap-3 flex-wrap mb-2">
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                        <a href="#">Contact</a>
+                    </div>
+                    <div class="footer-copyright">
+                        &copy; <?= date("Y") == "2025" ? date("Y") :  "2025 - " . date("Y"); ?> AstraCore.cloud - All rights reserved
+                    </div>
+                </div>
+
+                <!-- Right GitHub Link -->
+                <div class="col-md-2 text-center text-md-end mt-3 mt-md-0">
+                    <a href="https://github.com/Res-NeoTech/astracore_receiver" target="_blank" class="github-link text-decoration-none">
+                        <i class="bi bi-github"></i> Open Source
+                    </a>
+                </div>
+
             </div>
         </div>
     </footer>
@@ -155,6 +169,7 @@ if (isset($_SESSION["userId"])) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="pages/js/animation.js"></script>
     <script src="pages/js/home.js"></script>
+
 </body>
 
 </html>

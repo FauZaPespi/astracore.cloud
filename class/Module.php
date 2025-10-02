@@ -4,80 +4,29 @@ declare(strict_types=1);
 
 class Module
 {
+    public int $id;
+    public int $deviceId;
+    public string $name;
+    public string $description;
+    public string $command;
+    public DateTime $lastExecuted;
+    public string $status;
+
     public function __construct(
-        private ?int $id,
-        private int $deviceId,
-        private string $name,
-        private string $description,
-        private string $command,
-        private ?\DateTimeImmutable $lastExecuted,
-        private string $status
-    ) {}
-
-    // Getters
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
-
-    public function getDeviceId(): int
-    {
-        return $this->deviceId;
-    }
-
-    public function getName(): string
-    {
-        return $this->name;
-    }
-
-    public function getDescription(): string
-    {
-        return $this->description;
-    }
-
-    public function getCommand(): string
-    {
-        return $this->command;
-    }
-
-    public function getLastExecuted(): ?\DateTimeImmutable
-    {
-        return $this->lastExecuted;
-    }
-
-    public function getStatus(): string
-    {
-        return $this->status;
-    }
-
-    // Setters
-    public function setDeviceId(int $deviceId): void
-    {
+        int $id,
+        int $deviceId,
+        string $name,
+        string $description,
+        string $command,
+        DateTime $lastExecuted,
+        string $status
+    ) {
+        $this->id = $id;
         $this->deviceId = $deviceId;
-    }
-
-    public function setName(string $name): void
-    {
         $this->name = $name;
-    }
-
-    public function setDescription(string $description): void
-    {
         $this->description = $description;
-    }
-
-    public function setCommand(string $command): void
-    {
         $this->command = $command;
-    }
-
-    public function setLastExecuted(?\DateTimeImmutable $lastExecuted): void
-    {
         $this->lastExecuted = $lastExecuted;
-    }
-
-    public function setStatus(string $status): void
-    {
         $this->status = $status;
     }
 
@@ -85,12 +34,14 @@ class Module
     public static function fromArray(array $data): self
     {
         return new self(
-            id: $data['id'] ?? null,
+            id: (int) $data['id'],
             deviceId: (int) $data['device_id'],
             name: (string) $data['name'],
             description: (string) $data['description'],
             command: (string) $data['command'],
-            lastExecuted: isset($data['last_executed']) ? new \DateTimeImmutable($data['last_executed']) : null,
+            lastExecuted: !empty($data['last_executed'])
+                ? new DateTime($data['last_executed'])
+                : new DateTime(),
             status: (string) $data['status']
         );
     }

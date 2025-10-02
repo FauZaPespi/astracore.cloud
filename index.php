@@ -74,19 +74,8 @@ define('URL_ROOT', '/astracore');
 $requestUri = $_SERVER['REQUEST_URI'];
 $requestMethod = $_SERVER['REQUEST_METHOD'];
 
-// API routes
-if (strpos($requestUri, URL_ROOT . '/auth/login') !== false) {
-    require_once __DIR__ . URL_ROOT . '/endpoints/auth/login.php';
-} elseif (strpos($requestUri, '/auth/me') !== false) {
-    require_once __DIR__ . '/endpoints/auth/me.php';
-} elseif (strpos($requestUri, '/devices/list') !== false) {
-    require_once __DIR__ . '/endpoints/devices/list-devices.php';
-} elseif (strpos($requestUri, '/devices/add') !== false) {
-    require_once __DIR__ . '/endpoints/devices/add-devices.php';
-}
-
 // Pages
-elseif ($requestUri === URL_ROOT . '/' || $requestUri === URL_ROOT . '/index.php') {
+if ($requestUri === URL_ROOT . '/' || $requestUri === URL_ROOT . '/index.php') {
     require_once __DIR__ . '/pages/home.php';
 } elseif ($requestUri === URL_ROOT . '/doc' || $requestUri === URL_ROOT . '/doc/') {
     require_once __DIR__ . '/pages/documentation.php';
@@ -95,30 +84,15 @@ elseif ($requestUri === URL_ROOT . '/' || $requestUri === URL_ROOT . '/index.php
 } elseif ($requestUri === URL_ROOT . '/login') {
     require_once __DIR__ . '/pages/login.php';
 } elseif ($requestUri === URL_ROOT . '/download?platform=linux') {
-    $file = __DIR__ . '/endpoints/download/linux/astracore';
-    if (file_exists($file)) {
-        header('Content-Description: File Transfer');
-        header('Content-Type: application/octet-stream');
-        header('Content-Disposition: attachment; filename="' . basename($file) . '"');
-        header('Expires: 0');
-        header('Cache-Control: must-revalidate');
-        header('Pragma: public');
-        header('Content-Length: ' . filesize($file));
-        readfile($file);
-        exit;
-    }
+    $file = "https://github.com/Res-NeoTech/astracore_receiver/releases/download/Linux/astracore";
+    header("Location: $file");
+    exit;
 } elseif ($requestUri === URL_ROOT . '/download?platform=win') {
     $file = __DIR__ . '/endpoints/download/win/astracore.exe';
     if (file_exists($file)) {
-        header('Content-Description: File Transfer');
-        header('Content-Type: application/octet-stream');
-        header('Content-Disposition: attachment; filename="' . basename($file) . '"');
-        header('Expires: 0');
-        header('Cache-Control: must-revalidate');
-        header('Pragma: public');
-        header('Content-Length: ' . filesize($file));
-        readfile($file);
-        exit;
+    $file = "https://github.com/Res-NeoTech/astracore_receiver/releases/download/Windows/astracore.exe";
+    header("Location: $file");
+    exit;
     }
 } elseif ($requestUri === URL_ROOT . '/download' || $requestUri === URL_ROOT . '/download/') {
     require_once __DIR__ . '/endpoints/download/download.php';

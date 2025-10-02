@@ -93,3 +93,21 @@
 
 ---
 
+## Présentation
+
+## Maksym
+
+- **Explication Projet** : Mettre du contexte au debut de la présentation
+- **Montré l'architecture des fichiers** : tout les dossiers et fonctionnement interne
+- **Expliqué la classe Device et DeviceService** : Comment les class sont utilisé et crée
+- **Systeme de login avec session** : Backend
+- **Montré les login/signup pages** : montre les vues
+- **Explication Base de donnée** : le .sql
+
+## Oscar
+
+- **Explication routing** : explication sur le fichier index.php
+- **Montré le devlog** : présenter chaque semaine
+- **Montré les class logs** : comment sont utilisé les logs, comment on les récupere etc...
+- **Montré la homepage** : le style les elements
+- **Montré la dashboard** : le style les tabs le fonctionnement

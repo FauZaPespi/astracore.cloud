@@ -19,3 +19,17 @@
 [ERROR] Call to undefined method User::getId() | File: /home/fauza/web/astracore/pages/login.php | Line: 29 | Code: 
 [ERROR] Call to undefined method User::getDevices() | File: /home/fauza/web/astracore/pages/dashboard/devices.php | Line: 44 | Code: 
 [ERROR] Call to undefined method User::getUsername() | File: /home/fauza/web/astracore/pages/dashboard/settings.php | Line: 146 | Code: 
+[ERROR] count(): Argument #1 ($value) must be of type Countable|array, null given | File: /home/fauza/web/astracore/pages/dashboard/devices.php | Line: 44 | Code: 
+[ERROR] count(): Argument #1 ($value) must be of type Countable|array, null given | File: /home/fauza/web/astracore/pages/dashboard/devices.php | Line: 47 | Code: 
+[ERROR] count(): Argument #1 ($value) must be of type Countable|array, null given | File: /home/fauza/web/astracore/pages/dashboard/devices.php | Line: 47 | Code: 
+[ERROR] count(): Argument #1 ($value) must be of type Countable|array, null given | File: /home/fauza/web/astracore/pages/dashboard/devices.php | Line: 47 | Code: 
+[ERROR] count(): Argument #1 ($value) must be of type Countable|array, null given | File: /home/fauza/web/astracore/pages/dashboard/devices.php | Line: 47 | Code: 
+[ERROR] count(): Argument #1 ($value) must be of type Countable|array, null given | File: /home/fauza/web/astracore/pages/dashboard/devices.php | Line: 47 | Code: 
+[ERROR] count(): Argument #1 ($value) must be of type Countable|array, null given | File: /home/fauza/web/astracore/pages/dashboard/devices.php | Line: 47 | Code: 
+[ERROR] count(): Argument #1 ($value) must be of type Countable|array, null given | File: /home/fauza/web/astracore/pages/dashboard/devices.php | Line: 44 | Code: 
+[ERROR] count(): Argument #1 ($value) must be of type Countable|array, null given | File: /home/fauza/web/astracore/pages/dashboard/devices.php | Line: 44 | Code: 
+[ERROR] count(): Argument #1 ($value) must be of type Countable|array, null given | File: /home/fauza/web/astracore/pages/dashboard/devices.php | Line: 44 | Code: 
+[ERROR] count(): Argument #1 ($value) must be of type Countable|array, null given | File: /home/fauza/web/astracore/pages/dashboard/devices.php | Line: 44 | Code: 
+[ERROR] count(): Argument #1 ($value) must be of type Countable|array, null given | File: /home/fauza/web/astracore/pages/dashboard/devices.php | Line: 44 | Code: 
+[ERROR] Call to undefined method ModuleService::getAllModules() | File: /home/fauza/web/astracore/pages/dashboard/modules.php | Line: 42 | Code: 
+[ERROR] Call to undefined method ModuleService::getAllModules() | File: /home/fauza/web/astracore/pages/dashboard/modules.php | Line: 42 | Code: 

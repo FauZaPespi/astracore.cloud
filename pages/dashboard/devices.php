@@ -4,16 +4,15 @@ require_once "class/UserService.php";
 require_once "class/User.php";
 
 // Check login
-$isLogged = isset($_SESSION['user']);
+if (!isset($_SESSION["userId"])) {
+    header("Location: ../");
+    exit();
+}
 
-$isLogged = false; // Si le client est connecté
-//$_SESSION["id"] = 3;
-if (isset($_SESSION["userId"])) {
-    $user = UserService::getUserById($_SESSION["userId"]);
-
-    if (empty($user)) {
-        header("Location: ../");
-    }
+$user = UserService::getUserById($_SESSION["userId"]);
+if (empty($user)) {
+    header("Location: ../");
+    exit();
 }
 ?>
 <main class="main-content">
@@ -53,9 +52,9 @@ if (isset($_SESSION["userId"])) {
                                                 <i class="bi bi-pc-display text-success me-2"></i>
                                                 <span class="invisible">....</span>
                                                 <div>
-                                                    <strong class="text-white">IP: <?= htmlspecialchars($device->getIp()) ?></strong>
+                                                    <strong class="text-white">IP: <?= htmlspecialchars($device->ip) ?></strong>
                                                     <small class="text-white d-block">
-                                                        Token: <span class="text-secondary"><?= str_repeat("*", strlen(htmlspecialchars(substr($device->getLocalMachineToken(), 0, 255))))  ?></span>
+                                                        Token: <span class="text-secondary"><?= str_repeat("*", strlen(htmlspecialchars(substr($device->localMachineToken, 0, 255))))  ?></span>
                                                     </small>
                                                 </div>
                                             </div>

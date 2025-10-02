@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . "../../class/SessionHandler.php";
-require_once __DIR__ . "../../class/UserService.php";
-require_once __DIR__ . "../../class/DeviceService.php";
-require_once __DIR__ . "../../class/User.php";
-require_once __DIR__ . "../../class/Device.php";
-require_once __DIR__ . "../../class/utils/popUp/PopUpNotification.php";
+require_once __DIR__ . "/../../class/SessionHandler.php";
+require_once __DIR__ . "/../../class/UserService.php";
+require_once __DIR__ . "/../../class/DeviceService.php";
+require_once __DIR__ . "/../../class/User.php";
+require_once __DIR__ . "/../../class/Device.php";
+require_once __DIR__ . "/../../class/utils/popUp/PopUpNotification.php";
 
 // Check login
 if (!isset($_SESSION["userId"])) {
@@ -242,9 +242,9 @@ if (isset($_GET['popup']) && $_GET['popup'] === 'form_incomplete') {
                                                     <i class="bi bi-pc-display text-success me-2"></i>
                                                     <span class="invisible">....</span>
                                                     <div>
-                                                        <strong class="text-white">IP: <?= htmlspecialchars($device->getIp()) ?></strong>
+                                                        <strong class="text-white">IP: <?= htmlspecialchars($device->ip) ?></strong>
                                                         <small class="text-white d-block">
-                                                            Token: <span class="text-secondary"><?= str_repeat("*", strlen(htmlspecialchars(substr($device->getLocalMachineToken(), 0, 255))))  ?></span>
+                                                            Token: <span class="text-secondary"><?= str_repeat("*", strlen(htmlspecialchars(substr($device->localMachineToken, 0, 255))))  ?></span>
                                                         </small>
                                                     </div>
                                                 </div>

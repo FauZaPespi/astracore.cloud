@@ -32,7 +32,7 @@ class DeviceService
         self::init();
 
         $stmt = self::$db->prepare("INSERT INTO devices (ip, token, user_id) VALUES (:ip, :token, :user_id)");
-        $stmt->bindParam(":ip", $id, PDO::PARAM_INT);
+        $stmt->bindParam(":ip", $ip, PDO::PARAM_INT);
         $stmt->bindParam(":token", $token, PDO::PARAM_STR);
         $stmt->bindParam(":user_id", $userId, PDO::PARAM_INT);
         

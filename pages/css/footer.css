@@ -1,31 +1,46 @@
-
 /* Footer */
 .footer {
-    background: var(--black);
-    border-top: 1px solid var(--gray-dark);
-    padding: 3rem 2rem 2rem;
-    text-align: center;
-}
-
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 2rem;
+  background: var(--black);
+  border-top: 1px solid var(--gray-dark);
+  padding: 3rem 2rem 2rem;
 }
 
 .footer-links a {
-    color: var(--gray-light);
-    text-decoration: none;
-    transition: color 0.3s ease;
+  color: var(--gray-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: var(--green-accent);
+  color: var(--green-accent);
 }
 
 .footer-copyright {
-    color: var(--white);
-    text-shadow: var(--green-primary) 0px 0px 5px;
-    font-size: 0.9rem;
+  color: var(--white);
+  text-shadow: var(--green-primary) 0px 0px 5px;
+  font-size: 0.9rem;
+}
+
+.github-link * {
+    color: var(--gray-light);
+}
+
+.github-link {
+  color: var(--gray-light) !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.github-link:hover {
+  color: var(--green-accent) !important;
+}
+
+.github-link i {
+  margin-right: 0.4rem;
+  font-size: 1.2rem;
+  vertical-align: middle;
+  transition: color 0.3s ease;
+}
+.github-link:hover * {
+  color: var(--green-accent);
 }

@@ -47,7 +47,7 @@ class UserService
     public static function createUser(string $username, string $password, string $email): ?User
     {
         self::init();
-        $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+        $hashedPassword = password_hash($password, PASSWORD_ARGON2ID);
         $stmt = self::$db->prepare("INSERT INTO users (username, password, email) VALUES (:username, :password, :email)");
 
         if ($stmt->execute([
@@ -75,7 +75,7 @@ class UserService
         }
         if ($password !== null) {
             $fields[] = "password = :password";
-            $params[':password'] = password_hash($password, PASSWORD_BCRYPT);
+            $params[':password'] = password_hash($password, PASSWORD_ARGON2ID);
         }
         if ($email !== null) {
             $fields[] = "email = :email";
@@ -119,9 +119,9 @@ class UserService
         $devices = $stmtDevices->fetchAll();
 
         foreach ($devices as $deviceData) {
-            $device = new Device($deviceData['id'], $deviceData['ip'], $deviceData['local_machine_token'], $id);
+            $device = new Device($deviceData['id'], $deviceData['ip'], $deviceData['token'], $id);
             $user->addDevice($device);
-        }
+        } 
 
         return $user;
     }
