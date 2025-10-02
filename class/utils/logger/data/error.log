@@ -7,3 +7,15 @@
 [ERROR] Call to a member function getDevices() on null | File: /home/fauza/web/astracore/pages/dashboard/devices.php | Line: 44 | Code: 
 [ERROR] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Astracore.users' doesn't exist | File: /home/fauza/web/astracore/class/UserService.php | Line: 133 | Code: 42S02
 [ERROR] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Astracore.users' doesn't exist | File: /home/fauza/web/astracore/class/UserService.php | Line: 133 | Code: 42S02
+[ERROR] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Astracore.users' doesn't exist | File: /home/fauza/web/astracore/class/UserService.php | Line: 133 | Code: 42S02
+[ERROR] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Astracore.users' doesn't exist | File: /home/fauza/web/astracore/class/UserService.php | Line: 133 | Code: 42S02
+[ERROR] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Astracore.users' doesn't exist | File: /home/fauza/web/astracore/class/UserService.php | Line: 133 | Code: 42S02
+[ERROR] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Astracore.users' doesn't exist | File: /home/fauza/web/astracore/class/UserService.php | Line: 133 | Code: 42S02
+[ERROR] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Astracore.users' doesn't exist | File: /home/fauza/web/astracore/class/UserService.php | Line: 133 | Code: 42S02
+[ERROR] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Astracore.users' doesn't exist | File: /home/fauza/web/astracore/class/UserService.php | Line: 133 | Code: 42S02
+[ERROR] Call to a member function getDevices() on null | File: /home/fauza/web/astracore/pages/dashboard/devices.php | Line: 44 | Code: 
+[ERROR] Call to a member function getDevices() on null | File: /home/fauza/web/astracore/pages/dashboard/devices.php | Line: 44 | Code: 
+[ERROR] Call to a member function getDevices() on null | File: /home/fauza/web/astracore/pages/dashboard/devices.php | Line: 44 | Code: 
+[ERROR] Call to undefined method User::getId() | File: /home/fauza/web/astracore/pages/login.php | Line: 29 | Code: 
+[ERROR] Call to undefined method User::getDevices() | File: /home/fauza/web/astracore/pages/dashboard/devices.php | Line: 44 | Code: 
+[ERROR] Call to undefined method User::getUsername() | File: /home/fauza/web/astracore/pages/dashboard/settings.php | Line: 146 | Code: 

@@ -119,7 +119,7 @@ class UserService
         $devices = $stmtDevices->fetchAll();
 
         foreach ($devices as $deviceData) {
-            $device = new Device($deviceData['ip'], $deviceData['local_machine_token']);
+            $device = new Device($deviceData['id'], $deviceData['ip'], $deviceData['local_machine_token'], $id);
             $user->addDevice($device);
         }
 
@@ -178,66 +178,5 @@ class UserService
         self::init();
         $stmt = self::$db->prepare("UPDATE users SET token = NULL WHERE id = :id");
         return $stmt->execute([':id' => $userId]);
-    }
-
-    // Vérifie si un device est déjà enregistré
-    public static function isDeviceRegistered(int $userId, string $localMachineToken): bool
-    {
-        self::init();
-        $stmt = self::$db->prepare("SELECT 1 FROM devices WHERE user_id = :user_id AND local_machine_token = :token");
-        $stmt->execute([
-            ':user_id' => $userId,
-            ':token' => $localMachineToken
-        ]);
-        return (bool)$stmt->fetchColumn();
-    }
-
-    // Enregistre un device dans la DB
-    public static function registerDevice(int $userId, Device $device): bool
-    {
-        self::init();
-        $stmt = self::$db->prepare("
-            INSERT INTO devices (user_id, ip, local_machine_token)
-            VALUES (:user_id, :ip, :local_machine_token)
-        ");
-        return $stmt->execute([
-            ':user_id' => $userId,
-            ':ip' => $device->getIp(),
-            ':local_machine_token' => $device->getLocalMachineToken()
-        ]);
-    }
-
-    // Récupère tous les devices liés à un user
-    public static function getDevicesByUserId(int $userId): array
-    {
-        self::init();
-        $stmt = self::$db->prepare("SELECT * FROM devices WHERE user_id = :user_id");
-        $stmt->execute([':user_id' => $userId]);
-        $rows = $stmt->fetchAll();
-
-        $devices = [];
-        foreach ($rows as $row) {
-            $devices[] = new Device($row['ip'], $row['local_machine_token']);
-        }
-        return $devices;
-    }
-
-    // Supprime un device spécifique
-    public static function removeDeviceFromUser(int $userId, string $localMachineToken): bool
-    {
-        self::init();
-        $stmt = self::$db->prepare("DELETE FROM devices WHERE user_id = :user_id AND local_machine_token = :token");
-        return $stmt->execute([
-            ':user_id' => $userId,
-            ':token' => $localMachineToken
-        ]);
-    }
-
-    // Supprime tous les devices liés à un user
-    public static function clearDevicesForUser(int $userId): bool
-    {
-        self::init();
-        $stmt = self::$db->prepare("DELETE FROM devices WHERE user_id = :user_id");
-        return $stmt->execute([':user_id' => $userId]);
     }
 }

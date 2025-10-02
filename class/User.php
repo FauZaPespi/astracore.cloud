@@ -1,11 +1,11 @@
 <?php
 require_once "Device.php";
 class User {
-    private int $id;
-    private string $username;
-    private string $password;
-    private string $email;
-    private array $devices; // Array to hold Device objects
+    public int $id;
+    public string $username;
+    public string $password;
+    public string $email;
+    public array $devices; // Array to hold Device objects
 
     public function __construct(int $id, string $username, string $password, string $email) {
         $this->id = $id;
@@ -13,40 +13,6 @@ class User {
         $this->password = $password;
         $this->email = $email;
         $this->devices = [];
-    }
-
-    // Getters
-    public function getId(): int {
-        return $this->id;
-    }
-
-    public function getUsername(): string {
-        return $this->username;
-    }
-
-    public function getPassword(): string {
-        return $this->password;
-    }
-
-    public function getEmail(): string {
-        return $this->email;
-    }
-
-    public function getDevices(): array {
-        return $this->devices;
-    }
-
-    // Setters
-    public function setUsername(string $username): void {
-        $this->username = $username;
-    }
-
-    public function setPassword(string $password): void {
-        $this->password = $password;
-    }
-
-    public function setEmail(string $email): void {
-        $this->email = $email;
     }
 
     // Add a device to the user's device list

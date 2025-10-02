@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         case AVAILABLE:
             $user = UserService::createUser($username, $password, $email);
             new LogSuccess("New user created with ID: $id ($username)", 'SUCCESS');
-            SaveInSession("userId", $user->getId());
+            SaveInSession("userId", $user->id);
             header("Location: ./dashboard/");
             break;
         case USERNAME_TAKEN:

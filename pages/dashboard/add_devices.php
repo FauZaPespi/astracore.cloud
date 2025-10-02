@@ -1,9 +1,10 @@
 <?php
-require_once "class/SessionHandler.php";
-require_once "class/UserService.php";
-require_once "class/User.php";
-require_once "class/Device.php";
-require_once "class/utils/popUp/PopUpNotification.php";
+require_once __DIR__ . "../../class/SessionHandler.php";
+require_once __DIR__ . "../../class/UserService.php";
+require_once __DIR__ . "../../class/DeviceService.php";
+require_once __DIR__ . "../../class/User.php";
+require_once __DIR__ . "../../class/Device.php";
+require_once __DIR__ . "../../class/utils/popUp/PopUpNotification.php";
 
 // Check login
 if (!isset($_SESSION["userId"])) {
@@ -42,14 +43,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Check if device is already registered
         if (empty($errors)) {
-            if (UserService::isDeviceRegistered($user->getId(), $deviceToken)) {
-                $errors[] = "This device is already registered to your account.";
+            if (DeviceService::isAlreadyAdded($deviceIp)) {
+                $errors[] = "This device is already registered in AstraCore.";
             }
         }
 
         if (empty($errors)) {
-            $device = new Device($deviceIp, $deviceToken);
-            $success = UserService::registerDevice($user->getId(), $device);
+            $device = DeviceService::addDevice($deviceIp, $deviceToken, $user->id);
 
             if ($success) {
                 // Refresh user data to show the new device
@@ -223,19 +223,19 @@ if (isset($_GET['popup']) && $_GET['popup'] === 'form_incomplete') {
                 </div>
 
                 <!-- Current Devices Summary -->
-                <?php if (count($user->getDevices()) > 0): ?>
+                <?php if (count($user->devices) > 0): ?>
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
                                     <h5 class="card-title mb-0">
                                         <i class="bi bi-list-check me-2"></i>
-                                        My Devices (<?= count($user->getDevices()) ?>)
+                                        My Devices (<?= count($user->devices) ?>)
                                     </h5>
                                 </div>
                                 <div class="card-body">
                                     <div class="devices-summary">
-                                        <?php foreach ($user->getDevices() as $device): ?>
+                                        <?php foreach ($user->devices as $device): ?>
                                             <div class="device-item d-flex justify-content-between align-items-center mb-2 p-2 rounded" data-toggle="tooltip" data-placement="top" title="The token is hidden for security">
                                                 <div class="device-info d-flex align-items-center">
                                                     <span class="invisible">..</span>

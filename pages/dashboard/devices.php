@@ -41,12 +41,12 @@ if (isset($_SESSION["userId"])) {
                             <div class="card-header">
                                 <h5 class="card-title mb-0">
                                     <i class="bi bi-list-check me-2"></i>
-                                    My Devices (<?= count($user->getDevices()) ?>)
+                                    My Devices (<?= count($user->devices) ?>)
                                 </h5>
                             </div>
                             <div class="card-body">
                                 <div class="devices-summary">
-                                    <?php foreach ($user->getDevices() as $device): ?>
+                                    <?php foreach ($user->devices as $device): ?>
                                         <div class="device-item d-flex justify-content-between align-items-center mb-2 p-2 rounded" data-toggle="tooltip" data-placement="top" title="The token is hidden for security">
                                             <div class="device-info d-flex align-items-center">
                                                 <span class="invisible">..</span>

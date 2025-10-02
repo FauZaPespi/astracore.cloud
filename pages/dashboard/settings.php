@@ -38,16 +38,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // Check if credentials are taken by other users
                 if (empty($errors)) {
                     $credentialCheck = UserService::checkForExistantCredentials($newUsername, $newEmail);
-                    if ($credentialCheck === USERNAME_TAKEN && $newUsername !== $user->getUsername()) {
+                    if ($credentialCheck === USERNAME_TAKEN && $newUsername !== $user->username) {
                         $errors[] = "Ce nom d'utilisateur est déjà pris.";
                     }
-                    if ($credentialCheck === EMAIL_TAKEN && $newEmail !== $user->getEmail()) {
+                    if ($credentialCheck === EMAIL_TAKEN && $newEmail !== $user->email) {
                         $errors[] = "Cet email est déjà utilisé.";
                     }
                 }
 
                 if (empty($errors)) {
-                    $updatedUser = UserService::editUser($user->getId(), $newUsername, null, $newEmail);
+                    $updatedUser = UserService::editUser($user->id, $newUsername, null, $newEmail);
                     if ($updatedUser) {
                         $user = $updatedUser; // Update local user object
                         $message = "Profil mis à jour avec succès.";
@@ -80,12 +80,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 }
 
                 // Verify current password
-                if (empty($errors) && !password_verify($currentPassword, $user->getPassword())) {
+                if (empty($errors) && !password_verify($currentPassword, $user->password)) {
                     $errors[] = "Le mot de passe actuel est incorrect.";
                 }
 
                 if (empty($errors)) {
-                    $updatedUser = UserService::editUser($user->getId(), null, $newPassword, null);
+                    $updatedUser = UserService::editUser($user->id, null, $newPassword, null);
                     if ($updatedUser) {
                         $user = $updatedUser; // Update local user object
                         $message = "Mot de passe modifié avec succès.";
@@ -143,7 +143,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             class="form-control"
                                             id="username"
                                             name="username"
-                                            value="<?= htmlspecialchars($user->getUsername()) ?>"
+                                            value="<?= htmlspecialchars($user->username) ?>"
                                             required>
                                         <div class="form-text">Votre nom d'utilisateur unique</div>
                                     </div>
@@ -154,7 +154,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             class="form-control"
                                             id="email"
                                             name="email"
-                                            value="<?= htmlspecialchars($user->getEmail()) ?>"
+                                            value="<?= htmlspecialchars($user->email) ?>"
                                             required>
                                         <div class="form-text">Votre adresse email pour les notifications</div>
                                     </div>
@@ -239,7 +239,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="info-item mb-3">
                                             <strong>Nombre d'appareils connectés:</strong>
-                                            <span class="ms-2"><?= count($user->getDevices()) ?></span>
+                                            <span class="ms-2"><?= count($user->devices) ?></span>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
