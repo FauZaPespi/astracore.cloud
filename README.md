@@ -111,3 +111,24 @@
 - **Montré les class logs** : comment sont utilisé les logs, comment on les récupere etc...
 - **Montré la homepage** : le style les elements
 - **Montré la dashboard** : le style les tabs le fonctionnement
+
+---
+
+## Date : 06 Octobre 2025
+
+
+## Contributions de Maksym
+
+- **Privacy-Policy** : Faire la page de politique de confidentialité.
+- **Terms of Use** : Faire la page des conditions d'utilisation.
+- **Style Refactoring** : Refactoring & harmonisation des styles.
+- **Changelog** : Parse du fichier changelog.json pour afficher le changelog.
+
+---
+
+## Contributions d'Oscar
+
+- **Résolution bug** : Fix des bugs dans la dashboard (ex: bug reload)
+- **Modules** : Modules dans la dashboard fini et fonctionnelle
+- **CSS** : Avancement du CSS de toute les pages
+- **Documentation** : Faire la page de documentation (contenu)

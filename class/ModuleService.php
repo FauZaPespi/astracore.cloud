@@ -75,6 +75,29 @@ class ModuleService
         return $modules;
     }
 
+    // Get the device of a Module
+    public static function getDeviceByModule(int $deviceId): array
+    {
+        self::init();
+        $stmt = self::$db->prepare("SELECT * FROM modules WHERE device_id = :device_id");
+        $stmt->execute([':device_id' => $deviceId]);
+        $rows = $stmt->fetchAll();
+
+        $modules = [];
+        foreach ($rows as $row) {
+            $modules[] = new Module(
+                $row['id'],
+                $row['device_id'],
+                $row['name'],
+                $row['description'],
+                $row['command'],
+                $row['last_executed'],
+                $row['status']
+            );
+        }
+        return $modules;
+    }
+
     // Delete a specific module
     public static function deleteModule(int $deviceId, string $name): bool
     {
@@ -83,6 +106,16 @@ class ModuleService
         return $stmt->execute([
             ':device_id' => $deviceId,
             ':name' => $name
+        ]);
+    }
+
+    // Delete a specific module by Id
+    public static function deleteModuleById(int $moduleId): bool
+    {
+        self::init();
+        $stmt = self::$db->prepare("DELETE FROM modules WHERE id = :id");
+        return $stmt->execute([
+            ':id' => $moduleId
         ]);
     }
 
@@ -99,7 +132,7 @@ class ModuleService
         self::init();
         $stmt = self::$db->prepare("SELECT m.* FROM modules AS m INNER JOIN devices AS d ON m.device_id = d.id WHERE d.user_id = :user_id;");
         $stmt->execute([':user_id' => $userId]);
-        $rows = $stmt->fetchAll();  
+        $rows = $stmt->fetchAll();
         $modules = [];
         foreach ($rows as $row) {
             $modules[] = new Module(
@@ -108,7 +141,7 @@ class ModuleService
                 $row['name'],
                 $row['description'],
                 $row['command'],
-                $row['last_executed'] == null ? new DateTime() : new DateTime($row['last_executed']),
+                $row['last_executed'] === null ? new DateTime() : new DateTime($row['last_executed']),
                 $row['status']
             );
         }
@@ -118,6 +151,23 @@ class ModuleService
     // Execute a module (implementation pending)
     public static function execute(int $moduleId): void
     {
+        // First update the database lastExecuted
+        self::init();
+        $stmt = self::$db->prepare("SELECT * FROM modules WHERE id = :id");
+        $stmt->execute([':id' => $moduleId]);
+        $row = $stmt->fetch();
+        if (!$row) {
+            throw new Exception("Module not found");
+        }
+        $now = (new DateTime())->format('Y-m-d H:i:s');
+        $stmt = self::$db->prepare("UPDATE modules SET last_executed = :last_executed WHERE id = :id");
+        $stmt->execute([
+            ':last_executed' => $now,
+            ':id' => $moduleId
+        ]);
+        // Then, call the DeviceService to execute the command on the device
+
+
         // TODO: implement execution logic for module identified by $deviceId and $name
     }
 }

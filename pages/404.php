@@ -99,9 +99,9 @@ if (isset($_SESSION["userId"])) {
     <footer class="footer py-4 mt-auto">
         <div class="container text-center">
             <div class="footer-links mb-3 d-flex justify-content-center gap-3 flex-wrap">
-                <a href="#">Privacy</a>
-                <a href="#">Terms</a>
-                <a href="#">Contact</a>
+                <a href="privacy-policy">Privacy</a>
+                <a href="terms-of-use">Terms</a>
+                <a href="mailto:support@astracore.cloud">Contact</a>
             </div>
             <div class="footer-copyright">
                 &copy; 2025 AstraCore.cloud - All rights reserved

@@ -43,6 +43,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In - AstraCore.cloud</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="pages/css/login.css">
     <link rel="stylesheet" href="pages/css/header.css">
     <link rel="stylesheet" href="pages/css/footer.css">
@@ -107,14 +109,30 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-links">
-            <a href="#" class="footer-link">Privacy Policy</a>
-            <a href="#" class="footer-link">Terms of Service</a>
-            <a href="#" class="footer-link">Contact Support</a>
-        </div>
-        <div class="footer-copyright">
-            &copy; <?= date("Y") ?> AstraCore.cloud - All rights reserved
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Center Content -->
+                <div class="col-md-8 offset-md-2 text-center">
+                    <div class="footer-links d-flex justify-content-center gap-3 flex-wrap mb-2">
+                        <a href="privacy-policy">Privacy</a>
+                        <a href="terms-of-use">Terms</a>
+                        <a href="mailto:support@astracore.cloud">Contact</a>
+                    </div>
+                    <div class="footer-copyright">
+                        &copy; <?= date("Y") == "2025" ? date("Y") :  "2025 - " . date("Y"); ?> AstraCore.cloud - All rights reserved
+                    </div>
+                </div>
+
+                <!-- Right GitHub Link -->
+                <div class="col-md-2 text-center text-md-end mt-3 mt-md-0">
+                    <a href="https://github.com/Res-NeoTech/astracore_receiver" target="_blank" class="github-link text-decoration-none">
+                        <i class="bi bi-github"></i> Open Source
+                    </a>
+                </div>
+
+            </div>
         </div>
     </footer>
 </body>

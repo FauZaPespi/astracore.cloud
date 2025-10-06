@@ -2,7 +2,7 @@
 let modulePositions = {};
 
 // Initialize drag and drop functionality
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     initializeDragAndDrop();
     initializeSearch();
     initializeFilters();
@@ -14,33 +14,33 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeDragAndDrop() {
     const modulesGrid = document.getElementById('modulesGrid');
     const moduleWidgets = document.querySelectorAll('.module-widget');
-    
+
     let draggedElement = null;
-    
+
     moduleWidgets.forEach(widget => {
         // Drag start
-        widget.addEventListener('dragstart', function(e) {
+        widget.addEventListener('dragstart', function (e) {
             draggedElement = this;
             this.classList.add('dragging');
             e.dataTransfer.effectAllowed = 'move';
             e.dataTransfer.setData('text/html', this.innerHTML);
         });
-        
+
         // Drag end
-        widget.addEventListener('dragend', function(e) {
+        widget.addEventListener('dragend', function (e) {
             this.classList.remove('dragging');
             saveModulePositions();
         });
-        
+
         // Drag over
-        widget.addEventListener('dragover', function(e) {
+        widget.addEventListener('dragover', function (e) {
             e.preventDefault();
             e.dataTransfer.dropEffect = 'move';
-            
+
             if (this !== draggedElement) {
                 const rect = this.getBoundingClientRect();
                 const midpoint = rect.left + rect.width / 2;
-                
+
                 if (e.clientX < midpoint) {
                     this.parentNode.insertBefore(draggedElement, this);
                 } else {
@@ -55,12 +55,12 @@ function initializeDragAndDrop() {
 function saveModulePositions() {
     const widgets = document.querySelectorAll('.module-widget');
     const positions = {};
-    
+
     widgets.forEach((widget, index) => {
         const moduleId = widget.dataset.moduleId;
         positions[moduleId] = index;
     });
-    
+
     modulePositions = positions;
     console.log('Module positions saved:', modulePositions);
 }
@@ -70,35 +70,37 @@ function loadModulePositions() {
     if (Object.keys(modulePositions).length === 0) {
         return;
     }
-    
+
     const modulesGrid = document.getElementById('modulesGrid');
     const widgets = Array.from(document.querySelectorAll('.module-widget'));
-    
+
     // Sort widgets based on saved positions
     widgets.sort((a, b) => {
         const posA = modulePositions[a.dataset.moduleId] ?? 999;
         const posB = modulePositions[b.dataset.moduleId] ?? 999;
         return posA - posB;
     });
-    
+
     // Reorder in DOM
     widgets.forEach(widget => {
         modulesGrid.appendChild(widget);
     });
 }
 
+
 // Search functionality
 function initializeSearch() {
     const searchInput = document.getElementById('moduleSearch');
-    
-    searchInput.addEventListener('input', function() {
+    if (!searchInput) return;
+
+    searchInput.addEventListener('input', function () {
         const searchTerm = this.value.toLowerCase();
         const widgets = document.querySelectorAll('.module-widget');
-        
+
         widgets.forEach(widget => {
             const title = widget.querySelector('.module-title').textContent.toLowerCase();
             const description = widget.querySelector('.module-description').textContent.toLowerCase();
-            
+
             if (title.includes(searchTerm) || description.includes(searchTerm)) {
                 widget.classList.remove('hidden');
             } else {
@@ -111,30 +113,71 @@ function initializeSearch() {
 // Filter functionality
 function initializeFilters() {
     const filterButtons = document.querySelectorAll('.filter-btn');
-    
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Update active button
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-            
-            const filter = this.dataset.filter;
+    const deviceFilter = document.getElementById('deviceSelect'); // <-- fixed ID
+
+    if (filterButtons.length) {
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                // remove active from all, add to clicked
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+
+                const filter = this.dataset.filter;
+                const widgets = document.querySelectorAll('.module-widget');
+
+                widgets.forEach(widget => {
+                    const status = widget.dataset.status;
+                    if (filter === 'all' || filter === status) {
+                        widget.classList.remove('hidden');
+                    } else {
+                        widget.classList.add('hidden');
+                    }
+                });
+
+                // Reset device dropdown when using buttons
+                if (deviceFilter) deviceFilter.value = "all";
+            });
+        });
+    }
+
+    if (deviceFilter) {
+        deviceFilter.addEventListener('change', function () {
+            const filter = this.value;
             const widgets = document.querySelectorAll('.module-widget');
-            
+
+            // clear active state from buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+
             widgets.forEach(widget => {
-                const status = widget.dataset.status;
-                
-                if (filter === 'all') {
-                    widget.classList.remove('hidden');
-                } else if (filter === status) {
+                const device = widget.dataset.device; // make sure widgets have data-device attribute
+                if (filter === 'all' || filter === device) {
                     widget.classList.remove('hidden');
                 } else {
                     widget.classList.add('hidden');
                 }
             });
         });
-    });
+    }
 }
+
+// Initialize everything
+document.addEventListener('DOMContentLoaded', () => {
+    initializeSearch();
+    initializeFilters();
+});
+
+// Initialize everything
+document.addEventListener('DOMContentLoaded', () => {
+    initializeSearch();
+    initializeFilters();
+});
+
+
+// Initialize everything
+document.addEventListener('DOMContentLoaded', () => {
+    initializeSearch();
+    initializeFilters();
+});
 
 // Initialize Bootstrap tooltips
 function initializeTooltips() {
@@ -145,18 +188,17 @@ function initializeTooltips() {
 }
 
 // Form submission with loading state
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const forms = document.querySelectorAll('.module-toggle-form');
-    
+
     forms.forEach(form => {
-        form.addEventListener('submit', function(e) {
+        form.addEventListener('submit', function (e) {
             const button = this.querySelector('.toggle-btn');
             const icon = button.querySelector('i');
-            
+
             // Add loading state
             button.disabled = true;
             icon.className = 'bi bi-hourglass-split';
-            
             // Note: Form will submit normally, this is just for visual feedback
         });
     });
@@ -176,3 +218,9 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.module-widget').forEach(widget => {
     observer.observe(widget);
 });
+
+document.querySelectorAll('#readCommand').forEach(element => {
+    element.addEventListener('click', function () {
+        showDynamicModal(element.dataset.command, 'Module Command');
+    });
+}); 

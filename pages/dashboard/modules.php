@@ -1,6 +1,7 @@
 <?php
 require_once "class/SessionHandler.php";
 require_once "class/UserService.php";
+require_once "class/DeviceService.php";
 require_once "class/ModuleService.php";
 require_once "class/utils/popUp/PopUpNotification.php";
 
@@ -21,7 +22,7 @@ $messageType = '';
 
 // Handle module toggle
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['action']) && $_POST['action'] === 'toggle_module') {
+    if (isset($_POST['action']) && $_POST['action'] === 'execute_module') {
         $moduleId = intval($_POST['module_id'] ?? 0);
 
         if ($moduleId > 0) {
@@ -35,7 +36,45 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $messageType = 'danger';
             }
         }
+    } elseif (isset($_POST['action']) && $_POST['action'] === 'delete_module') {
+        $moduleId = intval($_POST['module_id'] ?? 0);
+
+        if ($moduleId > 0) {
+            $result = ModuleService::deleteModuleById($moduleId);
+
+            if ($result) {
+                $message = "Module deleted successfully!";
+                $messageType = 'success';
+            } else {
+                $message = "Error deleting module.";
+                $messageType = 'danger';
+            }
+        }
     }
+?>
+    <script>
+        // Redirect to the same page to avoid form resubmission
+        setTimeout(() => {
+            if (localStorage.getItem('reloadedRecently') === 'true') {
+                localStorage.setItem('reloadedRecently', 'false');
+                console.log("Already reloaded recently, not reloading again.");
+                return;
+            };
+            <?php header("Location: /astracore/dashboard/?tab=modules-list"); ?>
+            window.location.reload(true);
+            localStorage.setItem('reloadedRecently', 'true');
+        }, 100);
+    </script>
+<?php
+} else {
+?>
+    <script>
+        // Redirect to the same page to avoid form resubmission
+        setTimeout(() => {
+            localStorage.setItem('reloadedRecently', 'false');
+        }, 100);
+    </script>
+<?php
 }
 
 // Get all modules
@@ -68,15 +107,23 @@ $modules = ModuleService::getAllModules($user->id);
                         <input type="text" id="moduleSearch" placeholder="Search modules..." class="search-input">
                     </div>
                     <div class="filter-buttons">
-                        <button class="filter-btn active" data-filter="all">
-                            <i class="bi bi-grid me-1"></i> All
-                        </button>
-                        <button class="filter-btn" data-filter="enabled">
-                            <i class="bi bi-check-circle me-1"></i> Enabled
-                        </button>
-                        <button class="filter-btn" data-filter="disabled">
-                            <i class="bi bi-x-circle me-1"></i> Disabled
-                        </button>
+                        <?php if (!empty($user->devices)): ?>
+                            <div class="mb-3">
+
+                                <select class="form-select device-filter" id="deviceSelect" name="devuceId" required>
+                                    <option value="all">All</option>
+                                    <?php foreach ($user->devices as $device): ?>
+                                        <option value="<?= $device->ip ?>">
+                                            <?= htmlspecialchars($device->ip) ?>
+                                        </option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+                        <?php else: ?>
+                            <div class="alert alert-warning" role="alert">
+                                You need to <a href="dashboard/?tab=devices-add" class="alert-link">add a device</a> before creating modules.
+                            </div>
+                        <?php endif; ?>
                     </div>
                 </div>
 
@@ -84,9 +131,13 @@ $modules = ModuleService::getAllModules($user->id);
                 <div class="modules-grid" id="modulesGrid">
                     <?php if (!empty($modules)): ?>
                         <?php foreach ($modules as $module): ?>
-                            <div class="module-widget <?= $module->enabled ? 'enabled' : 'disabled' ?>"
+                            <?php
+                            $device = DeviceService::getDeviceById($module->deviceId);
+                            $ip = $device ? $device->ip : 'Unknown';
+                            ?>
+                            <div class="module-widget"
                                 data-module-id="<?= $module->id ?>"
-                                data-status="<?= $module->enabled ? 'enabled' : 'disabled' ?>"
+                                data-device="<?= $ip ?>"
                                 draggable="true">
                                 <div class="module-header">
                                     <div class="module-icon">
@@ -100,22 +151,37 @@ $modules = ModuleService::getAllModules($user->id);
                                 <div class="module-body">
                                     <h3 class="module-title"><?= htmlspecialchars($module->name) ?></h3>
                                     <p class="module-description"><?= htmlspecialchars($module->description) ?></p>
+                                    <div class="module-status">
+                                        <span class="status-text text-secondary">IP:</span>
+                                        <span class="status-text text-success" data-toggle="tooltip" title="<?= $ip ?>"><?= str_repeat("*", strlen(htmlspecialchars(substr($ip, 0, 255))))  ?></span>
+                                    </div>
                                 </div>
-
                                 <div class="module-footer">
                                     <div class="module-status">
-                                        <span class="status-dot <?= $module->enabled ? 'active' : 'inactive' ?>"></span>
-                                        <span class="status-text"><?= $module->enabled ? 'Enabled' : 'Disabled' ?></span>
+                                        <span class="status-text text-secondary">Last time executed:</span>
+                                        <span class="status-text text-success" data-toggle="tooltip" title="<?= $module->lastExecuted->format('Y-m-d') ?>"><?= $module->lastExecuted->format('H:i:s') ?></span>
                                     </div>
 
-                                    <form method="POST" class="module-toggle-form">
-                                        <input type="hidden" name="action" value="toggle_module">
-                                        <input type="hidden" name="module_id" value="<?= $module->id ?>">
-                                        <button type="submit" class="toggle-btn <?= $module->enabled ? 'btn-disable' : 'btn-enable' ?>"
-                                            data-toggle="tooltip" title="<?= $module->enabled ? 'Disable module' : 'Enable module' ?>">
-                                            <i class="bi bi-<?= $module->enabled ? 'toggle-on' : 'toggle-off' ?>"></i>
-                                        </button>
-                                    </form>
+                                    <div class="module-actions">
+                                        <button id="readCommand" class="btn-popUp"
+                                            data-toggle="tooltip" title="Read Command" data-command="<?= htmlspecialchars($module->command) ?>"><i class="bi bi-body-text"></i></button>
+                                        <form method="POST" class="module-toggle-form">
+                                            <input type="hidden" name="action" value="delete_module">
+                                            <input type="hidden" name="module_id" value="<?= $module->id ?>">
+                                            <button type="submit" class="toggle-btn"
+                                                data-toggle="tooltip" title="Delete Module">
+                                                <i class="bi bi-trash3"></i>
+                                            </button>
+                                        </form>
+                                        <form method="POST" class="module-toggle-form">
+                                            <input type="hidden" name="action" value="execute_module">
+                                            <input type="hidden" name="module_id" value="<?= $module->id ?>">
+                                            <button type="submit" class="toggle-btn"
+                                                data-toggle="tooltip" title="Execute Module">
+                                                <i class="bi bi-terminal"></i>
+                                            </button>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         <?php endforeach; ?>
@@ -224,5 +290,6 @@ $modules = ModuleService::getAllModules($user->id);
 </main>
 
 <script src="/astracore/pages/js/modules.js"></script>
+<script src="/astracore/pages/js/smallPopUp.js"></script>
 <link rel="stylesheet" href="/astracore/pages/css/modules.css">
 <link rel="stylesheet" href="/astracore/pages/css/settings.css">

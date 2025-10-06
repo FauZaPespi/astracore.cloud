@@ -13,7 +13,8 @@ class DeviceService
         }
     }
 
-    public static function isAlreadyAdded(string $ip): bool {
+    public static function isAlreadyAdded(string $ip): bool
+    {
         self::init();
 
         $stmt = self::$db->prepare("SELECT id FROM devices WHERE ip = :ip");
@@ -28,15 +29,16 @@ class DeviceService
         }
     }
 
-    public static function addDevice(string $ip, string $token, int $userId) : Device | null {
+    public static function addDevice(string $ip, string $token, int $userId): Device | null
+    {
         self::init();
 
         $stmt = self::$db->prepare("INSERT INTO devices (ip, token, user_id) VALUES (:ip, :token, :user_id)");
         $stmt->bindParam(":ip", $ip, PDO::PARAM_INT);
         $stmt->bindParam(":token", $token, PDO::PARAM_STR);
         $stmt->bindParam(":user_id", $userId, PDO::PARAM_INT);
-        
-        if($stmt->execute()) {
+
+        if ($stmt->execute()) {
             $id = (int)self::$db->lastInsertId();
             return new Device($id, $ip, $token, $userId);
         } else {
@@ -57,6 +59,15 @@ class DeviceService
             $devices[] = new Device($row['id'], $row['ip'], $row['local_machine_token'], $userId);
         }
         return $devices;
+    }
+    // Récupère tous les devices liés à un user
+    public static function getDeviceById(int $id): Device | null
+    {
+        self::init();
+        $stmt = self::$db->prepare("SELECT * FROM devices WHERE id = :id");
+        $stmt->execute([':id' => $id]);
+        $arrDevice = $stmt->fetch();
+        return new Device($arrDevice['id'], $arrDevice['ip'], $arrDevice['token'], $id);
     }
 
     // Supprime un device spécifique

@@ -40,6 +40,8 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
     <link rel="stylesheet" href="pages/css/footer.css">
     <link rel="stylesheet" href="pages/css/utils.css">
     <link rel="stylesheet" href="pages/css/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/x-icon" href="pages/assets/AstraCore.ico">
 </head>
 
@@ -79,9 +81,9 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
     <footer class="footer py-4">
         <div class="container text-center">
             <div class="footer-links mb-3 d-flex justify-content-center gap-3 flex-wrap">
-                <a href="#">Privacy</a>
-                <a href="#">Terms</a>
-                <a href="#">Contact</a>
+                <a href="privacy-policy">Privacy</a>
+                <a href="terms-of-use">Terms</a>
+                <a href="mailto:support@astracore.cloud">Contact</a>
             </div>
             <div class="footer-copyright">
                 &copy; <?= date("Y") == "2025" ?  date("Y") : "2025" - date("Y") ?> AstraCore.cloud - All rights reserved
@@ -98,4 +100,3 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
 </body>
 
 </html>
-

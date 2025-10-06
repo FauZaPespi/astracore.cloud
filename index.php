@@ -77,6 +77,10 @@ $requestMethod = $_SERVER['REQUEST_METHOD'];
 // Pages
 if ($requestUri === URL_ROOT . '/' || $requestUri === URL_ROOT . '/index.php') {
     require_once __DIR__ . '/pages/home.php';
+} elseif ($requestUri === URL_ROOT . '/privacy-policy') {
+    require_once __DIR__ . '/pages/privacyPolicy.php';
+} elseif ($requestUri === URL_ROOT . '/terms-of-use') {
+    require_once __DIR__ . '/pages/termsOfUse.php';
 } elseif ($requestUri === URL_ROOT . '/doc' || $requestUri === URL_ROOT . '/doc/') {
     require_once __DIR__ . '/pages/documentation.php';
 } elseif ($requestUri === URL_ROOT . '/signup') {

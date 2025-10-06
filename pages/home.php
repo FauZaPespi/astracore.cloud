@@ -143,9 +143,9 @@ if (isset($_SESSION["userId"])) {
                 <!-- Center Content -->
                 <div class="col-md-8 offset-md-2 text-center">
                     <div class="footer-links d-flex justify-content-center gap-3 flex-wrap mb-2">
-                        <a href="#">Privacy</a>
-                        <a href="#">Terms</a>
-                        <a href="#">Contact</a>
+                        <a href="privacy-policy">Privacy</a>
+                        <a href="terms-of-use">Terms</a>
+                        <a href="mailto:support@astracore.cloud">Contact</a>
                     </div>
                     <div class="footer-copyright">
                         &copy; <?= date("Y") == "2025" ? date("Y") :  "2025 - " . date("Y"); ?> AstraCore.cloud - All rights reserved
