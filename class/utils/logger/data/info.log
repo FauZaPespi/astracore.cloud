@@ -1982,3 +1982,698 @@
 [LogInfo] Page generation time: 0.00020790100097656 seconds | Page:localhost/astracore/index.php | INFO
 [LogInfo] Page generation time: 0.00030303001403809 seconds | Page:localhost/astracore/index.php | INFO
 [LogInfo] Page generation time: 0.00021505355834961 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0089190006256104 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00031805038452148 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00023698806762695 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00031685829162598 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00031304359436035 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0027611255645752 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.17868804931641 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0034780502319336 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0062260627746582 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0073950290679932 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0031437873840332 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0078167915344238 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0032060146331787 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0026669502258301 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0039598941802979 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0015029907226562 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0023670196533203 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0027589797973633 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.004645824432373 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0032260417938232 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00094389915466309 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00039291381835938 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00015687942504883 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00031399726867676 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00040507316589355 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00014591217041016 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.19861102104187 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0023910999298096 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0041851997375488 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0025041103363037 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.003230094909668 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0030210018157959 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0045390129089355 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0025241374969482 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0022358894348145 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0050768852233887 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0039489269256592 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0038919448852539 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.004202127456665 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00382399559021 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0039329528808594 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0039279460906982 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0038039684295654 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0019528865814209 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0020389556884766 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00019288063049316 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00013184547424316 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00016283988952637 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00022506713867188 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00014019012451172 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00020098686218262 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00021195411682129 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00016689300537109 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00021481513977051 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00020098686218262 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00023102760314941 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00021219253540039 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00015997886657715 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00026392936706543 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00048398971557617 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00021505355834961 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00016117095947266 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00013303756713867 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00015616416931152 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00020790100097656 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00017714500427246 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00022602081298828 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00014710426330566 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00029110908508301 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0022931098937988 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0036578178405762 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0016160011291504 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0022380352020264 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00029087066650391 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00016999244689941 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0022878646850586 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0040969848632812 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.19364500045776 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0018389225006104 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0037028789520264 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.002331018447876 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0024130344390869 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0023369789123535 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0023009777069092 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.002100944519043 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0023529529571533 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0021419525146484 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0030181407928467 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0014550685882568 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0028929710388184 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0025689601898193 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0031371116638184 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0017340183258057 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0021810531616211 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0020930767059326 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0068240165710449 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0026929378509521 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0027461051940918 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0027570724487305 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0030899047851562 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0032591819763184 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.003525972366333 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.010824918746948 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.065324783325195 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0029239654541016 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.057548046112061 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0035250186920166 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00082802772521973 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.060509920120239 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.003364086151123 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0065269470214844 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0020730495452881 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0026910305023193 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.061243772506714 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0029230117797852 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0064899921417236 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0020630359649658 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0023400783538818 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.075257062911987 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0028269290924072 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0030081272125244 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0029611587524414 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0028741359710693 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0026071071624756 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0026638507843018 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0037460327148438 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0031938552856445 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0022580623626709 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0025858879089355 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0027599334716797 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0046980381011963 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.002734899520874 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0029289722442627 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0024969577789307 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0028607845306396 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0043330192565918 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0028901100158691 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0029470920562744 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0024468898773193 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0058820247650146 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0077481269836426 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0024809837341309 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0023071765899658 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0019640922546387 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0021100044250488 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0022099018096924 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0020861625671387 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0040268898010254 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00295090675354 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0029840469360352 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0025408267974854 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0027899742126465 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.002781867980957 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0028760433197021 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0028369426727295 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0041511058807373 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0048518180847168 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0023322105407715 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0034248828887939 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0033571720123291 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.002769947052002 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0030419826507568 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0026090145111084 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0035340785980225 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0030601024627686 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0031070709228516 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0029730796813965 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0031440258026123 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0025432109832764 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0029661655426025 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0032289028167725 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0027341842651367 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0027449131011963 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0031120777130127 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0026171207427979 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0029048919677734 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.002763032913208 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0071728229522705 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.003629207611084 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.06525993347168 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0030419826507568 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.064570903778076 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0037529468536377 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00020599365234375 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00091195106506348 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.20288586616516 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0016849040985107 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0036361217498779 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.062216997146606 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0033471584320068 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0037868022918701 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.067525148391724 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0042541027069092 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0044429302215576 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.06266188621521 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0033540725708008 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0046291351318359 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.082510232925415 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0028789043426514 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0054829120635986 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0048301219940186 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0043351650238037 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ | INFO
+[LogInfo] Page generation time: 0.080012798309326 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0028040409088135 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ | INFO
+[LogInfo] Page generation time: 0.080587863922119 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0024030208587646 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ | INFO
+[LogInfo] Page generation time: 0.082726955413818 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0029661655426025 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ | INFO
+[LogInfo] Page generation time: 0.093897104263306 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0030291080474854 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ | INFO
+[LogInfo] Page generation time: 0.084425210952759 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0030369758605957 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.003899097442627 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0034329891204834 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0045289993286133 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0041050910949707 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ | INFO
+[LogInfo] Page generation time: 0.081475973129272 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0025808811187744 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ | INFO
+[LogInfo] Page generation time: 0.080219984054565 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0026500225067139 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ | INFO
+[LogInfo] Page generation time: 0.084064960479736 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0030100345611572 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ | INFO
+[LogInfo] Page generation time: 0.082049131393433 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0029640197753906 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ | INFO
+[LogInfo] Page generation time: 0.081707000732422 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0023930072784424 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0050392150878906 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ | INFO
+[LogInfo] Page generation time: 0.081501960754395 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0034971237182617 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ | INFO
+[LogInfo] Page generation time: 0.081143856048584 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0031960010528564 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0035789012908936 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ | INFO
+[LogInfo] Page generation time: 0.086932897567749 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0034031867980957 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0043840408325195 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ | INFO
+[LogInfo] Page generation time: 0.079907894134521 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0034611225128174 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ | INFO
+[LogInfo] Page generation time: 0.078238964080811 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0029170513153076 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ | INFO
+[LogInfo] Page generation time: 0.1188850402832 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0030629634857178 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ | INFO
+[LogInfo] Page generation time: 0.087963104248047 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0031020641326904 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ | INFO
+[LogInfo] Page generation time: 0.083712100982666 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0029819011688232 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ | INFO
+[LogInfo] Page generation time: 0.085341930389404 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0031871795654297 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.003342866897583 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0039160251617432 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0041611194610596 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ | INFO
+[LogInfo] Page generation time: 0.081452131271362 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0036609172821045 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ | INFO
+[LogInfo] Page generation time: 0.085619926452637 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0031580924987793 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0041580200195312 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ | INFO
+[LogInfo] Page generation time: 0.083362817764282 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0033450126647949 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0040371417999268 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ | INFO
+[LogInfo] Page generation time: 0.08659291267395 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0039680004119873 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0045208930969238 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ | INFO
+[LogInfo] Page generation time: 0.084617853164673 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0035319328308105 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.003817081451416 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ | INFO
+[LogInfo] Page generation time: 0.081348896026611 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0036189556121826 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0046248435974121 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ | INFO
+[LogInfo] Page generation time: 0.08088207244873 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0036489963531494 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0075089931488037 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0037410259246826 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0048069953918457 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ for module ID: 69 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:30:03 | INFO
+[LogInfo] Page generation time: 0.09251594543457 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0030457973480225 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ for module ID: 68 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:30:12 | INFO
+[LogInfo] Page generation time: 0.083170890808105 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0030381679534912 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ for module ID: 69 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:30:19 | INFO
+[LogInfo] Page generation time: 0.088365077972412 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0034189224243164 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00494384765625 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ for module ID: 69 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:31:23 | INFO
+[LogInfo] Page generation time: 0.086868047714233 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0033609867095947 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ for module ID: 69 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:31:25 | INFO
+[LogInfo] Page generation time: 0.087148904800415 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0035989284515381 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0073690414428711 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0076959133148193 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0046429634094238 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0042269229888916 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0042331218719482 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0042691230773926 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0031960010528564 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0038230419158936 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0055820941925049 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ for module ID: 69 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:38:18 | INFO
+[LogInfo] Page generation time: 0.086480140686035 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0044939517974854 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ for module ID: 69 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:38:23 | INFO
+[LogInfo] Page generation time: 0.089529037475586 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0032198429107666 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0053040981292725 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ for module ID: 69 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:39:16 | INFO
+[LogInfo] Page generation time: 0.085090160369873 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0039389133453369 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0047190189361572 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "Hello, World!"
+ for module ID: 68 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:39:27 | INFO
+[LogInfo] Page generation time: 0.083782911300659 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0032358169555664 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.005295991897583 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0076498985290527 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0023581981658936 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0064139366149902 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0018198490142822 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0051670074462891 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: astracore_receiver
+astracore_receiver.d
+build
+deps
+examples
+incremental
+ for module ID: 70 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:42:48 | INFO
+[LogInfo] Page generation time: 0.08540415763855 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.002875804901123 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0038628578186035 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: astracore_receiver
+astracore_receiver.d
+build
+deps
+examples
+incremental
+ for module ID: 70 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:43:34 | INFO
+[LogInfo] Page generation time: 0.083549976348877 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0035879611968994 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "hi from astracore" > vbus.txt
+ for module ID: 71 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:43:39 | INFO
+[LogInfo] Page generation time: 0.082328081130981 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.003831148147583 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: astracore_receiver
+astracore_receiver.d
+build
+deps
+examples
+incremental
+ for module ID: 70 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:43:55 | INFO
+[LogInfo] API response: astracore_receiver
+astracore_receiver.d
+build
+deps
+examples
+incremental
+ for module ID: 70 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:44:09 | INFO
+[LogInfo] Page generation time: 0.0037009716033936 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "hi from astracore" > vbus.txt
+ for module ID: 71 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:44:16 | INFO
+[LogInfo] Page generation time: 0.087419986724854 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0044589042663574 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: astracore_receiver
+astracore_receiver.d
+build
+deps
+examples
+incremental
+ for module ID: 70 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:44:15 | INFO
+[LogInfo] Page generation time: 0.0038859844207764 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0044319629669189 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: cat: vbus.txt: No such file or directory
+ for module ID: 72 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:45:02 | INFO
+[LogInfo] Page generation time: 0.086228847503662 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0037579536437988 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0050199031829834 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response:  for module ID: 73 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:45:22 | INFO
+[LogInfo] Page generation time: 0.087626934051514 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0046958923339844 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: astracore_receiver
+astracore_receiver.d
+build
+deps
+examples
+incremental
+vbus.txt
+ for module ID: 70 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:45:31 | INFO
+[LogInfo] API response: astracore_receiver
+astracore_receiver.d
+build
+deps
+examples
+incremental
+vbus.txt
+ for module ID: 70 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:47:25 | INFO
+[LogInfo] Page generation time: 0.085903882980347 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0045709609985352 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: astracore_receiver
+astracore_receiver.d
+build
+deps
+examples
+incremental
+vbus.txt
+ for module ID: 70 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:47:27 | INFO
+[LogInfo] Page generation time: 0.093564033508301 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.006019115447998 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "hi from astracore" > vbus.txt
+ for module ID: 71 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:47:40 | INFO
+[LogInfo] Page generation time: 0.083055019378662 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0038290023803711 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response:  for module ID: 72 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:47:46 | INFO
+[LogInfo] Page generation time: 0.083384990692139 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.003777027130127 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: astracore_receiver
+astracore_receiver.d
+build
+deps
+examples
+incremental
+vbus.txt
+ for module ID: 70 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:47:54 | INFO
+[LogInfo] Page generation time: 0.084965944290161 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0036070346832275 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "hi from astracore" > vbus.txt
+ for module ID: 71 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:48:04 | INFO
+[LogInfo] Page generation time: 0.087375164031982 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0043509006500244 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response:  for module ID: 72 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:48:19 | INFO
+[LogInfo] Page generation time: 0.08608603477478 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0048019886016846 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0059709548950195 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: /home/yrsksdwk/daemons/astracore/astracore_receiver/target/release
+ for module ID: 74 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:49:06 | INFO
+[LogInfo] Page generation time: 0.088505983352661 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0050079822540283 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response:  for module ID: 70 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:54:16 | INFO
+[LogInfo] Page generation time: 83.176340818405 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 82.370212078094 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 81.538377046585 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 81.343173980713 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0073840618133545 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0085628032684326 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0026979446411133 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0083119869232178 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0065999031066895 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0039839744567871 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0072751045227051 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0046420097351074 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0070829391479492 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0039441585540771 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.006519079208374 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0030949115753174 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0045180320739746 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0020368099212646 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0025210380554199 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: astracore_receiver
+astracore_receiver.d
+build
+deps
+examples
+incremental
+ for module ID: 75 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:58:29 | INFO
+[LogInfo] Page generation time: 29.605899095535 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 2.2275068759918 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.65008807182312 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0020439624786377 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00160813331604 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0034909248352051 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: astracore_receiver
+astracore_receiver.d
+build
+deps
+examples
+incremental
+ for module ID: 75 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:58:31 | INFO
+[LogInfo] Page generation time: 0.086035013198853 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0023360252380371 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0040009021759033 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "ntm" > test.caca
+ for module ID: 76 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:58:53 | INFO
+[LogInfo] Page generation time: 0.08765697479248 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0042781829833984 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0041739940643311 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: "caca" && ls
+ for module ID: 77 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 08:59:41 | INFO
+[LogInfo] Page generation time: 0.086833953857422 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0046291351318359 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0047190189361572 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: caca
+astracore_receiver
+astracore_receiver.d
+build
+deps
+examples
+incremental
+ for module ID: 77 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 09:09:01 | INFO
+[LogInfo] Page generation time: 0.085608005523682 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0046250820159912 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.004439115524292 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0033931732177734 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.001680850982666 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0065538883209229 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response:  for module ID: 78 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 09:11:05 | INFO
+[LogInfo] Page generation time: 0.11132287979126 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0042531490325928 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0051338672637939 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: Failed to stop npanel.service: Unit npanel.service not loaded.
+ for module ID: 79 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 09:11:49 | INFO
+[LogInfo] Page generation time: 0.10667109489441 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0049641132354736 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.016069889068604 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0048511028289795 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: astracore_receiver
+astracore_receiver.d
+build
+deps
+examples
+incremental
+ for module ID: 75 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 09:15:39 | INFO
+[LogInfo] Page generation time: 0.089674949645996 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0046191215515137 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response:  for module ID: 78 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 09:15:45 | INFO
+[LogInfo] Page generation time: 0.10433506965637 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.004601001739502 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0016219615936279 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0014710426330566 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0044138431549072 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.004951000213623 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response:  for module ID: 78 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 09:16:31 | INFO
+[LogInfo] Page generation time: 0.10498213768005 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0053350925445557 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: astracore_receiver
+astracore_receiver.d
+build
+deps
+examples
+incremental
+ for module ID: 75 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 09:16:32 | INFO
+[LogInfo] Page generation time: 0.088034868240356 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0058050155639648 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response:  for module ID: 76 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 09:16:33 | INFO
+[LogInfo] Page generation time: 0.087615013122559 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0049700736999512 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] API response: caca
+astracore_receiver
+astracore_receiver.d
+build
+deps
+examples
+incremental
+test.caca
+ for module ID: 77 on device ID: 4 (IP: 185.229.202.32)Date: 2025-10-09 09:16:34 | INFO
+[LogInfo] Page generation time: 0.088219165802002 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0037469863891602 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0084319114685059 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0046341419219971 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0079638957977295 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0031249523162842 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.006476879119873 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0022740364074707 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0071659088134766 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0024509429931641 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0049431324005127 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0021438598632812 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0019810199737549 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0024929046630859 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0022239685058594 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0026710033416748 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0028531551361084 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0042850971221924 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0021920204162598 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00015997886657715 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0021169185638428 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0022189617156982 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00024008750915527 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00014019012451172 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.19525790214539 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.1949520111084 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0019049644470215 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0026018619537354 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.002187967300415 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0036661624908447 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0023829936981201 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.002723217010498 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.002424955368042 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0023469924926758 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00193190574646 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0026941299438477 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0018808841705322 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0020468235015869 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0027740001678467 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0036938190460205 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0023488998413086 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0019819736480713 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0019738674163818 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0031390190124512 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Device with ID 4 removed by user ID 2 | INFO
+[LogInfo] Page generation time: 0.002734899520874 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Device with ID 4 removed by user ID 2 | INFO
+[LogInfo] Page generation time: 0.0026891231536865 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Device with ID 4 removed by user ID 2 | INFO
+[LogInfo] Page generation time: 0.002979040145874 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Device with ID 4 removed by user ID 2 | INFO
+[LogInfo] Page generation time: 0.0026099681854248 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Device with ID 4 removed by user ID 2 | INFO
+[LogInfo] Page generation time: 0.0025331974029541 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Device with ID 4 removed by user ID 2 | INFO
+[LogInfo] Page generation time: 0.0017340183258057 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Device with ID 4 removed by user ID 2 | INFO
+[LogInfo] Page generation time: 0.0018119812011719 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Device with ID 4 removed by user ID 2 | INFO
+[LogInfo] Page generation time: 0.0022361278533936 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Device with ID 4 removed by user ID 2 | INFO
+[LogInfo] Page generation time: 0.0020580291748047 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Device with ID 4 removed by user ID 2 | INFO
+[LogInfo] Page generation time: 0.0018250942230225 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Device with ID 4 removed by user ID 2 | INFO
+[LogInfo] Page generation time: 0.0030679702758789 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Device with ID 4 removed by user ID 2 | INFO
+[LogInfo] Page generation time: 0.0019650459289551 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Device with ID 4 removed by user ID 2 | INFO
+[LogInfo] Page generation time: 0.0028889179229736 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Device with ID 4 removed by user ID 2 | INFO
+[LogInfo] Page generation time: 0.0033659934997559 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0028281211853027 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Device with ID 4 removed by user ID 2 | INFO
+[LogInfo] Page generation time: 0.0031659603118896 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Device with ID 4 removed by user ID 2 | INFO
+[LogInfo] Page generation time: 0.008760929107666 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Device with ID 4 removed by user ID 2 | INFO
+[LogInfo] Page generation time: 0.0022931098937988 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Device with ID 4 removed by user ID 2 | INFO
+[LogInfo] Page generation time: 0.0028610229492188 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0055549144744873 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0024759769439697 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.0020279884338379 seconds | Page:localhost/astracore/index.php | INFO

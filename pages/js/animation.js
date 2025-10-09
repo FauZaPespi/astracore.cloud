@@ -1,4 +1,3 @@
-// Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -12,7 +11,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Fade-in animation on scroll
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -30,7 +28,6 @@ document.querySelectorAll('.fade-in').forEach(el => {
     observer.observe(el);
 });
 
-// Navbar scroll effect
 let lastScrollTop = 0;
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
@@ -47,8 +44,7 @@ window.addEventListener('scroll', () => {
 
 
 
-// GSAP Animations
-// Navbar animations
+// Animation avec GSAP
 gsap.from(".navbar .logo", {
     y: -50,
     opacity: 0,
@@ -81,7 +77,6 @@ gsap.from(".hero-subtitle", {
 });
 
 
-// Scroll-triggered animations for sections
 gsap.utils.toArray(".overview, .organisation, .final-cta").forEach(section => {
     gsap.from(section, {
         scrollTrigger: {
@@ -96,7 +91,6 @@ gsap.utils.toArray(".overview, .organisation, .final-cta").forEach(section => {
     });
 });
 
-// Feature cards animations
 gsap.utils.toArray(".feature-card").forEach(card => {
     gsap.from(card, {
         scrollTrigger: {
@@ -109,7 +103,6 @@ gsap.utils.toArray(".feature-card").forEach(card => {
         duration: 0.8,
         ease: "power2.out"
     });
-    // Hover animation
     card.addEventListener("mouseenter", () => {
         gsap.to(card, {
             scale: 1.05,
@@ -128,7 +121,6 @@ gsap.utils.toArray(".feature-card").forEach(card => {
     });
 });
 
-// Team cards animations
 gsap.utils.toArray(".team-card").forEach(card => {
     gsap.from(card, {
         scrollTrigger: {
@@ -143,7 +135,6 @@ gsap.utils.toArray(".team-card").forEach(card => {
     });
 });
 
-// Footer animation
 gsap.from(".footer", {
     scrollTrigger: {
         trigger: ".footer",

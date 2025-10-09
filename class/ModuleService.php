@@ -147,27 +147,79 @@ class ModuleService
         }
         return $modules;
     }
-
-    // Execute a module (implementation pending)
-    public static function execute(int $moduleId): void
+    // Sauvegarder dans la db la sortie console d'un module
+    public static function saveConsoleOutput(int $moduleId, string $output): bool
     {
-        // First update the database lastExecuted
+        self::init();
+        $stmt = self::$db->prepare("UPDATE modules SET console_output = :console_output WHERE id = :id");
+        return $stmt->execute([
+            ':console_output' => $output,
+            ':id' => $moduleId
+        ]);
+    }
+
+    // Récupérer la dernière sortie console d'un module
+    public static function getLastConsoleOutputs($moduleId): string | null
+    {
+        self::init();
+        $stmt = self::$db->prepare("SELECT console_output FROM modules WHERE id = :id");
+        $stmt->execute([':id' => $moduleId]);
+        $row = $stmt->fetch();
+        return $row ? $row['console_output'] : null;
+    }
+
+    // Executer une commande sur un module
+    public static function execute(int $moduleId): string | bool | null
+    {
         self::init();
         $stmt = self::$db->prepare("SELECT * FROM modules WHERE id = :id");
         $stmt->execute([':id' => $moduleId]);
-        $row = $stmt->fetch();
-        if (!$row) {
-            throw new Exception("Module not found");
+        $moduleRow = $stmt->fetch();
+        if (!$moduleRow) {
+            throw new Exception("Module not found.");
+        } else {
+            $stmt = self::$db->prepare("SELECT ip, token FROM devices WHERE id = :deviceId");
+            $stmt->execute([':deviceId' => $moduleRow['device_id']]);
+            $deviceRow = $stmt->fetch();
+
+            if (!$deviceRow) {
+                throw new Exception("Device not found.");
+            } else {
+                $ch = curl_init();
+
+                $url = "http://" . $deviceRow['ip'] . ":6769/execute"; //six-seven, six-nine
+                $rawData = json_encode(array("syntax" => $moduleRow['command']));
+
+                curl_setopt($ch, CURLOPT_URL, $url);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+                curl_setopt($ch, CURLOPT_POSTFIELDS, $rawData);
+                curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+                    'Content-Type: application/json',
+                    'Content-Length: ' . strlen($rawData),
+                    'x-astra-token: ' . $deviceRow['token']
+                ));
+
+                $response = curl_exec($ch);
+                $response = $response . ""; // Force string
+                new LogInfo("API response: " . $response . " for module ID: " . $moduleId . " on device ID: " . $moduleRow['device_id'] . " (IP: " . $deviceRow['ip'] . ")" . "Date: " . (new DateTime())->format('Y-m-d H:i:s'));
+                $lastResponse = self::getLastConsoleOutputs($moduleId);
+                ModuleService::saveConsoleOutput($moduleId, $lastResponse . "\n" . (new DateTime())->format('Y-m-d H:i:s') . " > " . $response);
+
+                if ($response === false) {
+                    error_log("cURL Error: " . curl_error($ch));
+                } else {
+                    $now = (new DateTime())->format('Y-m-d H:i:s');
+                    $stmt = self::$db->prepare("UPDATE modules SET last_executed = :last_executed WHERE id = :id");
+                    $stmt->execute([
+                        ':last_executed' => $now,
+                        ':id' => $moduleId
+                    ]);
+                }
+
+                curl_close($ch);
+                return $response;
+            }
         }
-        $now = (new DateTime())->format('Y-m-d H:i:s');
-        $stmt = self::$db->prepare("UPDATE modules SET last_executed = :last_executed WHERE id = :id");
-        $stmt->execute([
-            ':last_executed' => $now,
-            ':id' => $moduleId
-        ]);
-        // Then, call the DeviceService to execute the command on the device
-
-
-        // TODO: implement execution logic for module identified by $deviceId and $name
     }
 }

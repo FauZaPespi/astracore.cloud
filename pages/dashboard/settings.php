@@ -247,10 +247,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             <strong>Astracore version:</strong>
                                             <span class="badge bg-success ms-2">1.0.0</span>
                                         </div>
-                                        <div class="info-item mb-3 flex-column">
-                                            <strong>Hero's citation:</strong>
-                                            <span class="ms-2" id="citation"></span>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

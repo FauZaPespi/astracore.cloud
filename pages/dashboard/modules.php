@@ -19,6 +19,7 @@ if (empty($user)) {
 
 $message = '';
 $messageType = '';
+$reponseAPI = '';
 
 // Handle module toggle
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -27,6 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($moduleId > 0) {
             $result = ModuleService::Execute($moduleId);
+            $reponseAPI = $result;
 
             if ($result) {
                 $message = "Module status updated successfully!";
@@ -62,6 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             };
             <?php header("Location: /astracore/dashboard/?tab=modules-list"); ?>
             window.location.reload(true);
+
             localStorage.setItem('reloadedRecently', 'true');
         }, 100);
     </script>
@@ -120,7 +123,7 @@ $modules = ModuleService::getAllModules($user->id);
                                 </select>
                             </div>
                         <?php else: ?>
-                            <div class="alert alert-warning" role="alert">
+                            <div class="alert" role="alert">
                                 You need to <a href="dashboard/?tab=devices-add" class="alert-link">add a device</a> before creating modules.
                             </div>
                         <?php endif; ?>
@@ -164,7 +167,7 @@ $modules = ModuleService::getAllModules($user->id);
 
                                     <div class="module-actions">
                                         <button id="readCommand" class="btn-popUp"
-                                            data-toggle="tooltip" title="Read Command" data-command="<?= htmlspecialchars($module->command) ?>"><i class="bi bi-body-text"></i></button>
+                                            data-toggle="tooltip" title="Read information" data-title="<?= htmlspecialchars($module->name)?>" data-command="<?= htmlspecialchars($module->command) ?>" data-history="<?= base64_encode(ModuleService::getLastConsoleOutputs($module->id) . "") ?>"><i class="bi bi-body-text"></i></button>
                                         <form method="POST" class="module-toggle-form">
                                             <input type="hidden" name="action" value="delete_module">
                                             <input type="hidden" name="module_id" value="<?= $module->id ?>">
@@ -217,10 +220,6 @@ $modules = ModuleService::getAllModules($user->id);
                                                     </option>
                                                 <?php endforeach; ?>
                                             </select>
-                                        </div>
-                                    <?php else: ?>
-                                        <div class="alert alert-warning" role="alert">
-                                            You need to <a href="dashboard/?tab=devices-add" class="alert-link">add a device</a> before creating modules.
                                         </div>
                                     <?php endif; ?>
                                     <div class="mb-3">
@@ -288,7 +287,6 @@ $modules = ModuleService::getAllModules($user->id);
         </div>
     </div>
 </main>
-
 <script src="/astracore/pages/js/modules.js"></script>
 <script src="/astracore/pages/js/smallPopUp.js"></script>
 <link rel="stylesheet" href="/astracore/pages/css/modules.css">

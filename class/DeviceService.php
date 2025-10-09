@@ -74,7 +74,7 @@ class DeviceService
     public static function deleteDevice(int $userId, string $localMachineToken): bool
     {
         self::init();
-        $stmt = self::$db->prepare("DELETE FROM devices WHERE user_id = :user_id AND local_machine_token = :token");
+        $stmt = self::$db->prepare("DELETE FROM devices WHERE user_id = :user_id AND token = :token");
         return $stmt->execute([
             ':user_id' => $userId,
             ':token' => $localMachineToken

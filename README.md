@@ -132,3 +132,21 @@
 - **Modules** : Modules dans la dashboard fini et fonctionnelle
 - **CSS** : Avancement du CSS de toute les pages
 - **Documentation** : Faire la page de documentation (contenu)
+---
+
+## Date : 09 Octobre 2025
+
+
+## Contributions de Maksym
+
+- **Text** : text.
+- **Refactoring** : Faire le refactoring PHP
+
+---
+
+## Contributions d'Oscar
+
+- **Résolution bug** : Fix des bugs dans la dashboard
+- **Modules** : Faire les bon execution modification UI
+- **CSS** : Avancement du CSS de toute les pages
+- **Réfactoring** : Faire refactoring JS et CSS

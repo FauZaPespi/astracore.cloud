@@ -124,3 +124,4 @@ mkdir(__DIR__ . '/class/utils/logger/data', 0777, true);
 ?>
 <base href="/astracore/">
 <link rel="stylesheet" href="pages/css/popup.css">
+<script src="pages/js/home.js"></script>

@@ -1,4 +1,4 @@
-// Function for full-console hero vibes
+// Fonction pour afficher le hero dans la console
 function consoleHero() {
     // Title
     console.log(
@@ -44,5 +44,5 @@ function consoleHero() {
 
 }
 
-// Call it
+// Appelle pour la console
 consoleHero();

@@ -1,7 +1,7 @@
-// Module positions storage (in-memory, no localStorage)
+// La ou on va stocker les positions des modules (on va les saves après)
 let modulePositions = {};
 
-// Initialize drag and drop functionality
+// On fait l'initialisation de toutes les fonctionnalités une fois le DOM chargé
 document.addEventListener('DOMContentLoaded', function () {
     initializeDragAndDrop();
     initializeSearch();
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     loadModulePositions();
 });
 
-// Drag and Drop Implementation
+// Drag and Drop
 function initializeDragAndDrop() {
     const modulesGrid = document.getElementById('modulesGrid');
     const moduleWidgets = document.querySelectorAll('.module-widget');
@@ -51,7 +51,7 @@ function initializeDragAndDrop() {
     });
 }
 
-// Save module positions to memory
+// Sauvegarde des modules positions
 function saveModulePositions() {
     const widgets = document.querySelectorAll('.module-widget');
     const positions = {};
@@ -62,11 +62,18 @@ function saveModulePositions() {
     });
 
     modulePositions = positions;
+    localStorage.setItem('modulePositions', JSON.stringify(modulePositions)); // Sauvegarde dans le localstorage
     console.log('Module positions saved:', modulePositions);
 }
 
-// Load module positions from memory
+// load des modules positions
 function loadModulePositions() {
+    const savedPositions = localStorage.getItem('modulePositions');
+    if (savedPositions) {
+        modulePositions = JSON.parse(savedPositions); // Récupération dans le localstorage
+        console.log('Module positions loaded:', modulePositions);
+    }
+
     if (Object.keys(modulePositions).length === 0) {
         return;
     }
@@ -74,7 +81,7 @@ function loadModulePositions() {
     const modulesGrid = document.getElementById('modulesGrid');
     const widgets = Array.from(document.querySelectorAll('.module-widget'));
 
-    // Sort widgets based on saved positions
+    // On trie les widgets selon les positions sauvegardées (chatgpt m'a aidé pour cette partie)
     widgets.sort((a, b) => {
         const posA = modulePositions[a.dataset.moduleId] ?? 999;
         const posB = modulePositions[b.dataset.moduleId] ?? 999;
@@ -88,7 +95,7 @@ function loadModulePositions() {
 }
 
 
-// Search functionality
+// Search
 function initializeSearch() {
     const searchInput = document.getElementById('moduleSearch');
     if (!searchInput) return;
@@ -110,15 +117,14 @@ function initializeSearch() {
     });
 }
 
-// Filter functionality
+// Filte
 function initializeFilters() {
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const deviceFilter = document.getElementById('deviceSelect'); // <-- fixed ID
+    const deviceFilter = document.getElementById('deviceSelect'); 
 
     if (filterButtons.length) {
         filterButtons.forEach(button => {
             button.addEventListener('click', function () {
-                // remove active from all, add to clicked
                 filterButtons.forEach(btn => btn.classList.remove('active'));
                 this.classList.add('active');
 
@@ -134,7 +140,7 @@ function initializeFilters() {
                     }
                 });
 
-                // Reset device dropdown when using buttons
+                // Reset le dropdown si on clique sur le bouton
                 if (deviceFilter) deviceFilter.value = "all";
             });
         });
@@ -145,11 +151,10 @@ function initializeFilters() {
             const filter = this.value;
             const widgets = document.querySelectorAll('.module-widget');
 
-            // clear active state from buttons
             filterButtons.forEach(btn => btn.classList.remove('active'));
 
             widgets.forEach(widget => {
-                const device = widget.dataset.device; // make sure widgets have data-device attribute
+                const device = widget.dataset.device; 
                 if (filter === 'all' || filter === device) {
                     widget.classList.remove('hidden');
                 } else {
@@ -160,26 +165,13 @@ function initializeFilters() {
     }
 }
 
-// Initialize everything
+// Init search et filter
 document.addEventListener('DOMContentLoaded', () => {
     initializeSearch();
     initializeFilters();
 });
 
-// Initialize everything
-document.addEventListener('DOMContentLoaded', () => {
-    initializeSearch();
-    initializeFilters();
-});
-
-
-// Initialize everything
-document.addEventListener('DOMContentLoaded', () => {
-    initializeSearch();
-    initializeFilters();
-});
-
-// Initialize Bootstrap tooltips
+// Application des tooltips bootstrap
 function initializeTooltips() {
     const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'));
     tooltipTriggerList.map(function (tooltipTriggerEl) {
@@ -187,7 +179,7 @@ function initializeTooltips() {
     });
 }
 
-// Form submission with loading state
+// Animation horloge quand on click sur un button (agis comme form submit)
 document.addEventListener('DOMContentLoaded', function () {
     const forms = document.querySelectorAll('.module-toggle-form');
 
@@ -196,15 +188,14 @@ document.addEventListener('DOMContentLoaded', function () {
             const button = this.querySelector('.toggle-btn');
             const icon = button.querySelector('i');
 
-            // Add loading state
             button.disabled = true;
             icon.className = 'bi bi-hourglass-split';
-            // Note: Form will submit normally, this is just for visual feedback
+            // C'est uniquement visuelle la requete par quand même
         });
     });
 });
 
-// Smooth animations on scroll
+// Animation fade in des modules quand on scroll (chatgpt m'a aidé pour cette partie)
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -219,8 +210,9 @@ document.querySelectorAll('.module-widget').forEach(widget => {
     observer.observe(widget);
 });
 
+// Pour afficher le modal sans utiliser les popup en php parce que c'est moche
 document.querySelectorAll('#readCommand').forEach(element => {
     element.addEventListener('click', function () {
-        showDynamicModal(element.dataset.command, 'Module Command');
+        showDynamicModal(element.dataset.command, 'Module Command (' + element.dataset.title + ')' ,atob(element.dataset.history));
     });
 }); 

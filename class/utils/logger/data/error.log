@@ -212,3 +212,14 @@
 [ERROR] Module::__construct(): Argument #6 ($lastExecuted) must be of type DateTime, null given, called in /home/fauza/web/astracore/class/ModuleService.php on line 139 | File: /home/fauza/web/astracore/class/Module.php | Line: 15 | Code: 
 [ERROR] Module::__construct(): Argument #6 ($lastExecuted) must be of type DateTime, null given, called in /home/fauza/web/astracore/class/ModuleService.php on line 138 | File: /home/fauza/web/astracore/class/Module.php | Line: 15 | Code: 
 [ERROR] Module::__construct(): Argument #6 ($lastExecuted) must be of type DateTime, null given, called in /home/fauza/web/astracore/class/ModuleService.php on line 138 | File: /home/fauza/web/astracore/class/Module.php | Line: 15 | Code: 
+[ERROR] Device not found. | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 167 | Code: 
+[ERROR] Device not found. | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 167 | Code: 
+[ERROR] Call to undefined function curl_exec() | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 184 | Code: 
+[ERROR] base64_encode(): Passing null to parameter #1 ($string) of type string is deprecated | File: /home/fauza/web/astracore/pages/dashboard/modules.php | Line: 170 | Code: 
+[ERROR] SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'console_output' at row 1 | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 155 | Code: 22001
+[ERROR] SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'console_output' at row 1 | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 155 | Code: 22001
+[ERROR] SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'console_output' at row 1 | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 155 | Code: 22001
+[ERROR] SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'console_output' at row 1 | File: /home/fauza/web/astracore/class/ModuleService.php | Line: 155 | Code: 22001
+[ERROR] Class "DeviceService" not found | File: /home/fauza/web/astracore/pages/dashboard/devices.php | Line: 22 | Code: 
+[ERROR] Class "DeviceService" not found | File: /home/fauza/web/astracore/pages/dashboard/devices.php | Line: 22 | Code: 
+[ERROR] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'local_machine_token' in 'WHERE' | File: /home/fauza/web/astracore/class/DeviceService.php | Line: 77 | Code: 42S22

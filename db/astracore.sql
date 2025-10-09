@@ -25,5 +25,6 @@ CREATE TABLE modules(
     command VARCHAR(255) NOT NULL,
     last_executed DATETIME,
     status VARCHAR(50) NOT NULL,
+    console_output VARCHAR(255),
     FOREIGN KEY (device_id) REFERENCES devices(id) ON DELETE CASCADE
 );

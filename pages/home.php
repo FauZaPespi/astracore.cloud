@@ -168,8 +168,6 @@ if (isset($_SESSION["userId"])) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="pages/js/animation.js"></script>
-    <script src="pages/js/home.js"></script>
-
 </body>
 
 </html>

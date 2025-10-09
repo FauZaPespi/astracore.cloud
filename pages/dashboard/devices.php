@@ -2,6 +2,9 @@
 require_once "class/SessionHandler.php";
 require_once "class/UserService.php";
 require_once "class/User.php";
+require_once "class/DeviceService.php";
+require_once "class/Device.php";
+
 
 // Check login
 if (!isset($_SESSION["userId"])) {
@@ -13,6 +16,16 @@ $user = UserService::getUserById($_SESSION["userId"]);
 if (empty($user)) {
     header("Location: ../");
     exit();
+}
+
+// Handle module toggle
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['device_id']) && isset($_POST['device_token'])) {
+        $deviceId = intval($_POST['device_id'] ?? 0);   
+        $deviceToken = $_POST['device_token'] ?? '';
+        $result = DeviceService::deleteDevice($user->id, $deviceToken);
+        new LogInfo("Device with ID $deviceId removed by user ID " . $user->id);
+    }
 }
 ?>
 <main class="main-content">
@@ -58,6 +71,17 @@ if (empty($user)) {
                                                     </small>
                                                 </div>
                                             </div>
+                                            <span class="badge bg-primary" data-toggle="tooltip" data-placement="top" title="Device ID">
+                                                <i class="bi bi-hash me-1"></i>
+                                                <?= $device->id ?>
+                                            </span>
+                                            <form method="POST">
+                                                <input type="hidden" name="device_id" value="<?= $device->id ?>">
+                                                <input type="hidden" name="device_token" value="<?= $device->localMachineToken ?>">
+                                                <button class="btn badge bg-danger" type="submit" data-toggle="tooltip" data-placement="top" title="Remove this device">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            </form>
                                             <span class="badge bg-success" data-toggle="tooltip" data-placement="top" title="Server correctly connected">
                                                 <i class="bi bi-check-circle me-1"></i>
                                                 Connected

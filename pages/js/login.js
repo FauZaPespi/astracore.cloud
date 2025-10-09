@@ -1,4 +1,5 @@
-// Enhanced input focus effects
+// Style du login 
+
 document.querySelectorAll('.form-input').forEach(input => {
     input.addEventListener('focus', () => {
         input.parentElement.style.transform = 'translateY(-2px)';
@@ -9,14 +10,6 @@ document.querySelectorAll('.form-input').forEach(input => {
     });
 });
 
-// Social button interactions
-document.querySelectorAll('.social-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        alert(`${btn.title} integration coming soon!`);
-    });
-});
-
-// Add subtle mouse movement parallax effect
 document.addEventListener('mousemove', (e) => {
     const mouseX = e.clientX / window.innerWidth;
     const mouseY = e.clientY / window.innerHeight;
@@ -28,7 +21,6 @@ document.addEventListener('mousemove', (e) => {
     background.style.transform = `translate(${translateX}px, ${translateY}px)`;
 });
 
-// Auto-focus first input on page load
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('login-email').focus();
 });

@@ -1,11 +1,15 @@
-function showDynamicModal(command, title = '') {
-    // Remove any old modal if exists
+function showDynamicModal(command, title = '', history) {
+    // del les anciens modals
     const oldModal = document.getElementById("dynamicBootstrapModal");
     if (oldModal) {
         oldModal.remove();
     }
 
-    // Create modal container dynamically
+    console.log(command);
+    console.log(title);
+    console.log(history);
+
+    // Crée le modal avec le html bootstrap
     const modalWrapper = document.createElement("div");
     modalWrapper.innerHTML = `
         <div class="modal fade" id="dynamicBootstrapModal" tabindex="-1" aria-hidden="true">
@@ -20,16 +24,18 @@ function showDynamicModal(command, title = '') {
                     <span class="command-text text-secondary">Command:</span>
                     <code class="command-code">${command}</code>
                 </div>
+                <div class="module-history mt-3">
+                    <span class="history-text text-secondary">History output:</span>
+                    <pre class="history-pre bg-dark text-light p-3 rounded" style="max-height: 400px; overflow-y: auto;">${history}</pre>
+                </div>
               </div>
             </div>
           </div>
         </div>
     `;
 
-    // Append modal to body
     document.body.appendChild(modalWrapper);
 
-    // Initialize and show Bootstrap modal
     const modalEl = document.getElementById("dynamicBootstrapModal");
     const modal = new bootstrap.Modal(modalEl);
     modal.show();
