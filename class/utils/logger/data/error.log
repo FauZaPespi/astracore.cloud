@@ -223,3 +223,5 @@
 [ERROR] Class "DeviceService" not found | File: /home/fauza/web/astracore/pages/dashboard/devices.php | Line: 22 | Code: 
 [ERROR] Class "DeviceService" not found | File: /home/fauza/web/astracore/pages/dashboard/devices.php | Line: 22 | Code: 
 [ERROR] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'local_machine_token' in 'WHERE' | File: /home/fauza/web/astracore/class/DeviceService.php | Line: 77 | Code: 42S22
+[ERROR] Class "UserService" not found | File: /home/fauza/web/astracore/index.php | Line: 81 | Code: 
+[ERROR] Class "UserService" not found | File: /home/fauza/web/astracore/index.php | Line: 81 | Code: 

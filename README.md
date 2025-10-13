@@ -158,11 +158,11 @@
 
 ## Contributions de Maksym
 
-- **Refactoring** : Faire le refactoring.
+- **Refactoring** : Faire le refactoring de tout ce qui est possible.
 
 ---
 
 ## Contributions d'Oscar
 
-- **Refactoring** : Faire le refactoring.
+- **Refactoring** : Faire le refactoring de tout ce qui est possible.
 

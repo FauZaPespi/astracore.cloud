@@ -3,17 +3,7 @@ require_once "class/SessionHandler.php";
 require_once "class/UserService.php";
 require_once "class/User.php";
 
-// Check login
-if (!isset($_SESSION["userId"])) {
-    header("Location: ../");
-    exit();
-}
-
-$user = UserService::getUserById($_SESSION["userId"]);
-if (empty($user)) {
-    header("Location: ../");
-    exit();
-}
+global $user;
 
 $message = '';
 $messageType = '';
@@ -259,4 +249,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </main>
 
 <script src="/astracore/pages/js/settings.js"></script>
-<link rel="stylesheet" href="/astracore/pages/css/settings.css">
+<link rel="stylesheet" href="/astracore/pages/css/dashboard/settings.css">

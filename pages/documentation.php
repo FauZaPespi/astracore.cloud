@@ -1,19 +1,8 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-require_once "class/UserService.php";
-require_once "class/SessionHandler.php";
-require_once "class/User.php";
 require_once "class/utils/logger/LogError.php";
 require_once "class/utils/logger/LogSuccess.php";
 
-$isLogged = false;
-
-if (isset($_SESSION["userId"])) {
-    $user = UserService::getUserById($_SESSION["userId"]);
-    $isLogged = !empty($user);
-}
+global $isLogged;
 
 $jsonChangelog = file_get_contents("/home/fauza/web/astracore/changelog.json");
 $changelog = json_decode($jsonChangelog, true);
@@ -27,19 +16,19 @@ $changelog = json_decode($jsonChangelog, true);
     <title>AstraCore.cloud - One Website. Thousands of Machines. Full Control.</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="pages/css/home.css">
-    <link rel="stylesheet" href="pages/css/header.css">
-    <link rel="stylesheet" href="pages/css/footer.css">
-    <link rel="stylesheet" href="pages/css/utils.css">
+    <link rel="stylesheet" href="pages/css/base/home.css">
+    <link rel="stylesheet" href="pages/css/base/layout.css">
+    <link rel="stylesheet" href="pages/css/utils/variables.css">
+    <link rel="stylesheet" href="pages/css/utils/buttons.css">
     <link rel="icon" type="image/x-icon" href="pages/assets/AstraCore.ico">
 </head>
 
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <a href="/" class="logo">AstraCore</a>
+        <a href="/astracore" class="logo">AstraCore</a>
         <ul class="nav-links">
-            <li><a href="doc">Docs</a></li>
+            <li><a href="/astracore">Docs</a></li>
             <li><a href="doc#changelog">Changelog</a></li>
             <li><a href="mailto:support@astracore.cloud">Contact</a></li>
         </ul>

@@ -5,10 +5,6 @@ function showDynamicModal(command, title = '', history) {
         oldModal.remove();
     }
 
-    console.log(command);
-    console.log(title);
-    console.log(history);
-
     // Crée le modal avec le html bootstrap
     const modalWrapper = document.createElement("div");
     modalWrapper.innerHTML = `

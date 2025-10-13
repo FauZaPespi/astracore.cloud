@@ -1,14 +1,5 @@
 <?php
-require_once "class/UserService.php";
-require_once "class/SessionHandler.php";
-require_once "class/User.php";
-
-$isLogged = false;
-
-if (isset($_SESSION["userId"])) {
-    $user = UserService::getUserById($_SESSION["userId"]);
-    $isLogged = !empty($user);
-}
+global $isLogged;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,10 +10,10 @@ if (isset($_SESSION["userId"])) {
     <title>AstraCore.cloud - Privacy Policy</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="pages/css/header.css">
-    <link rel="stylesheet" href="pages/css/legal.css">
-    <link rel="stylesheet" href="pages/css/footer.css">
-    <link rel="stylesheet" href="pages/css/utils.css">
+    <link rel="stylesheet" href="pages/css/base/layout.css">
+    <link rel="stylesheet" href="pages/css/base/legal.css">
+    <link rel="stylesheet" href="pages/css/utils/variables.css">
+    <link rel="stylesheet" href="pages/css/utils/buttons.css">
     <link rel="icon" type="image/x-icon" href="pages/assets/AstraCore.ico">
 </head>
 

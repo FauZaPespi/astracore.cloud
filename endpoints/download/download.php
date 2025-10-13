@@ -1,15 +1,5 @@
 <?php
-require_once __DIR__ . "/../../class/SessionHandler.php";
-require_once __DIR__ . "/../../class/UserService.php";
-require_once __DIR__ . "/../../class/User.php";
-
-// Check if user is logged in (optional for download page)
-$isLogged = isset($_SESSION["userId"]);
-$user = null;
-
-if ($isLogged) {
-    $user = UserService::getUserById($_SESSION["userId"]);
-}
+global $isLogged;
 ?>
 
 <!DOCTYPE html>
@@ -21,11 +11,11 @@ if ($isLogged) {
     <title>Download AstraCore Agent - AstraCore.cloud</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="pages/css/home.css">
-    <link rel="stylesheet" href="pages/css/header.css">
-    <link rel="stylesheet" href="pages/css/footer.css">
-    <link rel="stylesheet" href="pages/css/utils.css">
-    <link rel="stylesheet" href="pages/css/settings.css">
+    <link rel="stylesheet" href="pages/css/base/home.css">
+    <link rel="stylesheet" href="pages/css/base/layout.css">
+    <link rel="stylesheet" href="pages/css/utils/variables.css">
+    <link rel="stylesheet" href="pages/css/utils/buttons.css">
+    <link rel="stylesheet" href="pages/css/backup/settings.css">
     <link rel="icon" type="image/x-icon" href="pages/assets/AstraCore.ico">
 </head>
 
@@ -171,6 +161,9 @@ if ($isLogged) {
                                             <div class="instruction-step mb-3 text-white">
                                                 <div class="step-content ">
                                                     <strong>Download the agent</strong>
+                                                    <div class="code-block mt-2">
+                                                        <code>wget "https://astracore.cloud/download?platform=linux" -O astracore</code>
+                                                    </div>
                                                     <p>Click the download button above to get the Linux binary.</p>
                                                 </div>
                                             </div>
@@ -188,7 +181,7 @@ if ($isLogged) {
                                                 <div class="step-content">
                                                     <strong>Run the agent</strong>
                                                     <div class="code-block mt-2">
-                                                        <code>./astracore --install</code>
+                                                        <code>./astracore</code>
                                                     </div>
                                                 </div>
                                             </div>
@@ -251,7 +244,7 @@ if ($isLogged) {
                     <?php if ($isLogged): ?>
                         <div class="row mt-5">
                             <div class="col-12">
-                                <div class="card">
+                                <div class="card" style="margin-bottom: 50px;">
                                     <div class="card-header">
                                         <h4 class="card-title mb-0">
                                             <i class="bi bi-arrow-right-circle me-2"></i>
@@ -279,7 +272,7 @@ if ($isLogged) {
                     <?php else: ?>
                         <div class="row mt-5">
                             <div class="col-12">
-                                <div class="card">
+                                <div class="card" style="margin-bottom: 50px;">
                                     <div class="card-header">
                                         <h4 class="card-title mb-0">
                                             <i class="bi bi-person-plus me-2"></i>
@@ -297,7 +290,7 @@ if ($isLogged) {
                                             </a>
                                             <a href="/astracore/login" class="btn btn-outline-primary">
                                                 <i class="bi bi-box-arrow-in-right me-2"></i>
-                                                Sign In
+                                                Log-In
                                             </a>
                                         </div>
                                     </div>
@@ -371,7 +364,7 @@ if ($isLogged) {
 
     <style>
         .download-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, all 0.5s ease;
             height: 100%;
         }
 

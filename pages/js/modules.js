@@ -117,7 +117,7 @@ function initializeSearch() {
     });
 }
 
-// Filte
+// Filter
 function initializeFilters() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const deviceFilter = document.getElementById('deviceSelect'); 

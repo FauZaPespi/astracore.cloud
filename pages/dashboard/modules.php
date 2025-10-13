@@ -5,17 +5,7 @@ require_once "class/DeviceService.php";
 require_once "class/ModuleService.php";
 require_once "class/utils/popUp/PopUpNotification.php";
 
-// Check login
-if (!isset($_SESSION["userId"])) {
-    header("Location: ../");
-    exit();
-}
-
-$user = UserService::getUserById($_SESSION["userId"]);
-if (empty($user)) {
-    header("Location: ../");
-    exit();
-}
+global $user;
 
 $message = '';
 $messageType = '';
@@ -289,5 +279,6 @@ $modules = ModuleService::getAllModules($user->id);
 </main>
 <script src="/astracore/pages/js/modules.js"></script>
 <script src="/astracore/pages/js/smallPopUp.js"></script>
-<link rel="stylesheet" href="/astracore/pages/css/modules.css">
-<link rel="stylesheet" href="/astracore/pages/css/settings.css">
+<link rel="stylesheet" href="/astracore/pages/css/dashboard/modules.css">
+<link rel="stylesheet" href="/astracore/pages/css/dashboard/settings.css">
+<link rel="stylesheet" href="/astracore/pages/css/utils/forms.css">

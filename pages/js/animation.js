@@ -1,6 +1,5 @@
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
             target.scrollIntoView({
@@ -16,6 +15,7 @@ const observerOptions = {
     rootMargin: '0px 0px -50px 0px'
 };
 
+// Pour savoir si l'utilisateur voit l'élement sur la page.
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -148,5 +148,3 @@ gsap.from(".footer", {
 });
 
 gsap.fromTo(".nav-buttons", { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1 });
-
-gsap.fromTo("hero-buttons", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1, delay: 1.2 });

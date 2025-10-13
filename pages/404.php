@@ -1,15 +1,4 @@
-<?php
-require_once "class/UserService.php";
-require_once "class/SessionHandler.php";
-require_once "class/User.php";
-
-$isLogged = false;
-
-if (isset($_SESSION["userId"])) {
-    $user = UserService::getUserById($_SESSION["userId"]);
-    $isLogged = !empty($user);
-}
-?>
+<?php global $isLogged; ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -18,10 +7,10 @@ if (isset($_SESSION["userId"])) {
     <title>AstraCore.cloud - Page Not Found</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="pages/css/utils.css">
-    <link rel="stylesheet" href="pages/css/home.css">
-    <link rel="stylesheet" href="pages/css/header.css">
-    <link rel="stylesheet" href="pages/css/footer.css">
+    <base href="/astracore/">
+    <link rel="stylesheet" href="pages/css/base/layout.css">
+    <link rel="stylesheet" href="pages/css/utils/variables.css">
+    <link rel="stylesheet" href="pages/css/utils/buttons.css">
     <link rel="icon" type="image/x-icon" href="pages/assets/AstraCore.ico">
     <style>
         /* 404 Custom Styles */
@@ -78,11 +67,11 @@ if (isset($_SESSION["userId"])) {
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <a href="#" class="logo">AstraCore</a>
+        <a href="/astracore" class="logo">AstraCore</a>
         <ul class="nav-links">
-            <li><a href="#">Overview</a></li>
-            <li><a href="#">Organisation</a></li>
-            <li><a href="#">Docs</a></li>
+            <li><a href="/astracore">Overview</a></li>
+            <li><a href="/astracore#organisation">Organisation</a></li>
+            <li><a href="/doc">Docs</a></li>
         </ul>
         <div class="nav-buttons"> <?= !$isLogged ? '<a href="login" class="btn btn-ghost">Login</a>' : "" ?> <a href="<?= $isLogged ? "dashboard/" : "signup" ?>" class="btn btn-primary"><?= $isLogged ? "Dashboard" : "Get Started" ?></a> </div>
     </nav>
@@ -92,7 +81,7 @@ if (isset($_SESSION["userId"])) {
         
         <h1><i class="bi bi-exclamation-triangle-fill error-icon"></i><span class="invisible">.</span>404</h1>
         <p>Oops! The page you're looking for doesn't exist.</p>
-        <a href="https://1.3.3.7/why so serious" onclick="history.back(); return false;" class="btn-back"><i class="bi bi-arrow-left-circle"></i><span class="invisible">..</span>Back to Home</a>
+        <a href="#" onclick="history.back(); return false;" class="btn-back"><i class="bi bi-arrow-left-circle"></i><span class="invisible">..</span>Back to previous page</a>
     </section>
 
     <!-- Footer -->

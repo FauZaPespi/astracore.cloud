@@ -4,14 +4,6 @@ require_once "class/SessionHandler.php";
 require_once "class/User.php";
 require_once "class/utils/LoggerOscar.php";
 
-if (isset($_SESSION["userId"])) {
-    $user = UserService::getUserById($_SESSION["userId"]);
-
-    if (!empty($user)) {
-        header("Location: ./dashboard/");
-    }
-}
-
 $diagnostics = [
     "username" => "",
     "email" => "",
@@ -73,11 +65,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <link rel="icon" type="image/x-icon" href="pages/assets/AstraCore.ico">
     <script type="text/javascript" src="pages/js/signup.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="pages/css/signup.css">
-    <link rel="stylesheet" href="pages/css/header.css">
-    <link rel="stylesheet" href="pages/css/footer.css">
-    <link rel="stylesheet" href="pages/css/utils.css">
+    <link rel="stylesheet" href="pages/css/utils/variables.css">
+    <link rel="stylesheet" href="pages/css/utils/buttons.css">
+    <link rel="stylesheet" href="pages/css/utils/forms.css">
+    <link rel="stylesheet" href="pages/css/utils/animations.css">
+    <link rel="stylesheet" href="pages/css/base/auth.css">
+    <link rel="stylesheet" href="pages/css/base/layout.css">
 </head>
 
 <body>

@@ -1,19 +1,8 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-require_once "class/UserService.php";
-require_once "class/SessionHandler.php";
-require_once "class/User.php";
 require_once "class/utils/logger/LogError.php";
 require_once "class/utils/logger/LogSuccess.php";
 
-$isLogged = false;
-
-if (isset($_SESSION["userId"])) {
-    $user = UserService::getUserById($_SESSION["userId"]);
-    $isLogged = !empty($user);
-}
+global $isLogged;
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -24,10 +13,13 @@ if (isset($_SESSION["userId"])) {
     <title>AstraCore.cloud - One Website. Thousands of Machines. Full Control.</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="pages/css/home.css">
-    <link rel="stylesheet" href="pages/css/header.css">
-    <link rel="stylesheet" href="pages/css/footer.css">
-    <link rel="stylesheet" href="pages/css/utils.css">
+    <base href="/astracore/pages">
+    <link rel="stylesheet" href="pages/css/utils/variables.css">
+    <link rel="stylesheet" href="pages/css/utils/buttons.css">
+    <link rel="stylesheet" href="pages/css/utils/forms.css">
+    <link rel="stylesheet" href="pages/css/utils/animations.css">
+    <link rel="stylesheet" href="pages/css/base/layout.css">
+    <link rel="stylesheet" href="pages/css/base/home.css">
     <link rel="icon" type="image/x-icon" href="pages/assets/AstraCore.ico">
 </head>
 
@@ -41,7 +33,7 @@ if (isset($_SESSION["userId"])) {
     <nav class="navbar"> <a href="#" class="logo">AstraCore</a>
         <ul class="nav-links">
             <li><a href="#overview">Overview</a></li>
-            <li><a href="#organisation">Organisation</a></li>
+            <li><a href="./download">Download</a></li>
             <li><a href="./doc">Docs</a></li>
         </ul>
         <div class="nav-buttons"> <?= !$isLogged ? '<a href="login" class="btn btn-ghost">Login</a>' : "" ?> <a href="<?= $isLogged ? "dashboard/" : "signup" ?>" class="btn btn-primary"><?= $isLogged ? "Dashboard" : "Get Started" ?></a> </div>
@@ -103,7 +95,7 @@ if (isset($_SESSION["userId"])) {
             <div class="row justify-content-center g-4">
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="team-card">
-                        <img class="team-avatar" src="https://api.fauza.dev/discord/pfp.php" alt="FauZa" onerror="this.onerror=null; this.src='https://placehold.co/1200x1200/1A1F2C/9b87f5?text=FZ';" draggable="false">
+                        <img class="team-avatar" src="notFound" alt="FauZa" onerror="this.onerror=null; this.src='https://placehold.co/1200x1200/1A1F2C/9b87f5?text=FZ';" draggable="false">
                         <h4>FauZa</h4>
                         <p>Front-End Developer, Co-Founder</p>
                     </div>
@@ -127,12 +119,9 @@ if (isset($_SESSION["userId"])) {
             <br>
             <a href="<?= $isLogged ? "dashboard" : "login" ?>" class="btn btn-outline"><i class="bi bi-database-fill-add"></i><span class="invisible">..</span>Connect my server</a>
         </div>
-        <?php
-        for ($i = 0; $i < 3; $i++) {
-            echo "<br>";
-        }
-        ?>
-
+        <br>
+        <br>
+        <br>
     </section>
 
     <!-- Footer -->

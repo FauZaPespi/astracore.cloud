@@ -6,17 +6,7 @@ require_once __DIR__ . "/../../class/User.php";
 require_once __DIR__ . "/../../class/Device.php";
 require_once __DIR__ . "/../../class/utils/popUp/PopUpNotification.php";
 
-// Check login
-if (!isset($_SESSION["userId"])) {
-    header("Location: ../");
-    exit();
-}
-
-$user = UserService::getUserById($_SESSION["userId"]);
-if (empty($user)) {
-    header("Location: ../");
-    exit();
-}
+global $user;
 
 $message = '';
 $messageType = '';
@@ -51,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (empty($errors)) {
             $device = DeviceService::addDevice($deviceIp, $deviceToken, $user->id);
 
-            if ($success) {
+            if ($device) {
                 // Refresh user data to show the new device
                 $user = UserService::getUserById($_SESSION["userId"]);
                 $message = "Device successfully added!";
@@ -333,6 +323,6 @@ if (isset($_GET['popup']) && $_GET['popup'] === 'form_incomplete') {
     });
 </script>
 
-<link rel="stylesheet" href="/astracore/pages/css/add_devices.css">
+<link rel="stylesheet" href="/astracore/pages/css/dashboard/add_devices.css">
 
-<link rel="stylesheet" href="/astracore/pages/css/settings.css">
+<link rel="stylesheet" href="/astracore/pages/css/dashboard/settings.css">

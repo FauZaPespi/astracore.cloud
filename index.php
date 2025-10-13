@@ -11,6 +11,9 @@ require_once __DIR__ . '/class/utils/logger/LogWarning.php';
 require_once __DIR__ . '/class/utils/logger/LogInfo.php';
 require_once __DIR__ . '/class/utils/logger/LogSuccess.php';
 require_once __DIR__ . '/class/utils/logger/LogDebug.php';
+require_once __DIR__ . '/class/SessionHandler.php';
+require_once __DIR__ . '/class/UserService.php';
+require_once __DIR__ . '/class/User.php';
 
 // Load config
 Config::load(__DIR__ . "/conf.json");
@@ -74,7 +77,15 @@ define('URL_ROOT', '/astracore');
 $requestUri = $_SERVER['REQUEST_URI'];
 $requestMethod = $_SERVER['REQUEST_METHOD'];
 
-// Pages
+$isLogged = false;
+$user = null;
+
+if (isset($_SESSION["userId"])) {
+    $user = UserService::getUserById($_SESSION["userId"]);
+    $isLogged = !empty($user);
+}
+
+// Pages Middleware
 if ($requestUri === URL_ROOT . '/' || $requestUri === URL_ROOT . '/index.php') {
     require_once __DIR__ . '/pages/home.php';
 } elseif ($requestUri === URL_ROOT . '/privacy-policy') {
@@ -84,11 +95,21 @@ if ($requestUri === URL_ROOT . '/' || $requestUri === URL_ROOT . '/index.php') {
 } elseif ($requestUri === URL_ROOT . '/doc' || $requestUri === URL_ROOT . '/doc/') {
     require_once __DIR__ . '/pages/documentation.php';
 } elseif ($requestUri === URL_ROOT . '/signup') {
-    require_once __DIR__ . '/pages/signup.php';
+    if (!empty($user)) {
+        http_response_code(301);
+        header("Location: ./dashboard/");
+    } else {
+        require_once __DIR__ . '/pages/signup.php';
+    }
 } elseif ($requestUri === URL_ROOT . '/login') {
-    require_once __DIR__ . '/pages/login.php';
+    if (!empty($user)) {
+        http_response_code(301);
+        header("Location: ./dashboard/");
+    } else {
+        require_once __DIR__ . '/pages/login.php';
+    }
 } elseif ($requestUri === URL_ROOT . '/download?platform=linux') {
-    $file = "https://github.com/Res-NeoTech/astracore_receiver/releases/download/Linux/astracore";
+    $file = "https://github.com/Res-NeoTech/astracore_receiver/releases/download/1.1.0-Linux/astracore";
     header("Location: $file");
     exit;
 } elseif ($requestUri === URL_ROOT . '/download?platform=win') {
@@ -108,7 +129,12 @@ if ($requestUri === URL_ROOT . '/' || $requestUri === URL_ROOT . '/index.php') {
     strpos($requestUri, URL_ROOT . '/dashboard?action=') === 0 ||
     strpos($requestUri, URL_ROOT . '/dashboard/?action=') === 0
 ) {
-    require_once __DIR__ . '/pages/dashboard/view.php';
+    if (empty($user)) {
+        http_response_code(301);
+        header("Location: ../login");
+    } else {
+        require_once __DIR__ . '/pages/dashboard/view.php';
+    }
 }
 // Fallback 404
 else {

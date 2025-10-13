@@ -5,20 +5,9 @@ require_once "class/User.php";
 require_once "class/DeviceService.php";
 require_once "class/Device.php";
 
+global $user;
 
-// Check login
-if (!isset($_SESSION["userId"])) {
-    header("Location: ../");
-    exit();
-}
-
-$user = UserService::getUserById($_SESSION["userId"]);
-if (empty($user)) {
-    header("Location: ../");
-    exit();
-}
-
-// Handle module toggle
+// Handle device deletion.
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['device_id']) && isset($_POST['device_token'])) {
         $deviceId = intval($_POST['device_id'] ?? 0);   
@@ -106,12 +95,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </main>
 
 
-<link rel="stylesheet" href="/astracore/pages/css/add_devices.css">
-
-<link rel="stylesheet" href="/astracore/pages/css/settings.css">
-
-<style>
-    .card {
-        margin: 45px;
-    }
-</style>
+<link rel="stylesheet" href="/astracore/pages/css/dashboard/add_devices.css">
+<link rel="stylesheet" href="/astracore/pages/css/dashboard/settings.css">

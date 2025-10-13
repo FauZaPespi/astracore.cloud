@@ -94,18 +94,6 @@
         }
     }
 
-    .card::before {
-        content: '';
-        position: absolute;
-        top: -200%;
-        left: -200%;
-        width: 400%;
-        height: 400%;
-        background: conic-gradient(from 0deg, transparent, rgba(15, 157, 102, 0.05), transparent);
-        animation: cardRotate 15s linear infinite;
-        z-index: 0;
-    }
-
     @keyframes cardRotate {
         0% {
             background: conic-gradient(from 0deg, transparent, rgba(15, 157, 102, 0.05), transparent);

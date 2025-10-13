@@ -5,14 +5,6 @@ require_once "class/User.php";
 require_once "class/utils/logger/LogError.php";
 require_once "class/utils/logger/LogWarning.php";
 
-if (isset($_SESSION["userId"])) {
-    $user = UserService::getUserById($_SESSION["userId"]);
-
-    if (!empty($user)) {
-        header("Location: ./dashboard/");
-    }
-}
-
 $error = false;
 $login = "";
 $password = "";
@@ -22,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $password = filter_input(INPUT_POST, "password", FILTER_UNSAFE_RAW);
     $error = empty($login) || empty($password);
 
-    if(!$error) {
+    if (!$error) {
         $user = UserService::login($login, $password);
 
         if (!empty($user)) {
@@ -45,10 +37,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <title>Log In - AstraCore.cloud</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="pages/css/login.css">
-    <link rel="stylesheet" href="pages/css/header.css">
-    <link rel="stylesheet" href="pages/css/footer.css">
-    <link rel="stylesheet" href="pages/css/utils.css">
+    <link rel="stylesheet" href="pages/css/utils/variables.css">
+    <link rel="stylesheet" href="pages/css/utils/buttons.css">
+    <link rel="stylesheet" href="pages/css/utils/forms.css">
+    <link rel="stylesheet" href="pages/css/utils/animations.css">
+    <link rel="stylesheet" href="pages/css/base/auth.css">
+    <link rel="stylesheet" href="pages/css/base/layout.css">
     <script type="text/javascript" src="pages/js/login.js" defer></script>
 </head>
 
@@ -60,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <nav class="navbar">
         <a href="../astracore" class="logo">AstraCore</a>
         <div class="nav-buttons">
-            <a href="signup" class="btn btn-ghost">Sign Up</a>
+            <a href="signup" class="btn btn-ghost">Register</a>
         </div>
     </nav>
 
@@ -99,7 +93,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
                 <?= $error ? "<p class='error'>Invalid credentials, please try again.</p>" : "" ?>
 
-                <button type="submit" class="btn btn-primary">Log In</button>
+                <button type="submit" class="btn btn-primary">Log-In</button>
 
                 <!-- <div class="forgot-password">
                     <a href="#" class="auth-link" onclick="showForgotPassword()">Forgot your password?</a>

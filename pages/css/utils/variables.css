@@ -1,0 +1,62 @@
+/* ===================================
+   VARIABLES CSS & RESET
+   =================================== */
+
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables globales */
+:root {
+    --green-primary: #0f9d66;
+    --green-accent: #10b981;
+    --white: #f9f9f9;
+    --gray-light: #e9e9e9;
+    --gray-dark: #2F343F;
+    --black: #0a0a0a;
+}
+
+/* Styles de base pour le body */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Styles pour les liens */
+a {
+    color: var(--green-accent);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--green-primary);
+}
+
+/* Styles pour le code */
+code {
+    background: rgba(47, 52, 63, 0.5);
+    border: 1px solid rgba(233, 233, 233, 0.1);
+    border-radius: 6px;
+    padding: 0.25rem 0.5rem;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    color: var(--green-accent);
+    font-size: 0.875rem;
+}
+
+/* Styles pour strong */
+strong {
+    color: var(--white);
+    font-weight: 600;
+}
+
+/* Liste sans style par défaut */
+ul, ol {
+    list-style: none;
+}
