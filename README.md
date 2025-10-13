@@ -139,7 +139,7 @@
 
 ## Contributions de Maksym
 
-- **Text** : text.
+- **Build** : build le reciever.
 - **Refactoring** : Faire le refactoring PHP
 
 ---
@@ -150,3 +150,19 @@
 - **Modules** : Faire les bon execution modification UI
 - **CSS** : Avancement du CSS de toute les pages
 - **Réfactoring** : Faire refactoring JS et CSS
+
+---
+
+## Date : 13 Octobre 2025
+
+
+## Contributions de Maksym
+
+- **Refactoring** : Faire le refactoring.
+
+---
+
+## Contributions d'Oscar
+
+- **Refactoring** : Faire le refactoring.
+

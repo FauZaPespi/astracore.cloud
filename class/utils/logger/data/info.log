@@ -2677,3 +2677,5 @@ test.caca
 [LogInfo] Page generation time: 0.0055549144744873 seconds | Page:localhost/astracore/index.php | INFO
 [LogInfo] Page generation time: 0.0024759769439697 seconds | Page:localhost/astracore/index.php | INFO
 [LogInfo] Page generation time: 0.0020279884338379 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.01042103767395 seconds | Page:localhost/astracore/index.php | INFO
+[LogInfo] Page generation time: 0.00021886825561523 seconds | Page:localhost/astracore/index.php | INFO
