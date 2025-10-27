@@ -166,3 +166,78 @@
 
 - **Refactoring** : Faire le refactoring de tout ce qui est possible.
 
+
+---
+
+#  Améliorations prévues
+
+##  Refonte technique
+
+-  **Recréer le site avec Nuxt.js ou Next.js**  
+  Remplacer l’ancien code PHP pour une stack moderne, rapide et évolutive.  
+-  **Rendre le site entièrement responsive**  
+  Optimiser l’expérience utilisateur sur mobile, tablette et desktop.  
+-  **Refaire le système de connexion au receiver**  
+  Sécurisation, robustesse et performance avant tout.  
+-  **Migrer de MariaDB vers MongoDB**  
+  Plus de flexibilité et de scalabilité dans la gestion des données.  
+-  **Refonte complète du design**  
+  Unifier le style et améliorer l’ergonomie du site.  
+-  **Remplacer Bootstrap par TailwindCSS**  
+  Code plus léger, design plus moderne et productivité accrue.  
+-  **Corriger les problèmes de routing**  
+  Réparer les redirections défectueuses et améliorer la navigation.  
+-  **Faire fonctionner toutes les pages (dont le changelog)**  
+  Assurer la cohérence des données entre chaque section du site.  
+
+---
+
+##  Nouvelles fonctionnalités
+
+-  **Intégrer un forfait Premium**  
+  Offrir plus de fonctionnalités et de valeur aux utilisateurs.  
+-  **Monétiser le projet**  
+  Publicités, abonnements, partenariats : plusieurs sources de revenus.  
+-  **Créer des panneaux de gestion**  
+  - Panel **Administrateur**  
+  - Panel **Modérateur**  
+  - Panel **Publicité**  
+-  **Migrer l’infrastructure DevOps vers AWS**  
+  Meilleure performance, sécurité et déploiement continu.  
+-  **Porter le site sur React Native**  
+  Pour une disponibilité sur **iOS, Android, Wear OS, SmartTV et Apple TV**.  
+
+---
+
+##  Communication & marketing
+
+-  **Lancer des campagnes publicitaires**  
+  - Google Ads & YouTube  
+  - Meta (Instagram, Facebook, etc.)  
+-  **Créer une présence sur les réseaux**  
+  - Instagram  
+  - X (Twitter)  
+  - YouTube  
+  - LinkedIn  
+  - GitHub (Organisation)  
+  - Indeed  
+  - Dailymotion  
+-  **Produire des vidéos de présentation et de tutoriels**  
+  Pour expliquer le projet et attirer de nouveaux utilisateurs.  
+-  **Recruter des membres actifs et modérateurs**  
+  Renforcer l’équipe et améliorer la gestion de la communauté.  
+-  **Créer un serveur Discord**  
+  Pour centraliser la communication et animer la communauté.  
+
+---
+
+##  Vision long terme
+
+-  **Enregistrer officiellement l’entreprise**  
+  Donner une identité juridique solide au projet.  
+-  **Acquérir des locaux**  
+  Pour structurer et professionnaliser l’équipe.  
+-  **Créer des comptes développeurs pro**  
+  Sur **Apple Store** et **Google Play Store**.  
+-  **Objectif ultime : introduction en bourse (NASDAQ)**  
+  Rien n’est impossible.  
