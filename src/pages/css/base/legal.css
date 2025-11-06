@@ -1,0 +1,194 @@
+/* ===================================
+   LEGAL PAGES (Privacy Policy, Terms, etc.)
+   =================================== */
+
+.privacy-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+    animation: fade-in-up 1s ease-out;
+}
+
+/* Main Heading */
+h1 {
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: 6rem;
+    margin-top: 6rem;
+    padding: 15px;
+    background: linear-gradient(135deg, var(--white), var(--green-accent));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Last Updated */
+body > p:first-of-type {
+    text-align: center;
+    color: var(--gray-light);
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    opacity: 0.8;
+}
+
+/* Introduction Paragraph */
+body > p:nth-of-type(2),
+body > p:nth-of-type(3) {
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    padding: 0 2rem;
+    color: var(--gray-light);
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* Section Headings */
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+h2::before {
+    content: '';
+    position: absolute;
+    left: 2rem;
+    bottom: -0.5rem;
+    width: 60px;
+    height: 3px;
+    background: var(--green-accent);
+}
+
+/* Sub-headings */
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--green-accent);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Paragraphs */
+p {
+    max-width: 900px;
+    margin: 0 auto 1.5rem;
+    padding: 0 2rem;
+    color: var(--gray-light);
+    line-height: 1.8;
+}
+
+/* Lists */
+.privacy-container > ul {
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    padding: 0 2rem 0 4rem;
+    color: var(--gray-light);
+    line-height: 1.8;
+}
+
+.privacy-container > ul li {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.privacy-containerul > li::marker {
+    color: var(--green-accent);
+}
+
+/* Nested Lists */
+.privacy-container > ul ul {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+/* Definition Cards for Key Terms */
+body > ul:first-of-type li {
+    background: rgba(10, 10, 10, 0.6);
+    border: 1px solid rgba(15, 157, 102, 0.2);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+body > ul:first-of-type li:hover {
+    border-color: var(--green-primary);
+    background: rgba(15, 157, 102, 0.05);
+    transform: translateX(5px);
+}
+
+body > ul:last-of-type {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+
+body > ul:last-of-type li {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        margin-top: 4rem;
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    h2::before {
+        left: 1rem;
+        width: 40px;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+        padding: 0 1rem;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+
+    p, ul {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    ul {
+        padding-left: 2rem;
+    }
+
+    .privacy-container {
+        padding: 4rem 1rem;
+    }
+}

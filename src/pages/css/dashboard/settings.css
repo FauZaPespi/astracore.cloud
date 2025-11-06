@@ -1,0 +1,108 @@
+/* ===================================
+   SETTINGS PAGE
+   =================================== */
+
+/* Main content area */
+.main-content {
+    background: var(--black);
+    min-height: 100vh;
+    color: var(--white);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Page header styling */
+.page-header {
+    padding: 2rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(15, 157, 102, 0.1) 0%, transparent 50%);
+    z-index: 0;
+}
+
+.page-title {
+    color: var(--white);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--white), var(--green-accent));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    z-index: 1;
+    animation: titleGlow 2s ease-in-out infinite alternate;
+}
+
+.page-description {
+    color: var(--gray-light);
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Info items */
+.info-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(233, 233, 233, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-item strong {
+    color: var(--white);
+    font-weight: 600;
+}
+
+.info-item span {
+    color: var(--gray-light);
+    font-size: 1rem;
+}
+
+/* Container adjustments */
+.container-fluid {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .container-fluid {
+        padding: 0 1rem;
+    }
+}
+
+/* Animation delays for staggered card appearance */
+.col-lg-6:nth-child(1) .card {
+    animation-delay: 0.1s;
+}
+
+.col-lg-6:nth-child(2) .card {
+    animation-delay: 0.2s;
+}
+
+.col-12 .card {
+    animation-delay: 0.3s;
+}
