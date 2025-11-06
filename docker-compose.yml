@@ -1,0 +1,39 @@
+name: astracore
+
+services:
+  web:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    container_name: web
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src/:/var/www/html/
+    depends_on:
+      mariadb:
+        condition: service_healthy
+  mariadb:
+    build:
+      context: ./db
+      dockerfile: Dockerfile
+    container_name: mariadb
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: Super123 
+      MYSQL_DATABASE: Astracore 
+      MYSQL_USER: remoteuser 
+      MYSQL_PASSWORD: Super123 
+    healthcheck:
+      test: [ "CMD", "healthcheck.sh", "--su-mysql", "--connect", "--innodb_initialized" ]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    volumes:
+      - dbdata:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+volumes:
+  dbdata:
