@@ -5,13 +5,15 @@ class User {
     public string $username;
     public string $password;
     public string $email;
+    public string $role;
     public array $devices; // Array to hold Device objects
 
-    public function __construct(int $id, string $username, string $password, string $email) {
+    public function __construct(int $id, string $username, string $password, string $email, string $role) {
         $this->id = $id;
         $this->username = $username;
         $this->password = $password;
         $this->email = $email;
+        $this->role = $role;
         $this->devices = [];
     }
 
@@ -43,6 +45,7 @@ class User {
             'id' => $this->id,
             'username' => $this->username,
             'email' => $this->email,
+            "role" => $this->role,
             'devices' => array_map(function($device) {
                 return method_exists($device, 'toArray') ? $device->toArray() : $device;
             }, $this->devices),

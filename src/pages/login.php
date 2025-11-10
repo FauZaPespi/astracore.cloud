@@ -19,7 +19,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         if (!empty($user)) {
             SaveInSession("userId", $user->id);
-            header("Location: /dashboard");
+            SaveInSession("role", $user->role);
+            if ($user->role == "admin")
+            {
+                header("Location: /admin");
+            }
+            else
+            {
+                header("Location: /dashboard");
+            }
         } else {
             new LogWarning("Failed login attempt for user: $login", "AUTH");
             $error = true;

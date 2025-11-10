@@ -95,6 +95,8 @@ if ($requestUri === URL_ROOT . '/' || $requestUri === URL_ROOT . '' || $requestU
     require_once __DIR__ . '/pages/termsOfUse.php';
 } elseif ($requestUri ===  '/doc' || $requestUri === '/doc/') {
     require_once __DIR__ . '/pages/documentation.php';
+} elseif ($requestUri === '/admin' || $requestUri === '/admin/'){
+    require_once __DIR__ . '/pages/admin.php';
 } elseif ($requestUri === '/signup' || $requestUri === '/signup/') {
     if (!empty($user)) {
         http_response_code(301);
