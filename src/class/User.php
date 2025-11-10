@@ -1,5 +1,7 @@
 <?php
+
 require_once "Device.php";
+
 class User {
     public int $id;
     public string $username;

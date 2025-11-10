@@ -19,14 +19,17 @@ global $isLogged;
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar"> <a href="/" class="logo">AstraCore</a>
+    <nav class="navbar"> 
+        <a href="/" class="logo">AstraCore</a>
         <ul class="nav-links">
-            <li><a href="/">Overview</a></li>
-            <li><a href="/#organisation">Organisation</a></li>
-            <li><a href="/doc">Docs</a></li>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="./download">Download</a></li>
+            <li><a href="./doc">Docs</a></li>
+            <li><a href="./pricing">Pricing</a></li>
         </ul>
         <div class="nav-buttons"> <?= !$isLogged ? '<a href="login" class="btn btn-ghost">Login</a>' : "" ?> <a href="<?= $isLogged ? "dashboard/" : "signup" ?>" class="btn btn-primary"><?= $isLogged ? "Dashboard" : "Get Started" ?></a> </div>
     </nav>
+    
     <article class="privacy-container">
         <h1>Terms of Use</h1>
         <p><strong>Last updated:</strong> October 7, 2025</p>

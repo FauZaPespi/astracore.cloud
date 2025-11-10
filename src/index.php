@@ -91,6 +91,10 @@ if ($requestUri === URL_ROOT . '/' || $requestUri === URL_ROOT . '' || $requestU
     require_once __DIR__ . '/pages/home.php';
 } elseif ($requestUri ===  '/privacy-policy') {
     require_once __DIR__ . '/pages/privacyPolicy.php';
+} elseif ($requestUri ===  '/pricing') {
+    require_once __DIR__ . '/pages/pricing.php';
+} elseif ($requestUri ===  '/subscribe') {
+    require_once __DIR__ . '/pages/subscribe.php';
 } elseif ($requestUri ===  '/terms-of-use') {
     require_once __DIR__ . '/pages/termsOfUse.php';
 } elseif ($requestUri ===  '/doc' || $requestUri === '/doc/') {
@@ -149,6 +153,7 @@ require_once 'class/utils/LoggerOscar.php';
 new LogInfo('Page generation time: ' . ($end - $start) . ' seconds | Page:' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'], 'INFO');
 mkdir(__DIR__ . '/class/utils/logger/data', 0777, true);
 ?>
+
 <base href="/">
 <link rel="stylesheet" href="pages/css/popup.css">
 <script src="pages/js/home.js"></script>

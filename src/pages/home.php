@@ -36,6 +36,7 @@ global $isLogged;
             <li><a href="#overview">Overview</a></li>
             <li><a href="./download">Download</a></li>
             <li><a href="./doc">Docs</a></li>
+            <li><a href="./pricing">Pricing</a></li>
         </ul>
         <div class="nav-buttons"> <?= !$isLogged ? '<a href="login" class="btn btn-ghost">Login</a>' : "" ?> <a href="<?= $isLogged ? "dashboard/" : "signup" ?>" class="btn btn-primary"><?= $isLogged ? "Dashboard" : "Get Started" ?></a> </div>
     </nav>
