@@ -106,6 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <!-- <div class="forgot-password">
                     <a href="#" class="auth-link" onclick="showForgotPassword()">Forgot your password?</a>
                 </div> -->
+                
             </form>
         </div>
     </div>

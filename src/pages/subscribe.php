@@ -1,6 +1,44 @@
+<?php
+
+$error      = false;
+$cardNumber = "";
+$cardDate   = "";
+$cardCvv    = "";
+$cardHolder = "";
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+    $cardNumber = trim(filter_input(INPUT_POST, "card-number", FILTER_VALIDATE_INT));
+    $cardDate   = trim(filter_input(INPUT_POST, "card-date",   FILTER_SANITIZE_SPECIAL_CHARS));
+    $cardCvv    = trim(filter_input(INPUT_POST, "card-cvv",    FILTER_VALIDATE_INT));
+    $cardHolder = trim(filter_input(INPUT_POST, "card-holder", FILTER_SANITIZE_SPECIAL_CHARS));
+
+    $error = empty($cardNumber) || empty($cardDate) || empty($cardCvv) || empty($cardHolder);
+
+    if (!$error) {
+        $user = UserService::login($login, $password);
+
+        if (!empty($user)) {
+            SaveInSession("userId", $user->id);
+            SaveInSession("role", $user->role);
+            if ($user->role == "admin")
+            {
+                header("Location: /admin");
+            }
+            else
+            {
+                header("Location: /dashboard");
+            }
+        } else {
+            new LogWarning("Failed login attempt for user: $login", "AUTH");
+            $error = true;
+        }
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,8 +99,8 @@
                     <label class="form-label" for="card-cvv">CVV</label>
                     <input
                         type="text"
-                        name="card-date"
-                        id="card-date"
+                        name="card-cvv"
+                        id="card-cvv"
                         value=""
                         class="form-input"
                         placeholder="12/30"
@@ -70,11 +108,11 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-label" for="card-name">Cardholder name</label>
+                    <label class="form-label" for="card-holder">Cardholder name</label>
                     <input
                         type="text"
-                        name="card-name"
-                        id="card-name"
+                        name="card-holder"
+                        id="card-holder"
                         value=""
                         class="form-input"
                         placeholder="John Doe"
