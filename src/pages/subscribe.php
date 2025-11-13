@@ -1,5 +1,16 @@
 <?php
 
+require_once "class/SessionHandler.php";
+require_once "class/UserService.php";
+require_once "class/User.php";
+
+global $user;
+
+if(!$_SESSION["userId"])
+{
+    header("Location: /login");
+}
+
 $error      = false;
 $cardNumber = "";
 $cardDate   = "";
@@ -8,31 +19,27 @@ $cardHolder = "";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
+    // Get card info
     $cardNumber = trim(filter_input(INPUT_POST, "card-number", FILTER_VALIDATE_INT));
     $cardDate   = trim(filter_input(INPUT_POST, "card-date",   FILTER_SANITIZE_SPECIAL_CHARS));
     $cardCvv    = trim(filter_input(INPUT_POST, "card-cvv",    FILTER_VALIDATE_INT));
     $cardHolder = trim(filter_input(INPUT_POST, "card-holder", FILTER_SANITIZE_SPECIAL_CHARS));
 
+    // Check card info
     $error = empty($cardNumber) || empty($cardDate) || empty($cardCvv) || empty($cardHolder);
 
-    if (!$error) {
-        $user = UserService::login($login, $password);
 
-        if (!empty($user)) {
-            SaveInSession("userId", $user->id);
-            SaveInSession("role", $user->role);
-            if ($user->role == "admin")
-            {
-                header("Location: /admin");
-            }
-            else
-            {
-                header("Location: /dashboard");
-            }
-        } else {
-            new LogWarning("Failed login attempt for user: $login", "AUTH");
-            $error = true;
+    if (!$error) {
+
+        if(!$user)
+        {
+
         }
+
+
+    } else {
+        new LogWarning("Failed payment attempt for user: $login", "AUTH");
+        $error = true;
     }
 }
 
@@ -66,6 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <div class="nav-buttons"> <?= !$isLogged ? '<a href="login" class="btn btn-ghost">Login</a>' : "" ?> <a href="<?= $isLogged ? "dashboard/" : "signup" ?>" class="btn btn-primary"><?= $isLogged ? "Dashboard" : "Get Started" ?></a> </div>
     </nav>
 
+    <!-- Payment form -->
     <section class="">
         <h1>Subscribe</h1>
 

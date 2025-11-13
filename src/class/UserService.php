@@ -66,6 +66,7 @@ class UserService
             ':email' => $email,
             ':role' => $defaultRole
         ])) {
+
             $id = (int)self::$db->lastInsertId();
             $tmp = UserRole::tryFrom($defaultRole) ?? UserRole::Member;
             return new User($id, $username, $hashedPassword, $email, $tmp);
@@ -116,14 +117,15 @@ class UserService
 
         if (!$userData) return null;
 
+        $enumRole = UserRole::tryFrom($userData['role']) ?? UserRole::Member;
+
         $user = new User(
             $userData['id'],
             $userData['username'],
             $userData['password'],
             $userData['email'],
-            $userData['token'] ?? ''
+            $enumRole
         );
-
         
         // Fetch devices
         $stmtDevices = self::$db->prepare("SELECT * FROM devices WHERE user_id = :user_id");
@@ -171,6 +173,7 @@ class UserService
         return null;
     }
 
+    /*
     // Get user by token
     public static function getUserByToken(string $token): ?User
     {
@@ -183,6 +186,7 @@ class UserService
 
         return self::getUserById((int)$userData['id']);
     }
+    */
 
     // Logout user (remove token)
     public static function logout(int $userId): bool

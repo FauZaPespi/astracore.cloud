@@ -18,7 +18,6 @@ global $isLogged;
     <link rel="icon" type="image/x-icon" href="pages/assets/AstraCore.ico">
 </head>
 
-
 <body>
     <!-- Navbar -->
     <nav class="navbar"> 
@@ -58,11 +57,12 @@ global $isLogged;
                         <h1>Premium</h1>
                     </div>
                     <div class="card-body">
+                        <h4>Lifetime license</h4>
                         <ul class="list">
                             <li>Maximum server count: <b>Unlimited</b></li>   
                             <li>Maximum module count: <b>Unlimited</b></li>    
                         </ul>
-                        <h3>67.99$/mo</h3>
+                        <h3>267$</h3>
                         <a href="./subscribe" class="btn btn-primary">Subscribe</a>
                     </div>
                 </div>
