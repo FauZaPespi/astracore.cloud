@@ -84,6 +84,10 @@ $user = null;
 if (isset($_SESSION["userId"])) {
     $user = UserService::getUserById($_SESSION["userId"]);
     $isLogged = !empty($user);
+    //var_dump($user);
+}
+else {
+    new LogDebug("Session failed");
 }
 
 // Pages Middleware
@@ -152,8 +156,12 @@ else {
 
 $end = microtime(true);
 require_once 'class/utils/LoggerOscar.php';
-new LogInfo('Page generation time: ' . ($end - $start) . ' seconds | Page:' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'], 'INFO');
-mkdir(__DIR__ . '/class/utils/logger/data', 0777, true);
+new LogInfo('Page generation time: ' . ($end - $start) . ' seconds | Page:' . $requestUri , 'INFO');
+if (file_exists(__DIR__ . '/class/utils/logger/data') == false)
+{
+    mkdir(__DIR__ . '/class/utils/logger/data', 0777, true);
+}
+
 ?>
 
 <base href="/">

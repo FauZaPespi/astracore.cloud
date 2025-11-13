@@ -150,9 +150,6 @@ class UserService
             ':email' => $usernameOrEmail
         ]);
         $userData = $stmt->fetch();
-        echo $userData['password'];
-        echo "\n";
-        echo $password;
 
         if ($userData && password_verify($password, $userData['password'])) {
             return self::getUserById((int)$userData['id']);

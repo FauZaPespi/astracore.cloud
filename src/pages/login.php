@@ -16,22 +16,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if (!$error) {
         $user = UserService::login($login, $password);
-
         if (!empty($user)) {
-            SaveInSession("userId", $user->id);
-            SaveInSession("role", $user->role);
-            if ($user->role == "admin")
-            {
-                header("Location: /admin");
-            }
-            else
-            {
-                header("Location: /dashboard");
-            }
+            //SaveInSession("userId", $user->id);
+            $_SESSION["userId"] = $user->id;
+            $_SESSION["role"] = $user->role;
+            header("Location: /dashboard");
         } else {
             new LogWarning("Failed login attempt for user: $login", "AUTH");
             $error = true;
         }
+    }
+    else
+    {
+        new LogWarning("Erreur lor du login", "AUTH");
     }
 }
 

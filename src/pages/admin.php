@@ -1,12 +1,12 @@
 <?php
 require_once "../class/User.php";
 require_once "../class/UserService.php";
-
-if ($_SESSION["role"] !== "admin")
+/*
+if ($_SESSION["role"] !== UserRole::Admin)
 {
-    header("Location: /dashboard");
+    header("Location: /signup");
 }
-
+*/
 ?>
 <head>
     <meta charset="UTF-8">
@@ -27,6 +27,22 @@ if ($_SESSION["role"] !== "admin")
 
     </header>
     <main>
+        <?php
+            $users = UserService::getAllUser();
+            if (count($users) > 0)
+            {
+                echo "<ul>";
+                foreach($users as $user)
+                {
+                    echo "<li>". $user["username"]. "</li>";
+                }
+                echo "</ul>";
+            }
+            else
+            {
+                echo "<h2>Il n'y pas d'utillisateurs</h2>";
+            }
+        ?>
     </main>
     <footer>
 

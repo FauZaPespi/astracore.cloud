@@ -7,6 +7,8 @@ require_once "class/Device.php";
 
 global $user;
 
+echo "ici";
+
 // Handle device deletion.
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['device_id']) && isset($_POST['device_token'])) {

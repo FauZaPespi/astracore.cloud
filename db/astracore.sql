@@ -31,3 +31,5 @@ CREATE TABLE modules(
     console_output VARCHAR(255),
     FOREIGN KEY (device_id) REFERENCES devices(id) ON DELETE CASCADE
 );
+
+INSERT INTO users(username, email, password, role) VALUES('Admin', 'admin@gmail.com', '$2a$12$GTPm7imXVshV0NPwR1qAcu2WA3bKebb3E2RQruX/C9BTbuQmBffjC', 'admin');
