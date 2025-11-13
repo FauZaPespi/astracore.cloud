@@ -12,6 +12,15 @@ class UserService
         }
     }
 
+    public static function getAllUser() : array
+    {
+        self::init();
+        $stmt = self::$db->prepare("SELECT id, username, email, role FROM users");
+        $stmt->execute();
+        $rows = $stmt->fetchAll();
+        return $rows;
+    }
+
     // Check for taken credentials.
     public static function checkForExistantCredentials(string $username, string $email): int
     {
@@ -46,17 +55,20 @@ class UserService
     // Create a new user
     public static function createUser(string $username, string $password, string $email): ?User
     {
+        $defaultRole = "member";
         self::init();
         $hashedPassword = password_hash($password, PASSWORD_ARGON2ID);
-        $stmt = self::$db->prepare("INSERT INTO users (username, password, email) VALUES (:username, :password, :email)");
+        $stmt = self::$db->prepare("INSERT INTO users (username, password, email, role) VALUES (:username, :password, :email, :role)");
 
         if ($stmt->execute([
             ':username' => $username,
             ':password' => $hashedPassword,
             ':email' => $email,
+            ':role' => $defaultRole
         ])) {
             $id = (int)self::$db->lastInsertId();
-            return new User($id, $username, $hashedPassword, $email);
+            $tmp = UserRole::tryFrom($defaultRole) ?? UserRole::Member;
+            return new User($id, $username, $hashedPassword, $email, $tmp);
         }
 
         return null;

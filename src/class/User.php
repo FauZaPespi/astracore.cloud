@@ -2,15 +2,22 @@
 
 require_once "Device.php";
 
+enum UserRole: string
+{
+    case Member  = 'member';
+    case Premium      = 'premium';
+    case Admin    = 'admin';
+}
+
 class User {
     public int $id;
     public string $username;
     public string $password;
     public string $email;
-    public string $role;
+    public UserRole $role;
     public array $devices; // Array to hold Device objects
 
-    public function __construct(int $id, string $username, string $password, string $email, string $role) {
+    public function __construct(int $id, string $username, string $password, string $email, UserRole $role) {
         $this->id = $id;
         $this->username = $username;
         $this->password = $password;

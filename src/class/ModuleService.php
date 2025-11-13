@@ -16,7 +16,6 @@ class ModuleService
     public static function isAlreadyAdded(int $deviceId, string $name): bool
     {
         self::init();
-
         $stmt = self::$db->prepare("SELECT id FROM modules WHERE device_id = :device_id AND name = :name");
         $stmt->bindParam(":device_id", $deviceId, PDO::PARAM_INT);
         $stmt->bindParam(":name", $name, PDO::PARAM_STR);
