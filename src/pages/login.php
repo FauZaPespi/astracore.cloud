@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once "/var/www/html/class/UserService.php";
 require_once "/var/www/html/class/SessionHandler.php";
 require_once "/var/www/html/class/User.php";
@@ -8,7 +9,6 @@ require_once "/var/www/html/class/utils/logger/LogWarning.php";
 $error = false;
 $login = "";
 $password = "";
-
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $login = trim(filter_input(INPUT_POST, "login", FILTER_SANITIZE_SPECIAL_CHARS));
     $password = filter_input(INPUT_POST, "password", FILTER_UNSAFE_RAW);
@@ -17,10 +17,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (!$error) {
         $user = UserService::login($login, $password);
         if (!empty($user)) {
-            //SaveInSession("userId", $user->id);
             $_SESSION["userId"] = $user->id;
-            $_SESSION["role"] = $user->role;
+            new LogInfo("Connexion faite avec l'user correspondant à l'id : ". $user->id, "AUTH");
+            $_SESSION["role"] = $user->role->value;
             header("Location: /dashboard");
+            die;
         } else {
             new LogWarning("Failed login attempt for user: $login", "AUTH");
             $error = true;

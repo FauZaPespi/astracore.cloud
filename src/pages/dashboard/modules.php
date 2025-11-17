@@ -1,11 +1,15 @@
 <?php
+session_start();
 require_once "class/SessionHandler.php";
 require_once "class/UserService.php";
 require_once "class/DeviceService.php";
 require_once "class/ModuleService.php";
 require_once "class/utils/popUp/PopUpNotification.php";
-
-global $user;
+$user = null;
+if (isset($_SESSION["userId"])) {
+    $user = UserService::getUserById($_SESSION["userId"]);
+    $isLogged = !empty($user);
+}
 
 $message = '';
 $messageType = '';

@@ -118,7 +118,7 @@ class UserService
         if (!$userData) return null;
 
         $enumRole = UserRole::tryFrom($userData['role']) ?? UserRole::Member;
-
+        
         $user = new User(
             $userData['id'],
             $userData['username'],
@@ -126,7 +126,7 @@ class UserService
             $userData['email'],
             $enumRole
         );
-        
+        $user->devices = [];
         // Fetch devices
         $stmtDevices = self::$db->prepare("SELECT * FROM devices WHERE user_id = :user_id");
         $stmtDevices->execute([':user_id' => $id]);

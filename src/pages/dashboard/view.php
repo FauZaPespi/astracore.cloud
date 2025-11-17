@@ -1,15 +1,19 @@
 <?php
+session_start();
 require_once "class/SessionHandler.php";
 require_once "class/UserService.php";
 require_once "class/User.php";
-
-global $user;
+$user = null;
+if (isset($_SESSION["userId"])) {
+    $user = UserService::getUserById($_SESSION["userId"]);
+    $isLogged = !empty($user);
+}
 
 // Logout handling
+
 if (isset($_GET['action']) && $_GET['action'] === 'logout') {
     session_destroy();
-    $url = "../";
-    header('Location: ' . $url);
+    header('Location: /login');
     die();
 }
 

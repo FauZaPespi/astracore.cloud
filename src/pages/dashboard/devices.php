@@ -1,13 +1,15 @@
 <?php
+session_start();
 require_once "class/SessionHandler.php";
 require_once "class/UserService.php";
 require_once "class/User.php";
 require_once "class/DeviceService.php";
 require_once "class/Device.php";
-
-global $user;
-
-echo "ici";
+$user = null;
+if (isset($_SESSION["userId"])) {
+    $user = UserService::getUserById($_SESSION["userId"]);
+    $isLogged = !empty($user);
+}
 
 // Handle device deletion.
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -44,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="card-header">
                                 <h5 class="card-title mb-0">
                                     <i class="bi bi-list-check me-2"></i>
-                                    My Devices (<?= count($user->devices) ?>)
+                                    My Devices (<?php if (isset($user->devices) == true) {echo count($user->devices); } else { echo "0"; } ?>)
                                 </h5>
                             </div>
                             <div class="card-body">

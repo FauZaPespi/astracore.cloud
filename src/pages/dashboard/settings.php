@@ -1,9 +1,17 @@
 <?php
-require_once "class/SessionHandler.php";
-require_once "class/UserService.php";
-require_once "class/User.php";
+session_start();
+require_once __DIR__."/../../class/UserService.php";
+require_once __DIR__."/../../class/User.php";
+$user = null;
+if (isset($_SESSION["userId"])) {
+    $user = UserService::getUserById($_SESSION["userId"]);
+    $isLogged = !empty($user);
+}
+else
+{
+    var_dump($_SESSION);
+}
 
-global $user;
 
 $message = '';
 $messageType = '';

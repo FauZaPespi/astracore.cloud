@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $start = microtime(true);
 
 ini_set('display_errors', 0);
@@ -84,7 +86,6 @@ $user = null;
 if (isset($_SESSION["userId"])) {
     $user = UserService::getUserById($_SESSION["userId"]);
     $isLogged = !empty($user);
-    //var_dump($user);
 }
 else {
     new LogDebug("Session failed");
@@ -140,9 +141,9 @@ if ($requestUri === URL_ROOT . '/' || $requestUri === URL_ROOT . '' || $requestU
     strpos($requestUri, '/dashboard?action=') === 0 ||
     strpos($requestUri, '/dashboard/?action=') === 0
 ) {
-    if (empty($user)) {
+    if (isset($user->id) == false) {
         http_response_code(301);
-        header("Location: ../login");
+        header("Location: /login");
     } else {
         require_once __DIR__ . '/pages/dashboard/view.php';
     }

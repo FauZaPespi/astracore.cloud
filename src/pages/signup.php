@@ -4,6 +4,8 @@ require_once "/var/www/html/class/SessionHandler.php";
 require_once "/var/www/html/class/User.php";
 require_once "/var/www/html/class/utils/LoggerOscar.php";
 
+session_start();
+
 $diagnostics = [
     "username" => "",
     "email" => "",

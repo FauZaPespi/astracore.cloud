@@ -1,12 +1,16 @@
 <?php
+session_start();
 require_once __DIR__ . "/../../class/SessionHandler.php";
 require_once __DIR__ . "/../../class/UserService.php";
 require_once __DIR__ . "/../../class/DeviceService.php";
 require_once __DIR__ . "/../../class/User.php";
 require_once __DIR__ . "/../../class/Device.php";
 require_once __DIR__ . "/../../class/utils/popUp/PopUpNotification.php";
-
-global $user;
+$user = null;
+if (isset($_SESSION["userId"])) {
+    $user = UserService::getUserById($_SESSION["userId"]);
+    $isLogged = !empty($user);
+}
 
 $message = '';
 $messageType = '';
@@ -213,7 +217,7 @@ if (isset($_GET['popup']) && $_GET['popup'] === 'form_incomplete') {
                 </div>
 
                 <!-- Current Devices Summary -->
-                <?php if (count($user->devices) > 0): ?>
+                <?php if (isset($user->devices) == true): ?>
                     <div class="row">
                         <div class="col-12">
                             <div class="card">

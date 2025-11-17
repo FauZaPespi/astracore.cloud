@@ -4,9 +4,9 @@ require_once "Device.php";
 
 enum UserRole: string
 {
-    case Member  = 'member';
-    case Premium      = 'premium';
-    case Admin    = 'admin';
+    case Member = 'member';
+    case Premium = 'premium';
+    case Admin = 'admin';
 }
 
 class User {
@@ -15,7 +15,7 @@ class User {
     public string $password;
     public string $email;
     public UserRole $role;
-    public array $devices; // Array to hold Device objects
+    public array $devices = []; // Array to hold Device objects
 
     public function __construct(int $id, string $username, string $password, string $email, UserRole $role) {
         $this->id = $id;
@@ -28,7 +28,7 @@ class User {
 
     // Add a device to the user's device list
     public function addDevice(Device $device): void {
-        $this->devices[] = $device;
+        array_push($this->devices, $device);
     }
 
     // Remove a device from the user's device list
