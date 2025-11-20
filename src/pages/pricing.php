@@ -1,5 +1,6 @@
 <?php
 global $isLogged;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

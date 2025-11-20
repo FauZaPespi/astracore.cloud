@@ -11,11 +11,15 @@ if(!$_SESSION["userId"])
     header("Location: /login");
 }
 
-$error      = false;
-$cardNumber = "";
-$cardDate   = "";
-$cardCvv    = "";
-$cardHolder = "";
+if($_SESSION["userId"])
+{
+    $user = UserService::getUserById($_SESSION["userId"]);
+    
+    if($user->role != UserRole::Member)
+    {
+        header("Location: /dashboard");
+    }
+}
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
@@ -26,16 +30,23 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $cardHolder = trim(filter_input(INPUT_POST, "card-holder", FILTER_SANITIZE_SPECIAL_CHARS));
 
     // Check card info
-    $error = empty($cardNumber) || empty($cardDate) || empty($cardCvv) || empty($cardHolder);
-
+    $error = count($cardNumber) != 16 || empty($cardDate) || count($cardCvv) != 3 || empty($cardHolder);
 
     if (!$error) {
+        
+        $user = UserService::getUserById($_SESSION["userId"]);
 
-        if(!$user)
+        if($user)
+        {
+            if(UserService::subscribe($_SESSION["userId"]))
+            {
+                header("Location: /dashboard");
+            }
+        }
+        else
         {
 
         }
-
 
     } else {
         new LogWarning("Failed payment attempt for user: $login", "AUTH");
@@ -88,6 +99,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         value=""
                         class="form-input"
                         placeholder="xxxx xxxx xxxx xxxx"
+                        minlength="16"
+                        minlength="16"
                         required>
                 </div>
 
@@ -111,7 +124,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         id="card-cvv"
                         value=""
                         class="form-input"
-                        placeholder="12/30"
+                        placeholder="676"
                         required>
                 </div>
 
@@ -130,8 +143,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <input type="submit" value="Pay" class="btn btn-primary ">
             </form>
         </div>
-        
-
     </section>
 
     <!-- Footer -->

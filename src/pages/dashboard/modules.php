@@ -76,6 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 // Get all modules
 $modules = ModuleService::getAllModules($user->id);
+
 ?>
 
 <main class="main-content">
@@ -249,6 +250,7 @@ $modules = ModuleService::getAllModules($user->id);
                 </div>
                 <br style="user-select: none;">
                 <br style="user-select: none;">
+
                 <?php
                 // Handle module creation
                 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['action'] === 'create_module') {
@@ -260,14 +262,23 @@ $modules = ModuleService::getAllModules($user->id);
                         $moduleEnabled = trim($_POST['module_enabled']);
 
                         if (!empty($moduleName) && !empty($moduleDescription)) {
-                            $result = ModuleService::addModule($deviceId, $moduleName, $moduleDescription, $moduleCommand, $moduleEnabled);
 
-                            if ($result) {
-                                $message = "Module created successfully!";
-                                $messageType = 'success';
-                            } else {
-                                $message = "Error creating module.";
+                            if($user->role == UserRole::Member && count($modules) >= 5)
+                            {
+                                $message = "Max module count limit reached, please subscribe to add more!";
                                 $messageType = 'danger';
+                            }
+                            else
+                            {
+                                $result = ModuleService::addModule($deviceId, $moduleName, $moduleDescription, $moduleCommand, $moduleEnabled);
+
+                                if ($result) {
+                                    $message = "Module created successfully!";
+                                    $messageType = 'success';
+                                } else {
+                                    $message = "Error creating module.";
+                                    $messageType = 'danger';
+                                }
                             }
 
                             // Refresh the page to show the new module
