@@ -43,21 +43,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         if (empty($errors)) {
-            $device = DeviceService::addDevice($deviceIp, $deviceToken, $user->id);
 
-            if ($device) {
-                // Refresh user data to show the new device
-                $user = UserService::getUserById($_SESSION["userId"]);
-                $message = "Device successfully added!";
-                $messageType = 'success';
-
-                // Clear form fields
-                $deviceIp = '';
-                $deviceToken = '';
-            } else {
-                $message = "Error while adding device.";
+            if($user->role == UserRole::Member && count($user->devices) >= 3)
+            {
+                $message = "Max server limit reached, please subscribe to add more servers!";
                 $messageType = 'danger';
             }
+            else
+            {
+                $device = DeviceService::addDevice($deviceIp, $deviceToken, $user->id);
+
+                if ($device) {
+                    // Refresh user data to show the new device
+                    $user = UserService::getUserById($_SESSION["userId"]);
+                    $message = "Device successfully added!";
+                    $messageType = 'success';
+
+                    // Clear form fields
+                    $deviceIp = '';
+                    $deviceToken = '';
+                } else {
+                    $message = "Error while adding device.";
+                    $messageType = 'danger';
+                }
+            }
+
         } else {
             $message = implode(' ', $errors);
             $messageType = 'danger';

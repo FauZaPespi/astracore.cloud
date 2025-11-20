@@ -157,6 +157,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         <div class="form-text">Votre adresse email pour les notifications</div>
                                     </div>
 
+                                    <div class="mb-3">
+                                        <label for="role" class="form-label">Type de compte</label>
+                                        <input type="text"
+                                            class="form-control"
+                                            id="role"
+                                            name="role"
+                                            value="<?= htmlspecialchars($user->role->value) ?>"
+                                            disabled>
+                                    </div>
+
                                     <button type="submit" class="btn btn-primary">
                                         <i class="bi bi-check-circle me-1"></i>
                                         Mettre à jour le profil

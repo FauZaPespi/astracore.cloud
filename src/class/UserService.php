@@ -107,6 +107,19 @@ class UserService
         return null;
     }
 
+    //
+    public static function subscribe($userId)
+    {
+        self::init();
+
+        $sql = "UPDATE users SET `role` = 'premium' WHERE id = :id";
+        $stmt = self::$db->prepare($sql);
+
+        return $stmt->execute([
+            ':id' => $userId
+        ]);
+    }
+
     // Get user by ID
     public static function getUserById(int $id): ?User
     {
