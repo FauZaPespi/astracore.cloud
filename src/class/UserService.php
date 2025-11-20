@@ -140,6 +140,19 @@ class UserService
         return $user;
     }
 
+    /**
+     * Fonction pour supprimer un user
+     * @param int idUser pour choisir l'user à suppirimer
+     * @return bool si la suppréssion c'est bien réaliser
+     */
+    public static function deleteUser(int $idUser) : bool
+    {
+        self::init();
+        $stmt = self::$db->prepare("DELETE FROM users WHERE id = ?");
+        $result = $stmt->execute([$idUser]);
+        return $result;
+    }
+
     // Login user
     public static function login(string $usernameOrEmail, string $password): ?User
     {

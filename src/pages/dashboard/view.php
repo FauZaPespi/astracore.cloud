@@ -3,6 +3,7 @@ session_start();
 require_once "class/SessionHandler.php";
 require_once "class/UserService.php";
 require_once "class/User.php";
+session_start();
 $user = null;
 if (isset($_SESSION["userId"])) {
     $user = UserService::getUserById($_SESSION["userId"]);
@@ -60,6 +61,16 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
                 break;
             case 'settings':
                 require_once __DIR__ . '/settings.php';
+                break;
+            case "admin":
+                if ($_SESSION["role"] == "admin")
+                {
+                    require_once __DIR__ . '/admin.php';
+                }
+                else
+                {
+                    require_once __DIR__ . '/devices.php';
+                }
                 break;
             case 'curious':
                 echo "<h1>You're curious, aren't you?</h1>";

@@ -38,7 +38,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     switch (UserService::checkForExistantCredentials($username, $email)) {
         case AVAILABLE:
             $user = UserService::createUser($username, $password, $email);
-            new LogSuccess("New user created with ID: $id ($username)", 'SUCCESS');
             SaveInSession("userId", $user->id);
             header("Location: ./dashboard/");
             break;

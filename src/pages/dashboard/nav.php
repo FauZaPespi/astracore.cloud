@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (isset($_GET['tab'])) {
     $currentTab = $_GET['tab'];
 } else {
@@ -36,6 +37,16 @@ if (isset($_GET['tab'])) {
                     <span>Settings</span>
                 </a>
             </li>
+            <?php
+            if ($_SESSION["role"] == "admin")
+            {?>
+                <li class="nav-item">
+                <a href="dashboard/?tab=admin" class="nav-link <?= ($currentTab == 'admin') ? 'active' : '' ?>">
+                    <i class="bi bi-shield"></i>
+                    <span>Admin</span>
+                </a>
+            </li>
+            <?php } ?>
             <li class="nav-item nav-logout">
                 <a href="dashboard/?action=logout" class="nav-link logout-link">
                     <i class="bi bi-box-arrow-right"></i>

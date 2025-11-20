@@ -104,9 +104,7 @@ if ($requestUri === URL_ROOT . '/' || $requestUri === URL_ROOT . '' || $requestU
     require_once __DIR__ . '/pages/termsOfUse.php';
 } elseif ($requestUri ===  '/doc' || $requestUri === '/doc/') {
     require_once __DIR__ . '/pages/documentation.php';
-} elseif ($requestUri === '/admin' || $requestUri === '/admin/'){
-    require_once __DIR__ . '/pages/admin.php';
-} elseif ($requestUri === '/signup' || $requestUri === '/signup/') {
+}elseif ($requestUri === '/signup' || $requestUri === '/signup/') {
     if (!empty($user)) {
         http_response_code(301);
         header("Location: /dashboard");
@@ -157,7 +155,6 @@ else {
 
 $end = microtime(true);
 require_once 'class/utils/LoggerOscar.php';
-new LogInfo('Page generation time: ' . ($end - $start) . ' seconds | Page:' . $requestUri , 'INFO');
 if (file_exists(__DIR__ . '/class/utils/logger/data') == false)
 {
     mkdir(__DIR__ . '/class/utils/logger/data', 0777, true);
